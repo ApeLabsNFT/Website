@@ -41,7 +41,8 @@ class Component extends DCLogic {
 
   onResize = () => {
     const el = document.getElementById('pbrMobileCta');
-    if (el) el.style.display = window.innerWidth < 900 ? 'block' : 'none';
+    const hasVoiceWidget = Boolean(document.querySelector('elevenlabs-convai'));
+    if (el) el.style.display = window.innerWidth < 900 && !hasVoiceWidget ? 'block' : 'none';
   };
   componentDidMount(){
     window.addEventListener('resize', this.onResize);

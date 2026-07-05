@@ -208,7 +208,7 @@ class Component extends DCLogic {
   esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
   onHash = () => { this.apply(this.slug()); window.scrollTo({ top:0, behavior: this.reduce ? 'auto' : 'smooth' }); };
-  onResize = () => { const s = document.getElementById('pbrBottomSpace'); if (s) s.style.height = window.innerWidth < 900 ? '84px' : '0px'; };
+  onResize = () => { const s = document.getElementById('pbrBottomSpace'); if (s) s.style.height = '0px'; };
   onScroll = () => {
     if (this.reduce) return;
     const sy = window.scrollY || 0;
