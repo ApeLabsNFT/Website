@@ -33,10 +33,10 @@ class Component extends DCLogic {
     if (path.includes('condition') && slug && this.NAMES[slug]) return "I am reading about " + this.NAMES[slug];
     if (path.includes('conditions')) return "I am exploring the conditions page";
     if (path.includes('about')) return "I read about your approach";
-    return "I found Physio by Rutvi online";
+    return "I found PhysioByRutvi online";
   }
   link(msg){ return "https://wa.me/" + this.PHONE + "?text=" + encodeURIComponent(msg); }
-  wa = this.link("Hi Dr Rutvi, " + this.context() + " and would like to ask about home physiotherapy.");
+  wa = this.link("Hi Dr Rutvi, " + this.context() + ". My area is ___ and my concern is ___. I would like to ask about a home physiotherapy visit.");
   book = this.link("Hi Dr Rutvi, I'd like to book a home visit. My name is ___, suburb is ___, preferred day/time is ___, and I need help with ___. " + this.context() + ".");
 
   onResize = () => {
