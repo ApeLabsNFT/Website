@@ -80,15 +80,13 @@
 </helmet>
 
 <dc-import name="Header" hint-size="100%,66px"></dc-import>
-<x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="0,0"></x-import>
-
 <!-- LEAD -->
 <section style="position:relative;background:#FDF8F5;padding:clamp(40px,6vw,80px) clamp(20px,5vw,52px) clamp(48px,6vw,80px);overflow:hidden;">
   <div style="max-width:1220px;margin:0 auto;">
     <div data-reveal style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#717470;margin-bottom:clamp(24px,3vw,40px);flex-wrap:wrap;">
-      <a href="Home.dc.html" style="text-decoration:none;color:#717470;">Home</a>
+      <a href="/" style="text-decoration:none;color:#717470;">Home</a>
       <span style="color:#CFE3D8;">/</span>
-      <a href="Conditions.dc.html" style="text-decoration:none;color:#717470;">Conditions</a>
+      <a href="/conditions" style="text-decoration:none;color:#717470;">Conditions</a>
       <span style="color:#CFE3D8;">/</span>
       <span id="cdCrumb" style="color:#0E4F52;font-weight:600;">Back &amp; Neck Pain</span>
     </div>
@@ -108,7 +106,7 @@
 
       <div data-reveal data-delay="120" style="position:relative;">
         <div style="position:absolute;top:-8%;right:-6%;width:64%;pointer-events:none;opacity:.6;z-index:1;"><svg viewBox="0 0 400 240" fill="none" width="100%"><path d="M10 220 C 120 30, 280 30, 390 220" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-        <image-slot id="cond-lead" style="width:100%;aspect-ratio:4/3;border-radius:24px;position:relative;z-index:2;" shape="rounded" radius="24" placeholder="Photo: Dr Rutvi treating this condition at home"></image-slot>
+        <img id="cdLead" src="assets/img/cond-1.webp" alt="Physiotherapist supporting neck and upper-back assessment at home" loading="eager" decoding="async" style="width:100%;height:clamp(300px,42vw,520px);object-fit:cover;border-radius:24px;position:relative;z-index:2;box-shadow:0 18px 44px rgba(14,79,82,.12);">
       </div>
     </div>
   </div>
@@ -159,9 +157,9 @@
   <div style="max-width:1120px;margin:0 auto;">
     <div data-reveal style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#717470;margin-bottom:16px;">Related concerns</div>
     <div id="cdRelated" data-reveal data-delay="60" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(40px,5vw,64px);">
-      <a href="Condition.dc.html#posture" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Posture Correction →</a>
-      <a href="Condition.dc.html#sciatica" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Sciatica →</a>
-      <a href="Condition.dc.html#frozen-shoulder" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Frozen Shoulder →</a>
+      <a href="/condition#posture" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Posture Correction →</a>
+      <a href="/condition#sciatica" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Sciatica →</a>
+      <a href="/condition#frozen-shoulder" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Frozen Shoulder →</a>
     </div>
 
     <div data-reveal style="position:relative;background:#EE7B5B;border-radius:28px;overflow:hidden;padding:clamp(36px,5vw,64px);text-align:center;">
@@ -185,6 +183,8 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   NAMES = { 'back-neck':'Back & Neck Pain','sports-injury':'Sports Injury','post-surgery':'Post-Surgical Rehabilitation','knee-joint':'Knee & Joint Pain / Arthritis','sciatica':'Sciatica & Disc Pain','posture':'Posture Correction','frozen-shoulder':'Frozen Shoulder','geriatric':'Geriatric Mobility','strength-conditioning':'Strength & Conditioning' };
+  IMG = { 'back-neck':'cond-1','sports-injury':'cond-2','post-surgery':'cond-3','knee-joint':'cond-4','sciatica':'cond-5','posture':'cond-6','frozen-shoulder':'cond-7','geriatric':'cond-8','strength-conditioning':'cond-2' };
+  ALT = { 'back-neck':'Physiotherapist supporting neck and upper-back assessment at home','sports-injury':'Guided sports injury rehabilitation exercise at home','post-surgery':'Physiotherapist guiding gentle post-surgery rehabilitation movement','knee-joint':'Knee assessment during a home physiotherapy session','sciatica':'Guided leg mobility stretch for sciatica support','posture':'Physiotherapist correcting seated desk posture at home','frozen-shoulder':'Shoulder range-of-motion assessment by a physiotherapist','geriatric':'Physiotherapist assisting an elderly patient with safe walking support','strength-conditioning':'Guided sports injury rehabilitation exercise at home' };
 
   DATA = {
     'sports-injury': { kicker:'Sports Injury', ctaHead:"Let's get you back to it.",
@@ -322,8 +322,8 @@ class Component extends DCLogic {
     this.updateSchema(slug);
     const wa = this.waLink(slug);
     document.querySelectorAll('[data-cdwa]').forEach((a) => a.setAttribute('href', wa));
-    const slot = document.getElementById('cond-lead');
-    if (slot) { slot.setAttribute('id', 'cond-lead'); slot.setAttribute('placeholder', 'Photo: Dr Rutvi treating ' + (this.NAMES[slug] || 'this condition').toLowerCase() + ' at home'); }
+    const lead = document.getElementById('cdLead');
+    if (lead) { lead.setAttribute('src', 'assets/img/' + (this.IMG[slug] || 'cond-1') + '.webp'); lead.setAttribute('alt', this.ALT[slug] || 'Home physiotherapy session'); }
     try {
       const pageTitle = (this.NAMES[slug] || 'Condition') + ' Physiotherapy at Home - Mumbai | PhysioByRutvi';
       document.title = pageTitle;
@@ -351,7 +351,7 @@ class Component extends DCLogic {
     if (faq) faq.innerHTML = d.faq.map((x) => '<details style="padding:20px 0;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:\'Fraunces\',serif;font-weight:600;font-size:clamp(18px,2.2vw,22px);color:#1B2021;">'+this.esc(x.q)+'<span class="cd-plus" style="flex:0 0 auto;color:#EE7B5B;font-size:24px;transition:transform .3s;">+</span></summary><p style="color:#4A4F4C;font-size:15.5px;line-height:1.65;margin-top:14px;max-width:60ch;">'+this.esc(x.a)+'</p></details>').join('');
 
     const rel = document.getElementById('cdRelated');
-    if (rel) rel.innerHTML = (d.related||[]).map((s) => '<a href="Condition.dc.html#'+s+'" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" onmouseover="this.style.background=\'#0E4F52\';this.style.color=\'#FDF8F5\'" onmouseout="this.style.background=\'#fff\';this.style.color=\'#0E4F52\'">'+this.esc(this.NAMES[s])+' \u2192</a>').join('');
+    if (rel) rel.innerHTML = (d.related||[]).map((s) => '<a href="/condition#'+s+'" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" onmouseover="this.style.background=\'#0E4F52\';this.style.color=\'#FDF8F5\'" onmouseout="this.style.background=\'#fff\';this.style.color=\'#0E4F52\'">'+this.esc(this.NAMES[s])+' \u2192</a>').join('');
   }
 
   initReveal(){
