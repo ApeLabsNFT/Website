@@ -334,6 +334,7 @@
     ensureMeta('og:image:width', '1200', 'property');
     ensureMeta('og:image:height', '630', 'property');
     ensureMeta('og:image:type', 'image/png', 'property');
+    ensureMeta('og:image:alt', 'PhysioByRutvi - doctor-led home physiotherapy in Mumbai', 'property');
     ensureMeta('twitter:title', meta.title);
     ensureMeta('twitter:description', meta.description);
     ensureMeta('twitter:card', 'summary_large_image');
