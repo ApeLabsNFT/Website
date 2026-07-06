@@ -330,9 +330,15 @@
     ensureMeta('og:title', meta.title, 'property');
     ensureMeta('og:description', meta.description, 'property');
     ensureMeta('og:url', BASE + canonicalPath(), 'property');
+    ensureMeta('og:image', BASE + '/assets/social-share.png', 'property');
+    ensureMeta('og:image:width', '1200', 'property');
+    ensureMeta('og:image:height', '630', 'property');
+    ensureMeta('og:image:type', 'image/png', 'property');
     ensureMeta('twitter:title', meta.title);
     ensureMeta('twitter:description', meta.description);
     ensureMeta('twitter:card', 'summary_large_image');
+    ensureMeta('twitter:image', BASE + '/assets/social-share.png');
+    ensureMeta('twitter:image:alt', 'PhysioByRutvi - doctor-led home physiotherapy in Mumbai');
     ensureLink('canonical', { href: BASE + canonicalPath() });
 
     var clean = cleanPath(location.pathname);
@@ -482,7 +488,7 @@
         url: BASE + '/',
         telephone: '+918879475065',
         email: 'support@physiobyrutvi.in',
-        image: BASE + '/assets/pbr-logo-horizontal.png',
+        image: BASE + '/assets/social-share.png',
         logo: BASE + '/assets/pbr-logo-mark.png',
         slogan: 'Movement, restored personally.',
         description: 'Doctor-led home physiotherapy by Dr Rutvi Gandhi, PT, MPT Musculoskeletal and Sports Physiotherapy, across the Bhayander to Andheri corridor in Mumbai.',
