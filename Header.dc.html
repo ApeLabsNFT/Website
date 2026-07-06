@@ -13,7 +13,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>*{box-sizing:border-box;}</style>
+<style>
+  *{box-sizing:border-box;}
+  #pbrLangSwitch a,#pbrLangSwitchMenu a{transition:background .25s,color .25s,border-color .25s;}
+  @media (max-width:760px){#pbrLangSwitch{display:none!important;}#pbrLangSwitchMenu{display:flex!important;}}
+</style>
 </helmet>
 
 <div id="pbrProgress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#EE7B5B;z-index:95;transition:width .1s linear;"></div>
@@ -28,6 +32,12 @@
         <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:8px;letter-spacing:.32em;color:#EE7B5B;margin-top:5px;">BY RUTVI</span>
       </span>
     </a>
+
+    <nav id="pbrLangSwitch" aria-label="Language" style="display:flex;align-items:center;gap:4px;margin-left:auto;margin-right:clamp(4px,1vw,10px);padding:4px;border:1px solid rgba(14,79,82,.13);border-radius:100px;background:rgba(253,248,245,.72);">
+      <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.08em;padding:7px 9px;border-radius:100px;">EN</a>
+      <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">मराठी</a>
+      <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">ગુજરાતી</a>
+    </nav>
 
     <div style="display:flex;align-items:center;gap:clamp(8px,1.6vw,12px);flex:0 0 auto;">
       <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(14,79,82,.2);display:flex;align-items:center;justify-content:center;color:#0E4F52;text-decoration:none;transition:background .3s,border-color .3s,color .3s;" style-hover="background:#0E4F52;border-color:#0E4F52;color:#FDF8F5;">
@@ -87,6 +97,11 @@
       </div>
 
       <div style="background:rgba(253,248,245,.06);border:1px solid rgba(246,242,236,.14);border-radius:24px;padding:clamp(22px,3vw,32px);">
+        <div id="pbrLangSwitchMenu" aria-label="Language" style="display:none;align-items:center;gap:6px;margin-bottom:20px;padding:5px;border:1px solid rgba(246,242,236,.16);border-radius:100px;background:rgba(253,248,245,.06);">
+          <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;letter-spacing:.08em;padding:9px 10px;border-radius:100px;">EN</a>
+          <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">मराठी</a>
+          <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">ગુજરાતી</a>
+        </div>
         <div style="font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#CFE3D8;margin-bottom:14px;">Book a home visit</div>
         <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2.4vw,25px);line-height:1.28;color:#FDF8F5;margin:0 0 20px;">Message Dr Rutvi directly - the same specialist, every visit.</p>
         <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:15px;border-radius:100px;margin-bottom:11px;">
@@ -110,6 +125,34 @@ class Component extends DCLogic {
   PHONE = "918879475065";
   NAMES = { 'back-neck':'back and neck pain','sports-injury':'a sports injury','post-surgery':'post-surgery rehab','knee-joint':'knee or joint pain','sciatica':'sciatica','posture':'posture correction','frozen-shoulder':'frozen shoulder','geriatric':'geriatric mobility' };
   wa = this.waLink();
+
+  currentLang(){
+    const p = decodeURIComponent(location.pathname || '/').toLowerCase();
+    if (p === '/mr' || p.startsWith('/mr/')) return 'mr';
+    if (p === '/gu' || p.startsWith('/gu/')) return 'gu';
+    return 'en';
+  }
+  cleanPath(){
+    let p = decodeURIComponent(location.pathname || '/');
+    p = p.replace(/^\/(mr|gu)(?=\/|$)/, '');
+    if (!p) p = '/';
+    return p;
+  }
+  langHref(lang){
+    const clean = this.cleanPath();
+    const hash = location.hash || '';
+    if (lang === 'en') return clean + hash;
+    return '/' + lang + (clean === '/' ? '/' : clean) + hash;
+  }
+  paintLanguage = () => {
+    const active = this.currentLang();
+    document.querySelectorAll('[data-pbr-lang-option]').forEach((a) => {
+      const on = a.getAttribute('data-pbr-lang-option') === active;
+      a.setAttribute('aria-current', on ? 'page' : 'false');
+      a.style.background = on ? '#EE7B5B' : 'transparent';
+      a.style.color = on ? '#1B2021' : (a.closest('#pbrLangSwitchMenu') ? '#FDF8F5' : '#0E4F52');
+    });
+  };
 
   waLink(){
     const path = decodeURIComponent(location.pathname || '').toLowerCase();
@@ -156,7 +199,7 @@ class Component extends DCLogic {
     window.addEventListener('resize', this.onResize);
     window.addEventListener('keydown', this.onKey);
     this.wa = this.waLink();
-    this.onScroll(); this.onResize();
+    this.onScroll(); this.onResize(); this.paintLanguage();
   }
   componentWillUnmount(){
     window.removeEventListener('scroll', this.onScroll);
@@ -164,7 +207,7 @@ class Component extends DCLogic {
     window.removeEventListener('keydown', this.onKey);
     try { document.body.style.overflow = ''; } catch(e){}
   }
-  renderVals(){ return { waHref: this.wa, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu }; }
+  renderVals(){ return { waHref: this.wa, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu, langEnHref: this.langHref('en'), langMrHref: this.langHref('mr'), langGuHref: this.langHref('gu') }; }
 }
 </script>
 </body>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E4F52">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <script src="/vendor/react.production.min.js"></script>
 <script src="/vendor/react-dom.production.min.js"></script>
 <script src="/support.js"></script>
@@ -17,6 +19,10 @@
 <title>Home Physiotherapy Bhayander to Andheri | PhysioByRutvi</title>
 <meta name="description" content="Doctor-led home-visit physiotherapy by Dr Rutvi Gandhi, PT, MPT. Back pain, sports injury, post-surgery rehab and senior mobility across Bhayander to Andheri. WhatsApp to book.">
 <link rel="canonical" href="https://physiobyrutvi.in/">
+<link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/">
+<link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/">
+<link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/">
+<link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/pbr-logo-mark.png">
 <meta name="google-site-verification" content="gOzwWFIC1CoIZx9oeelgbph2vxjVSfnmaW7FciqlxQA">
@@ -159,11 +165,21 @@
   #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
   @media (max-width:720px){
     body{padding-bottom:112px;}
-    #heroVp{height:calc(100svh - 64px)!important;min-height:640px!important;max-height:760px!important;cursor:auto!important;}
-    #heroVp h1{font-size:clamp(31px,9.8vw,39px)!important;line-height:.96!important;letter-spacing:0!important;max-width:100%;overflow-wrap:normal;}
+    #heroVp{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;cursor:auto!important;touch-action:auto!important;background:#FDF8F5;}
+    #heroTrack{display:block!important;height:auto!important;width:100%!important;transform:none!important;transition:none!important;will-change:auto!important;}
+    #heroTrack>div{display:none!important;}
+    #heroTrack>div:first-child{display:block!important;position:relative!important;height:auto!important;min-height:760px!important;overflow:hidden!important;background:#FDF8F5;}
+    #heroTrack>div:first-child>img{position:absolute!important;inset:0 0 auto 0!important;width:100%!important;height:276px!important;object-fit:cover!important;object-position:68% 38%!important;opacity:1!important;filter:saturate(.96);}
+    #heroTrack>div:first-child>div:nth-of-type(1),
+    #heroTrack>div:first-child>div:nth-of-type(2),
+    #heroTrack>div:first-child>div:nth-of-type(3){display:none!important;}
+    #heroTrack>div:first-child>div:nth-of-type(4){position:relative!important;z-index:2!important;height:auto!important;min-height:760px!important;justify-content:flex-start!important;padding:322px 20px 142px!important;background:linear-gradient(180deg,rgba(253,248,245,0) 0,rgba(253,248,245,.96) 262px,#FDF8F5 330px);}
+    #heroTrack>div:first-child>div:nth-of-type(4)>div{max-width:100%!important;}
+    #heroVp h1{font-size:clamp(31px,9.8vw,38px)!important;line-height:.98!important;letter-spacing:0!important;max-width:100%;overflow-wrap:normal;}
     #heroVp p{font-size:16px!important;line-height:1.55!important;max-width:25rem!important;}
     #heroVp [data-parallax]{display:none!important;}
     #heroDots{display:none!important;}
+    img[src="/assets/rutvi-3.png"]{height:86%!important;max-height:390px!important;object-fit:contain!important;}
     #approach,#how,#reviews,#answers{scroll-margin-top:74px!important;}
     #how{padding-top:76px!important;padding-bottom:86px!important;}
     #reviews{padding-top:76px!important;padding-bottom:84px!important;}
@@ -171,8 +187,9 @@
     .pbrScroll{scroll-snap-type:x proximity!important;padding-bottom:26px!important;scroll-padding-left:20px;}
   }
   @media (max-width:520px){
-    #heroVp{height:660px!important;min-height:660px!important;}
-    #heroVp h1{font-size:clamp(31px,9.8vw,39px)!important;}
+    #heroTrack>div:first-child{min-height:735px!important;}
+    #heroTrack>div:first-child>div:nth-of-type(4){min-height:735px!important;padding:312px 20px 136px!important;}
+    #heroVp h1{font-size:clamp(30px,9.35vw,36px)!important;}
   }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
@@ -523,8 +540,6 @@
 </section>
 
 <dc-import name="Footer" hint-size="100%,520px"></dc-import>
-<div id="pbrBottomSpace" style="height:0;background:#0A3A3C;"></div>
-<dc-import name="MobileCTA" hint-size="0,0"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
@@ -697,5 +712,6 @@ class Component extends DCLogic {
 </script>
 <script src="/site-analytics.js"></script>
 <script src="/voice-widget-loader.js"></script>
+<script src="/site-i18n.js"></script>
 </body>
 </html>

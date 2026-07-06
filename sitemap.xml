@@ -1,19 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://physiobyrutvi.in/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://physiobyrutvi.in/conditions</loc>
+    <loc>https://physiobyrutvi.in/mr/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/gu/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/conditions/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/mr/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/conditions/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/gu/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/conditions/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/condition/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/condition/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/condition/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/condition/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/condition/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://physiobyrutvi.in/condition</loc>
+    <loc>https://physiobyrutvi.in/mr/condition/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/condition/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/condition/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/condition/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/condition/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://physiobyrutvi.in/about</loc>
+    <loc>https://physiobyrutvi.in/gu/condition/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/condition/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/condition/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/condition/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/condition/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/about/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/about/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/about/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/mr/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/about/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/about/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/about/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://physiobyrutvi.in/gu/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/about/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/about/"/>
+    <xhtml:link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/about/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
