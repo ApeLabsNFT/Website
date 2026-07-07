@@ -138,6 +138,9 @@
       common: {
         'Conditions': 'आजार',
         'How It Works': 'कसं चालतं',
+        'How it works': 'कसं चालतं',
+        '5.0 on Google · MPT, Sports & Musculoskeletal · The same expert, every visit': 'Google वर 5.0 · MPT, Sports आणि Musculoskeletal · दर वेळी तीच तज्ज्ञ',
+        '5.0 on Google · MPT, Sports & Musculoskeletal': 'Google वर 5.0 · MPT, Sports आणि Musculoskeletal',
         'About Dr Rutvi': 'डॉ. रुत्वींबद्दल',
         'Reviews': 'अभिप्राय',
         'Chat on WhatsApp': 'WhatsApp वर बोला',
@@ -200,6 +203,9 @@
       common: {
         'Conditions': 'રોગ',
         'How It Works': 'કેવી રીતે',
+        'How it works': 'કેવી રીતે',
+        '5.0 on Google · MPT, Sports & Musculoskeletal · The same expert, every visit': 'Google પર 5.0 · MPT, Sports અને Musculoskeletal · દર વખત એ જ નિષ્ણાત',
+        '5.0 on Google · MPT, Sports & Musculoskeletal': 'Google પર 5.0 · MPT, Sports અને Musculoskeletal',
         'About Dr Rutvi': 'ડૉ. રુત્વી વિશે',
         'Reviews': 'સમીક્ષાઓ',
         'Chat on WhatsApp': 'WhatsApp પર વાત કરો',
@@ -409,6 +415,9 @@
       setText(slide.querySelector('p'), slideCopy.sub);
       setFirstText(slide, [
         'DOCTOR-LED HOME PHYSIOTHERAPY',
+        'Doctor-led home physiotherapy',
+        'Continuity of care',
+        'Guided recovery',
         'WHY PATIENTS SWITCH TO HER',
         'CONTINUITY OF CARE',
         'WHAT RECOVERY FEELS LIKE HERE'
@@ -416,6 +425,8 @@
       setFirstText(slide, [
         '★★★★★ 5.0 · 500+ home patients',
         '★★★★★ 5.0 on Google · MPT, Sports & Musculoskeletal',
+        '5.0 on Google · MPT, Sports & Musculoskeletal · The same expert, every visit',
+        '5.0 on Google · MPT, Sports & Musculoskeletal',
         'One specialist · Your whole recovery',
         'Hands-on care · A plan that is yours alone'
       ], slideCopy.trust);
@@ -480,6 +491,8 @@
   function injectSchema(page) {
     var id = 'pbr-llm-local-seo-schema';
     var clean = cleanPath(location.pathname);
+    var lang = currentLang();
+    var meta = (META[lang] && META[lang][page]) || META.en[page] || META.en.home;
     var graph = [
       {
         '@type': ['MedicalBusiness', 'LocalBusiness'],
@@ -493,9 +506,17 @@
         logo: BASE + '/assets/pbr-logo-mark.png',
         slogan: 'Movement, restored personally.',
         description: 'Doctor-led home physiotherapy by Dr Rutvi Gandhi, PT, MPT Musculoskeletal and Sports Physiotherapy, across the Bhayander to Andheri corridor in Mumbai.',
+        priceRange: 'By appointment',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Mumbai',
+          addressRegion: 'Maharashtra',
+          addressCountry: 'IN'
+        },
         knowsLanguage: ['English', 'Hindi', 'Marathi', 'Gujarati'],
         medicalSpecialty: ['Physiotherapy', 'Sports Medicine', 'Musculoskeletal'],
         areaServed: ['Bhayander', 'Mira Road', 'Dahisar', 'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri', 'Mumbai'].map(function (name) { return { '@type': 'Place', name: name }; }),
+        serviceArea: ['Bhayander', 'Mira Road', 'Dahisar', 'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri', 'Mumbai'].map(function (name) { return { '@type': 'Place', name: name }; }),
         availableService: [
           'Home physiotherapy',
           'Back and neck pain physiotherapy',
@@ -531,6 +552,22 @@
         name: 'PhysioByRutvi',
         inLanguage: ['en-IN', 'mr-IN', 'gu-IN'],
         publisher: { '@id': BASE + '/#business' }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': BASE + clean + '#webpage',
+        url: BASE + canonicalPath(),
+        name: meta.title,
+        description: meta.description,
+        inLanguage: META[lang].htmlLang,
+        isPartOf: { '@id': BASE + '/#website' },
+        about: { '@id': BASE + '/#business' },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: BASE + '/assets/social-share.png',
+          width: 1200,
+          height: 630
+        }
       },
       {
         '@type': 'BreadcrumbList',

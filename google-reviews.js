@@ -82,8 +82,37 @@
       if (link && data.googleMapsUri) link.href = data.googleMapsUri;
   }
 
-  fetch('/data/google-reviews.json?ts=' + Date.now(), { cache: 'no-store' })
-    .then(function(response) { return response.ok ? response.json() : null; })
-    .then(function(data) { renderGoogleReviews(data, 0); })
-    .catch(function(){});
+  var loaded = false;
+  function loadReviews() {
+    if (loaded) return;
+    loaded = true;
+    fetch('/data/google-reviews.json?ts=' + Date.now(), { cache: 'no-store' })
+      .then(function(response) { return response.ok ? response.json() : null; })
+      .then(function(data) { renderGoogleReviews(data, 0); })
+      .catch(function(){});
+  }
+
+  function scheduleReviews(attempt) {
+    attempt = attempt || 0;
+    var section = getSection();
+    if (!section) {
+      if (attempt < 20) window.setTimeout(function() { scheduleReviews(attempt + 1); }, 150);
+      else window.setTimeout(loadReviews, 1800);
+      return;
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries) {
+        if (entries.some(function(entry) { return entry.isIntersecting; })) {
+          io.disconnect();
+          loadReviews();
+        }
+      }, { rootMargin: '720px 0px' });
+      io.observe(section);
+      return;
+    }
+    window.setTimeout(loadReviews, 1400);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function() { scheduleReviews(0); });
+  else scheduleReviews(0);
 })();

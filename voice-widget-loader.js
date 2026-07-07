@@ -73,11 +73,36 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', installVoiceCollapse);
   else installVoiceCollapse();
 
-  if (window.customElements && window.customElements.get('elevenlabs-convai')) return;
+  function loadConvaiWidget() {
+    if (window.__pbrConvaiScriptRequested) return;
+    window.__pbrConvaiScriptRequested = true;
+    if (window.customElements && window.customElements.get('elevenlabs-convai')) return;
 
-  var script = document.createElement('script');
-  script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
-  script.async = true;
-  script.type = 'text/javascript';
-  document.head.appendChild(script);
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+    script.async = true;
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
+  }
+
+  function scheduleConvaiWidget() {
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+    var delay = isMobile ? 15000 : 1800;
+    var idle = window.requestIdleCallback || function(cb) { return window.setTimeout(cb, delay); };
+    var timer = window.setTimeout(loadConvaiWidget, delay);
+    var eagerEvents = ['pointerdown', 'keydown', 'touchstart'];
+
+    function eagerLoad() {
+      window.clearTimeout(timer);
+      eagerEvents.forEach(function(name) { window.removeEventListener(name, eagerLoad, true); });
+      loadConvaiWidget();
+    }
+
+    eagerEvents.forEach(function(name) { window.addEventListener(name, eagerLoad, { capture: true, once: true, passive: true }); });
+    idle(function() {
+      if (!isMobile) loadConvaiWidget();
+    });
+  }
+
+  scheduleConvaiWidget();
 })();
