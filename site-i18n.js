@@ -25,8 +25,8 @@
       },
       about: {
         title: 'Dr Rutvi Gandhi, PT, MPT | Home Physiotherapist Mumbai',
-        description: 'Meet Dr Rutvi Gandhi, a PT, MPT physiotherapist specialising in musculoskeletal and sports physiotherapy with home visits from Bhayander to Andheri.',
-        keywords: 'Dr Rutvi Gandhi physiotherapist, MPT physiotherapist Mumbai, sports physiotherapist Mumbai, home physiotherapist Bhayander to Andheri'
+        description: 'Meet Dr Rutvi Gandhi, PT, MPT, and explore her home-visit physiotherapy services, certifications, sports rehab, post-op care and nutrition guidance in Mumbai.',
+        keywords: 'Dr Rutvi Gandhi physiotherapist, MPT physiotherapist Mumbai, BPT physiotherapist, K-Taping, IASTM, cupping therapy, sports rehab, post operative rehabilitation, geriatric physiotherapy, womens health physiotherapy, nutrition guidance Mumbai'
       }
     },
     mr: {
@@ -143,8 +143,7 @@
         '5.0 on Google · MPT, Sports & Musculoskeletal': 'Google वर 5.0 · MPT, Sports आणि Musculoskeletal',
         'About Dr Rutvi': 'डॉ. रुत्वींबद्दल',
         'Reviews': 'अभिप्राय',
-        'Chat on WhatsApp': 'WhatsApp वर बोला',
-        'Start on WhatsApp': 'WhatsApp वर सुरू करा',
+        'WhatsApp me': 'WhatsApp वर बोला',
         'Book a home visit': 'घरभेट बुक करा',
         'Call +91 88794 75065': 'कॉल +91 88794 75065',
         'Movement, restored personally.': 'हालचाल, पुन्हा — आपुलकीने.',
@@ -195,7 +194,7 @@
         'Back & Neck Pain — treated at home': 'पाठ आणि मानदुखी — घरीच उपचार',
         'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'डेस्कवर तासनतास बसल्याने होणारी मंद वेदना असो वा तीव्र, पसरणारी वेदना — पाठ आणि मानेचा त्रास थकवून टाकतो. डॉ. रुत्वी मूळ कारण शोधून घरीच हातांनी उपचार करतात.',
         'Chat about this': 'याबद्दल बोला',
-        'Chat on WhatsApp about this': 'याबद्दल WhatsApp वर बोला'
+        'WhatsApp me about this': 'याबद्दल WhatsApp वर बोला'
       },
       whatsapp: 'नमस्कार डॉ. रुत्वी, मला घरपोच फिजिओथेरपीबद्दल विचारायचे आहे. माझा परिसर ___ आणि माझी तक्रार ___ आहे.'
     },
@@ -208,8 +207,7 @@
         '5.0 on Google · MPT, Sports & Musculoskeletal': 'Google પર 5.0 · MPT, Sports અને Musculoskeletal',
         'About Dr Rutvi': 'ડૉ. રુત્વી વિશે',
         'Reviews': 'સમીક્ષાઓ',
-        'Chat on WhatsApp': 'WhatsApp પર વાત કરો',
-        'Start on WhatsApp': 'WhatsApp પર શરૂ કરો',
+        'WhatsApp me': 'WhatsApp પર વાત કરો',
         'Book a home visit': 'ઘરની મુલાકાત બુક કરો',
         'Call +91 88794 75065': 'કૉલ +91 88794 75065',
         'Movement, restored personally.': 'હલનચલન, ફરી — પોતાપણાથી.',
@@ -260,7 +258,7 @@
         'Back & Neck Pain — treated at home': 'પીઠ અને ગરદનનો દુખાવો — ઘરે જ સારવાર',
         'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'ડેસ્ક પર લાંબા સમય બેસવાથી થતો હળવો દુખાવો હોય કે તીવ્ર, ફેલાતો દુખાવો — પીઠ અને ગરદનની તકલીફ થકવી નાખે છે. ડૉ. રુત્વી મૂળ કારણ શોધીને ઘરે જ હાથથી સારવાર કરે છે.',
         'Chat about this': 'આ વિશે વાત કરો',
-        'Chat on WhatsApp about this': 'આ વિશે WhatsApp પર વાત કરો'
+        'WhatsApp me about this': 'આ વિશે WhatsApp પર વાત કરો'
       },
       whatsapp: 'નમસ્તે ડૉ. રુત્વી, મને ઘરઆંગણે ફિઝિયોથેરાપી વિશે પૂછવું છે. મારો વિસ્તાર ___ અને મારી તકલીફ ___ છે.'
     }
@@ -447,16 +445,16 @@
   function updateWhatsApp(lang, page) {
     var copy = COPY[lang];
     var msg = lang === 'en'
-      ? 'Hi Dr Rutvi, I would like to ask about a home physiotherapy visit. My area is ___ and my concern is ___.'
+      ? 'Hi Dr Rutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
       : copy.whatsapp;
     if (page === 'conditions') {
       msg = lang === 'en'
-        ? 'Hi Dr Rutvi, I am exploring the conditions page. My area is ___ and my concern is ___. Can home physiotherapy help?'
+        ? 'Hi Dr Rutvi, I am exploring the conditions page. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___. Can home physiotherapy help?'
         : msg;
     }
     if (page === 'about') {
       msg = lang === 'en'
-        ? 'Hi Dr Rutvi, I read about your approach and would like to discuss my recovery and book a home visit.'
+        ? 'Hi Dr Rutvi, I read about your qualifications and services. I would like to discuss my recovery and book a home visit. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
         : msg;
     }
     document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) {
@@ -541,7 +539,7 @@
           name: 'Dr Rutvi Gandhi',
           honorificPrefix: 'Dr',
           jobTitle: 'Physiotherapist',
-          description: 'PT, MPT - Musculoskeletal and Sports Physiotherapy'
+          description: 'PT, MPT - Musculoskeletal and Sports Physiotherapy. BPT, clinical nutritionist, sports and fitness nutritionist, with certifications in K-Taping, IASTM, cupping therapy and MFR.'
         },
         sameAs: ['https://www.instagram.com/physiobyrutvi/']
       },
