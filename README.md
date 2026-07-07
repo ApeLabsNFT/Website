@@ -4,22 +4,25 @@ Static website for `physiobyrutvi.in`.
 
 ## Deploy
 
-This project is a static site. On Netlify, use:
+This project is deployed on **GitHub Pages**. The website is automatically published when changes are pushed to the `main` branch.
 
-- Build command: leave empty
-- Publish directory: `.`
+- Repository: `https://github.com/ApeLabsNFT/Website`
 - Production branch: `main`
+- Published at: `https://physiobyrutvi.in/`
 
-Pushes to `main` should publish the latest files only after the Netlify site is connected to this GitHub repository.
+To deploy:
+1. Make changes and commit to the repository
+2. Push to `main` branch
+3. GitHub Pages automatically deploys within seconds
 
 ## Domain
 
-The live domain is intended to point to Netlify:
+The live domain points to GitHub Pages:
 
 - `physiobyrutvi.in`
 - `www.physiobyrutvi.in`
 
-Keep DNS on one provider at a time. If Netlify is the production host, do not switch the Hostinger DNS back to Vercel records.
+GitHub Pages is configured as the primary host for the domain.
 
 ## Google Business
 
