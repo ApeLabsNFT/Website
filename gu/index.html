@@ -308,25 +308,27 @@
   a:focus-visible,button:focus-visible{outline:3px solid #EE7B5B;outline-offset:3px;border-radius:4px;}
   ::selection{background:#EE7B5B;color:#1B2021;}
   @supports (content-visibility:auto){
+  @supports (content-visibility:auto){
     section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:720px;}
   }
   #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
   @media (max-width:720px){
     body{padding-bottom:112px;}
-    #heroVp{height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;cursor:auto!important;touch-action:pan-y!important;background:#FDF8F5;}
+    #heroVp{height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;cursor:auto!important;touch-action:pan-y!important;background:#F6F2EC;}
     #heroTrack{display:block!important;height:auto!important;width:100%!important;transform:none!important;transition:none!important;will-change:auto!important;}
     #heroTrack>div{display:none!important;}
-    #heroTrack>div:first-child{display:flex!important;flex-direction:column!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;background:#FDF8F5!important;padding:0!important;}
-    #heroTrack>div:first-child>img{position:relative!important;display:block!important;inset:auto!important;width:calc(100% - 40px)!important;height:260px!important;object-fit:cover!important;object-position:66% 46%!important;border-radius:20px!important;box-shadow:0 16px 36px rgba(14,79,82,.10)!important;margin:0 auto!important;opacity:1!important;filter:none!important;order:2!important;}
+    #heroTrack>div:first-child{display:flex!important;flex-direction:column!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;background:#F6F2EC!important;padding:0!important;}
+    #heroTrack>div:first-child>img{position:relative!important;display:block!important;inset:auto!important;width:100%!important;height:55vh!important;min-height:400px!important;object-fit:cover!important;object-position:66% 30%!important;border-radius:0 0 32px 32px!important;margin:0!important;opacity:1!important;filter:none!important;order:1!important;}
     #heroTrack>div:first-child>div:nth-of-type(1),
     #heroTrack>div:first-child>div:nth-of-type(2),
     #heroTrack>div:first-child>div:nth-of-type(3){display:none!important;}
-    #heroTrack>div:first-child>div:nth-of-type(4){position:relative!important;z-index:2!important;height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;padding:clamp(48px,12vw,64px) 20px 28px!important;background:transparent!important;order:1!important;}
+    #heroTrack>div:first-child>div:nth-of-type(4){position:relative!important;z-index:2!important;height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;padding:42px 24px 32px!important;background:#fff!important;order:2!important;margin:-40px 16px 0!important;border-radius:24px!important;box-shadow:0 12px 32px rgba(14,79,82,.08)!important;}
     #heroTrack>div:first-child>div:nth-of-type(4)>div{max-width:100%!important;}
-    #heroVp h1{font-size:clamp(32px,9.5vw,40px)!important;line-height:.96!important;letter-spacing:-.01em!important;max-width:100%;overflow-wrap:normal;text-wrap:balance;}
-    #heroVp p{font-size:15.5px!important;line-height:1.55!important;max-width:100%!important;margin-top:18px!important;}
+    #heroVp h1{font-size:clamp(32px,9vw,38px)!important;line-height:1.05!important;letter-spacing:-.02em!important;max-width:100%;overflow-wrap:normal;text-wrap:balance;text-align:center!important;}
+    #heroVp p{font-size:16px!important;line-height:1.5!important;max-width:100%!important;margin-top:16px!important;text-align:center!important;}
     #heroVp [data-parallax]{display:none!important;}
     #heroDots{display:none!important;}
+    #heroTrack>div:first-child>div:nth-of-type(4) .mobile-center{justify-content:center!important;text-align:center!important;}
     .hero-mobile-trust{margin-top:24px!important;order:3!important;padding:20px 20px clamp(32px,6vw,48px)!important;}
     #approach,#how,#reviews,#answers{scroll-margin-top:74px!important;}
     #how{padding-top:76px!important;padding-bottom:86px!important;}
@@ -334,22 +336,9 @@
     #answers{padding-top:72px!important;padding-bottom:82px!important;}
     .pbrScroll{scroll-snap-type:x proximity!important;padding-bottom:26px!important;scroll-padding-left:20px;}
   }
-  @supports (height:100svh){
-    @media (max-width:720px){
-      #heroTrack>div:first-child{height:min(600px,calc(100svh - 0px))!important;min-height:560px!important;}
-      #heroTrack>div:first-child>div:nth-of-type(4){min-height:560px!important;}
-    }
-  }
   @media (max-width:520px){
-    #heroTrack>div:first-child{height:590px!important;min-height:550px!important;}
-    #heroTrack>div:first-child>div:nth-of-type(4){min-height:550px!important;padding:60px 18px 82px!important;}
-    #heroTrack>div:first-child>div:nth-of-type(4)>div{max-width:min(100%,340px)!important;}
-    #heroVp h1{font-size:clamp(30px,8.7vw,35px)!important;}
-  }
-  @supports (height:100svh){
-    @media (max-width:520px){
-      #heroTrack>div:first-child{height:min(590px,calc(100svh - 0px))!important;}
-    }
+    #heroTrack>div:first-child>img{height:50vh!important;min-height:360px!important;}
+    #heroVp h1{font-size:clamp(28px,8.5vw,34px)!important;}
   }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
@@ -358,30 +347,29 @@
 <dc-import name="Header" hint-size="100%,66px"></dc-import>
 
 <!-- ===================== HERO CAROUSEL ===================== -->
-<section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
+<section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;margin-top:-72px;">
   <div id="heroVp" style="position:relative;width:100%;height:clamp(620px,90vh,880px);overflow:hidden;cursor:grab;touch-action:pan-y;">
     <div id="heroTrack" style="display:flex;height:100%;width:100%;will-change:transform;">
 
       <!-- SLIDE 1 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-1.webp" alt="Physiotherapist treating a patient's shoulders during a home visit in a bright Mumbai apartment" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.98) 0%,rgba(253,248,245,.94) 35%,rgba(253,248,245,.65) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(600px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>DOCTOR-LED HOME PHYSIOTHERAPY</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">PHYSIOTHERAPY<br>THAT COMES<br>TO YOU.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">Expert, one-on-one care from Dr Rutvi Gandhi, in your own home, across Mumbai's western suburbs.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+          <div style="max-width:min(660px,94%);">
+            <div class="mobile-center" style="display:inline-flex;align-items:center;gap:9px;background:#EAF3EE;color:#0E4F52;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>DOCTOR-LED HOME PHYSIOTHERAPY</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,98px);line-height:.95;letter-spacing:-.03em;color:#0E4F52;">PHYSIOTHERAPY<br>THAT COMES<br>TO YOU.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,20px);line-height:1.55;color:#4A4F4B;margin-top:22px;max-width:480px;">Expert, one-on-one care from Dr Rutvi Gandhi, in your own home, across Mumbai's western suburbs.</p>
+            <div class="mobile-center" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:32px;">
+              <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:15px 28px;border-radius:100px;box-shadow:0 8px 24px rgba(238,123,91,.25);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(238,123,91,.35);">
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                 Chat on WhatsApp
               </a>
-              <a href="#how" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">How it works
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#how" style="display:inline-flex;align-items:center;gap:6px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;padding:10px 0;">How it works <span>&#8594;</span></a>
             </div>
-            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google &middot; MPT, Sports &amp; Musculoskeletal &middot; The same expert, every visit</div>
+            <div class="mobile-center" style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:28px;color:#5A5F5B;font-size:12.5px;font-weight:600;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;font-size:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; MPT Sports &amp; Musculoskeletal &middot; Same expert, every visit</div>
           </div>
         </div>
       </div>
@@ -390,22 +378,22 @@
       <!-- SLIDE 2 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-2.webp" alt="Physiotherapist reviewing a personalised recovery plan on a tablet with a patient at home" loading="lazy" fetchpriority="low" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.98) 0%,rgba(253,248,245,.94) 35%,rgba(253,248,245,.65) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(600px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>WHY PATIENTS SWITCH TO HER</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">THE SAME<br><span style="color:#0E4F52;">EXPERT.</span><br>EVERY VISIT.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">No rotating therapists. One specialist who knows your history, your progress, and your goals — from first visit to full recovery.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="{{ bookHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+          <div style="max-width:min(660px,94%);">
+            <div class="mobile-center" style="display:inline-flex;align-items:center;gap:9px;background:#EAF3EE;color:#0E4F52;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>WHY PATIENTS SWITCH TO HER</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,98px);line-height:.95;letter-spacing:-.03em;color:#0E4F52;">THE SAME<br>EXPERT.<br>EVERY VISIT.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,20px);line-height:1.55;color:#4A4F4B;margin-top:22px;max-width:480px;">No rotating therapists. One specialist who knows your history, your progress, and your goals — from first visit to full recovery.</p>
+            <div class="mobile-center" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:32px;">
+              <a href="{{ bookHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:15px 28px;border-radius:100px;box-shadow:0 8px 24px rgba(238,123,91,.25);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(238,123,91,.35);">
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                 Book a home visit
               </a>
-              <a href="/conditions/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Explore conditions</a>
+              <a href="/conditions/" style="display:inline-flex;align-items:center;gap:6px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;padding:10px 0;">Explore conditions <span>&#8594;</span></a>
             </div>
-            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> One specialist &middot; Your whole recovery</div>
+            <div class="mobile-center" style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:28px;color:#5A5F5B;font-size:12.5px;font-weight:600;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;font-size:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> One specialist &middot; Your whole recovery</div>
           </div>
         </div>
       </div>
@@ -414,31 +402,30 @@
       <!-- SLIDE 3 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-3.webp" alt="Guided resistance-band recovery exercise during an at-home physiotherapy session" loading="lazy" fetchpriority="low" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.98) 0%,rgba(253,248,245,.94) 35%,rgba(253,248,245,.65) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(620px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>WHAT RECOVERY FEELS LIKE HERE</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">BACK TO<br><span style="color:#0E4F52;">THE THINGS</span><br>THAT MATTER.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">Picking up your child. Sleeping through the night. A morning walk without pain. Real goals, with a plan built around your body.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+          <div style="max-width:min(660px,94%);">
+            <div class="mobile-center" style="display:inline-flex;align-items:center;gap:9px;background:#EAF3EE;color:#0E4F52;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>WHAT RECOVERY FEELS LIKE HERE</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,98px);line-height:.95;letter-spacing:-.03em;color:#0E4F52;">BACK TO<br>THE THINGS<br>THAT MATTER.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,20px);line-height:1.55;color:#4A4F4B;margin-top:22px;max-width:480px;">Picking up your child. Sleeping through the night. A morning walk without pain. Real goals, with a plan built around your body.</p>
+            <div class="mobile-center" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:32px;">
+              <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:15px 28px;border-radius:100px;box-shadow:0 8px 24px rgba(238,123,91,.25);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(238,123,91,.35);">
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                 Message Dr Rutvi
               </a>
-              <a href="/about/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Meet Dr Rutvi</a>
+              <a href="/about/" style="display:inline-flex;align-items:center;gap:6px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;padding:10px 0;">Meet Dr Rutvi <span>&#8594;</span></a>
             </div>
-            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Hands-on care &middot; A plan that is yours alone</div>
+            <div class="mobile-center" style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:28px;color:#5A5F5B;font-size:12.5px;font-weight:600;line-height:1.4;max-width:430px;"><span style="color:#EE7B5B;letter-spacing:1px;font-size:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Hands-on care &middot; A plan that is yours alone</div>
           </div>
         </div>
       </div>
 
 
-
     </div>
 
-    <div id="heroDots" style="position:absolute;bottom:clamp(20px,3.5vw,34px);left:clamp(20px,5vw,52px);display:flex;gap:8px;z-index:4;">
+    <div id="heroDots" style="position:absolute;bottom:42px;left:clamp(20px,5vw,52px);display:flex;gap:8px;z-index:4;">
       <span id="hDot0" role="button" aria-label="Slide 1" tabindex="0" style="width:30px;height:4px;border-radius:3px;background:#EE7B5B;cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
       <span id="hDot1" role="button" aria-label="Slide 2" tabindex="0" style="width:16px;height:4px;border-radius:3px;background:rgba(27,32,33,.18);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
       <span id="hDot2" role="button" aria-label="Slide 3" tabindex="0" style="width:16px;height:4px;border-radius:3px;background:rgba(27,32,33,.18);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
@@ -882,3 +869,4 @@ class Component extends DCLogic {
 <script defer src="/site-i18n.min.js"></script>
 </body>
 </html>
+
