@@ -33,9 +33,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="/vendor/react.production.min.js"></script>
-<script src="/vendor/react-dom.production.min.js"></script>
-<script src="/support.js"></script>
+<script defer src="/vendor/react.production.min.js"></script>
+<script defer src="/vendor/react-dom.production.min.js"></script>
+<script defer src="/support.min.js"></script>
 </head>
 <body>
 <x-dc>
@@ -130,6 +130,9 @@
   img{display:block;max-width:100%;}
   a{color:inherit;}
   ::selection{background:#EE7B5B;color:#1B2021;}
+  @supports (content-visibility:auto){
+    section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:720px;}
+  }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 </helmet>
@@ -148,7 +151,7 @@
     <div data-reveal data-delay="40" style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#0E4F52;margin-bottom:18px;">What we treat</div>
     <h1 data-reveal data-delay="80" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(38px,7vw,84px);line-height:.92;letter-spacing:-.02em;color:#1B2021;max-width:15ch;">Expert care for the things that slow you down.</h1>
     <p data-reveal data-delay="140" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,20px);line-height:1.6;color:#4A4F4C;max-width:58ch;margin-top:24px;">From a pulled hamstring to post-surgery rehab, Dr Rutvi treats a full range of musculoskeletal and sports conditions - at home, across Bhayander to Andheri.</p>
-    <a data-reveal data-delay="180" href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:100px;margin-top:28px;">WhatsApp me</a>
+    <a data-reveal data-delay="180" href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:100px;margin-top:28px;">Message Dr Rutvi</a>
   </div>
 </section>
 
@@ -259,9 +262,9 @@
     <div style="position:relative;display:flex;flex-direction:column;gap:12px;">
       <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#0F7A40;color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 24px;border-radius:100px;">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-        WhatsApp me</a>
+        Message Dr Rutvi</a>
       <a href="tel:+918879475065" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid rgba(246,242,236,.3);color:#FDF8F5;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:100px;">Call +91 88794 75065</a>
-      <div style="color:rgba(246,242,236,.6);font-size:12.5px;text-align:center;margin-top:2px;"><span style="color:#EE7B5B;">★</span> 5.0 rated · Same expert, every visit</div>
+      <div style="color:rgba(246,242,236,.6);font-size:12.5px;text-align:center;margin-top:2px;"><span style="color:#EE7B5B;">★</span> 5.0 rated · Home visits by appointment</div>
     </div>
   </div>
 </section>
@@ -305,9 +308,9 @@ class Component extends DCLogic {
   renderVals(){ return { waHref: this.wa }; }
 }
 </script>
-<script src="/site-analytics.js"></script>
-<script src="/google-reviews.js"></script>
-<script src="/voice-widget-loader.js"></script>
-<script src="/site-i18n.js"></script>
+<script defer src="/site-analytics.min.js"></script>
+<script defer src="/google-reviews.min.js"></script>
+<script defer src="/voice-widget-loader.min.js"></script>
+<script defer src="/site-i18n.min.js"></script>
 </body>
 </html>

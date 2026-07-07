@@ -264,6 +264,18 @@
     }
   };
 
+  Object.keys(COPY).forEach(function (lang) {
+    var common = COPY[lang].common;
+    common['Message Dr Rutvi'] = (COPY[lang].about && COPY[lang].about['Talk to Dr Rutvi']) || common['WhatsApp me'];
+    common['Message about this'] = (COPY[lang].condition && COPY[lang].condition['Chat about this']) || common['Message Dr Rutvi'];
+    common['Share what feels difficult, your suburb, and a preferred time.'] = (COPY[lang].home && COPY[lang].home['Tell Dr Rutvi what is hurting. She will take it from there.']) || common['Book a home visit'];
+    common['Home visits by appointment'] = common['Home visits only · by appointment'];
+    common['Appointment-based home visits'] = common['Home visits only · by appointment'];
+    common['5.0 · MPT · Home visits by appointment'] = '5.0 · MPT · ' + (common['Home visits only · by appointment'] || 'Home visits by appointment');
+    common['5.0 · Home visits · Appointment-based'] = '5.0 · ' + (common['Home visits only · by appointment'] || 'Home visits by appointment');
+    common['5.0 rated · Home visits by appointment'] = '5.0 · ' + (common['Home visits only · by appointment'] || 'Home visits by appointment');
+  });
+
   function currentLang() {
     var p = decodeURIComponent(location.pathname || '/').toLowerCase();
     if (p === '/mr' || p.indexOf('/mr/') === 0) return 'mr';
@@ -414,6 +426,9 @@
       setFirstText(slide, [
         'DOCTOR-LED HOME PHYSIOTHERAPY',
         'Doctor-led home physiotherapy',
+        'Specialist-led home physiotherapy',
+        'Care that fits real life',
+        'Clear, consistent plan',
         'Continuity of care',
         'Guided recovery',
         'WHY PATIENTS SWITCH TO HER',
@@ -424,6 +439,9 @@
         '★★★★★ 5.0 · 500+ home patients',
         '★★★★★ 5.0 on Google · MPT, Sports & Musculoskeletal',
         '5.0 on Google · MPT, Sports & Musculoskeletal · The same expert, every visit',
+        '5.0 Google rated · PT, MPT · Sports and musculoskeletal focus · Home visits by appointment',
+        'Your stairs · Your desk · Your routine',
+        'Assessment · Follow-up exercises · Progress checks',
         '5.0 on Google · MPT, Sports & Musculoskeletal',
         'One specialist · Your whole recovery',
         'Hands-on care · A plan that is yours alone'
@@ -445,7 +463,7 @@
   function updateWhatsApp(lang, page) {
     var copy = COPY[lang];
     var msg = lang === 'en'
-      ? 'Hi Dr Rutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
+      ? 'Hi Dr Rutvi, I would like to start with my symptoms and check if a home physiotherapy visit is right for me. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
       : copy.whatsapp;
     if (page === 'conditions') {
       msg = lang === 'en'

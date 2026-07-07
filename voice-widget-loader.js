@@ -17,7 +17,7 @@
       '.pbrVoiceOrb:after{content:"";position:absolute;inset:8px 7px 9px 9px;border-radius:50%;background:linear-gradient(140deg,rgba(255,255,255,.86),rgba(255,255,255,0) 52%);transform:rotate(-18deg);}',
       'body.pbr-voice-collapsed #pbrVoiceAgent{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(12px) scale(.96);}',
       'body.pbr-voice-collapsed #pbrVoiceLauncher{opacity:1;pointer-events:auto;transform:none;}',
-      '@media (max-width:760px){#pbrVoiceAgent{right:10px!important;bottom:10px!important;max-width:calc(100vw - 20px);}#pbrVoiceLauncher{right:14px;bottom:14px;width:58px;height:58px;}.pbrVoiceOrb{width:40px;height:40px;}}'
+      '@media (max-width:760px){#pbrVoiceAgent,#pbrVoiceLauncher{display:none!important;}}'
     ].join('\n');
     document.head.appendChild(style);
 
@@ -87,6 +87,7 @@
 
   function scheduleConvaiWidget() {
     var isMobile = window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+    if (isMobile) return;
     var delay = isMobile ? 15000 : 1800;
     var idle = window.requestIdleCallback || function(cb) { return window.setTimeout(cb, delay); };
     var timer = window.setTimeout(loadConvaiWidget, delay);
