@@ -65,35 +65,58 @@ html, body {
   /* --- PREMIUM HERO ADAPTATION --- */
   /* Instead of chopping the carousel, we allow the hero to scale natively but enhance its presentation */
   #hero {
-    height: 100dvh !important; /* Use dynamic viewport height to fix browser URL bar jumps */
+    height: auto !important;
+    min-height: 100dvh !important; /* Allow it to grow if text is long */
     max-height: none !important;
     border-radius: 0 0 32px 32px !important;
     margin-bottom: 24px;
     box-shadow: 0 12px 40px rgba(14, 79, 82, 0.08);
+    background: #FDF8F5 !important;
   }
   
   #heroVp {
-    height: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
   }
   
-  /* Add a vertical gradient for mobile readability (image is background, text is bottom) */
-  #heroTrack > div::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(253,248,245, 0) 20%, rgba(253,248,245, 0.75) 55%, rgba(253,248,245, 0.98) 90%);
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  /* The inline text container for the hero */
-  #heroTrack > div > div:nth-child(5) {
-    padding-top: 0 !important;
-    padding-bottom: calc(48px + env(safe-area-inset-bottom)) !important;
-    justify-content: flex-end !important;
-    z-index: 2 !important;
+  /* Remove carousel horizontal swiping on mobile, stack everything vertically */
+  #heroTrack > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
   }
 
+  /* Image takes top 50vh, perfectly framed */
+  #heroTrack > div:first-child > img {
+    position: relative !important;
+    height: 55vh !important;
+    min-height: 380px !important;
+    max-height: 500px !important;
+    object-position: 72% 25% !important;
+    border-radius: 0 !important;
+    order: 1 !important;
+  }
+
+  /* Hide gradient overlays since we aren't overlapping text on the image anymore */
+  #heroTrack > div:first-child > div:nth-child(2),
+  #heroTrack > div:first-child > div:nth-child(3),
+  #heroTrack > div:first-child > div:nth-child(4) {
+    display: none !important;
+  }
+
+  /* The inline text container sits neatly below the image on a solid background */
+  #heroTrack > div:first-child > div:nth-child(5) {
+    position: relative !important;
+    order: 2 !important;
+    height: auto !important;
+    padding: 32px 24px calc(48px + env(safe-area-inset-bottom)) !important;
+    background: #FDF8F5 !important;
+    border-radius: 24px 24px 0 0 !important;
+    margin-top: -24px !important; /* Slight overlap for premium look */
+    z-index: 2 !important;
+    justify-content: flex-start !important;
+  }
+  
   /* Force Hero buttons to stack neatly on small screens */
   #heroTrack .mobile-center {
     flex-direction: column !important;
