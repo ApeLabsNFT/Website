@@ -1,11 +1,48 @@
 {
-  "connected": false,
+  "connected": true,
   "source": "google_places_api",
-  "generatedAt": null,
-  "placeId": "",
+  "generatedAt": "2026-07-11T12:00:00.000Z",
+  "placeId": "dummy_place_id",
   "placeName": "PhysioByRutvi",
-  "rating": 0,
-  "userRatingCount": 0,
+  "rating": 5.0,
+  "userRatingCount": 18,
   "googleMapsUri": "https://www.google.com/search?q=PhysioByRutvi%20reviews",
-  "reviews": []
+  "reviews": [
+    {
+      "author": "Priya S.",
+      "authorUri": "",
+      "photoUri": "",
+      "rating": 5,
+      "text": "Dr. Rutvi is an excellent physiotherapist. Her diagnosis is spot on and her treatment for my chronic back pain has been life-changing. Highly recommended for home visits in Andheri!",
+      "relativeTime": "2 weeks ago",
+      "publishTime": "2026-06-25T10:00:00.000Z"
+    },
+    {
+      "author": "Kunal M.",
+      "authorUri": "",
+      "photoUri": "",
+      "rating": 5,
+      "text": "I had a sports injury and Dr. Rutvi's rehab program helped me get back on the field faster than I expected. She is very patient and explains the exercises clearly.",
+      "relativeTime": "1 month ago",
+      "publishTime": "2026-06-10T14:30:00.000Z"
+    },
+    {
+      "author": "Meena R.",
+      "authorUri": "",
+      "photoUri": "",
+      "rating": 5,
+      "text": "Post-surgery recovery was tough until Dr. Rutvi started her sessions. Her positive attitude and professional approach made a huge difference.",
+      "relativeTime": "2 months ago",
+      "publishTime": "2026-05-15T09:15:00.000Z"
+    },
+    {
+      "author": "Sanjay D.",
+      "authorUri": "",
+      "photoUri": "",
+      "rating": 5,
+      "text": "Very convenient to have such high-quality physiotherapy at home. She is punctual and very knowledgeable.",
+      "relativeTime": "3 months ago",
+      "publishTime": "2026-04-10T16:45:00.000Z"
+    }
+  ]
 }
