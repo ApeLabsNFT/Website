@@ -149,6 +149,10 @@ function normalizeBody(source, type) {
       .replace(/One specialist\.<br>Your corner\./g, 'Clinical standards.<br>Personal care.')
       .replace(/She founded Physio by Rutvi on a simple belief:[\s\S]*?comfort of your own home\./g, 'She founded PhysioByRutvi to make careful, assessment-led physiotherapy easier to access at home. Dr Rutvi leads the clinical standards while visits may be delivered by a suitably matched physiotherapist from the care team.')
       .replace(/Message Dr Rutvi today, a physiotherapist matched to the patient’s needs, at your door, every visit\./g, 'Tell our care team what feels difficult, where you live and when you would prefer help. We will guide the next appropriate step.')
+      .replace(/Message Dr Rutvi today, the same specialist, at your door, every visit\./g, 'Tell our care team what feels difficult, where you live and when you would prefer help. We will guide the next appropriate step.')
+      .replace(/Tell Rutvi what's hurting\. One quick message, she replies personally, usually the same day\./g, 'Tell the care team what feels difficult, where care is needed and your preferred time. We will respond as availability allows.')
+      .replace(/Rutvi visits your home/g, 'A physiotherapist visits your home')
+      .replace(/The same specialist arrives with everything needed, assessment, hands-on treatment, and a plan you can follow\./g, 'A matched physiotherapist arrives for assessment, appropriate treatment and a plan you can follow between visits.')
       .replace(/Chat on WhatsApp/g, 'Message the Care Team');
   }
 
@@ -158,6 +162,10 @@ function normalizeBody(source, type) {
       .replace(/src="\/assets\/rutvi-3-480\.webp"/g, 'src="/assets/img/dr-rutvi-founder-about-portrait.webp"')
       .replace(/src="\/assets\/rutvi-2-480\.webp"/g, 'src="/assets/img/dr-rutvi-founder-at-work.webp"')
       .replace(/alt="Dr Rutvi K Gandhi \(PT\)"/g, 'alt="Dr Rutvi K Gandhi (PT), Founder and Clinical Lead"')
+      .replace(/The Person Who<br><span style="color:#0E4F52;">Assesses You<\/span><br>Guides Recovery\./g, 'The Clinical Lead<br><span style="color:#0E4F52;">Setting Care</span><br>Standards.')
+      .replace(/She brings physiotherapy into the patient's home/g, 'Through PhysioByRutvi, she brings clinically led physiotherapy into the patient’s home')
+      .replace(/Dr Rutvi explains the problem, guides treatment, and helps you understand what to do between visits/g, 'The treating physiotherapist explains the plan, guides treatment and helps you understand what to do between visits')
+      .replace(/The person who assesses you continues to guide your plan, progress, and follow-up\./g, 'Clinical information and goals are carried through a shared care plan, with follow-up adjusted as needed.')
       .replace(/Talk to Dr Rutvi/g, 'Talk to the Care Team')
       .replace(/Message Dr Rutvi/g, 'Message the Care Team');
 

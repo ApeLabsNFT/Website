@@ -27,7 +27,9 @@ const banned = [
   '[MR DRAFT:', '[GU DRAFT:',
   'Same expert, every visit', 'same specialist, every visit',
   'No rotating aggregator therapists', 'Guaranteed cure', 'guaranteed cure',
-  'eradicate pain', 'instant recovery'
+  'eradicate pain', 'instant recovery', 'Rutvi visits your home',
+  'she replies personally', 'The Person Who', 'The person who assesses you',
+  'Message Dr Rutvi today, the same specialist'
 ];
 
 let failed = false;
