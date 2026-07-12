@@ -130,6 +130,8 @@ a:focus-visible, button:focus-visible {
   transition: opacity .45s cubic-bezier(.22, 1, .36, 1), transform .45s cubic-bezier(.22, 1, .36, 1), visibility .45s;
 }
 .pbr-menu[data-open="true"] { visibility: visible; opacity: 1; transform: none; }
+.pbr-menu .pbr-brand__name { color: var(--soft-cream); }
+.pbr-menu .pbr-icon-btn { color: var(--soft-cream); border-color: rgba(246, 242, 236, .32); }
 .pbr-menu__inner { min-height: 100%; padding-block: 30px 44px; display: flex; flex-direction: column; }
 .pbr-menu__top { display: flex; align-items: center; justify-content: space-between; }
 .pbr-menu__grid { margin-block: auto; padding-block: 42px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 64px; align-items: center; }

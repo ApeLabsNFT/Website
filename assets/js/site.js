@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const setMenu = (open) => {
     if (!menu || !openButton) return;
     menu.dataset.open = String(open);
-    menu.inert = !open;
+    if (open) menu.removeAttribute('inert');
+    else menu.setAttribute('inert', '');
     openButton.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('menu-open', open);
     if (open) {
       returnFocus = document.activeElement;
-      requestAnimationFrame(() => (closeButton || focusables()[0])?.focus());
+      (closeButton || focusables()[0])?.focus({ preventScroll: true });
     } else {
       (returnFocus || openButton).focus();
     }
