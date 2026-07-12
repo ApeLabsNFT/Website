@@ -15,9 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;}
-  #pbrLangSwitch a,#pbrLangSwitchMenu a{transition:background .25s,color .25s,border-color .25s;}
-  @media (max-width:760px){#pbrLangSwitch{display:none!important;}#pbrLangSwitchMenu{display:flex!important;}}
-</style>
+  </style>
 </helmet>
 
 <div id="pbrProgress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#EE7B5B;z-index:95;transition:width .1s linear;"></div>
@@ -29,21 +27,15 @@
       <img src="/assets/pbr-logo-mark-96.webp" alt="" loading="eager" decoding="async" width="44" height="44" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#FDF8F5;padding:3px;box-shadow:0 1px 0 rgba(27,32,33,.06);flex:0 0 auto;">
       <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;min-width:0;">
         <span style="font-family:'Fraunces',serif;font-weight:700;font-size:19px;letter-spacing:.24em;color:#0E4F52;">PHYSIO</span>
-        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:8px;letter-spacing:.32em;color:#B64C31;margin-top:5px;">BY RUTVI</span>
+        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:8px;letter-spacing:.32em;color:#EE7B5B;margin-top:5px;">BY RUTVI</span>
       </span>
     </a>
-
-    <nav id="pbrLangSwitch" aria-label="Language" style="display:flex;align-items:center;gap:4px;margin-left:auto;margin-right:clamp(4px,1vw,10px);padding:4px;border:1px solid rgba(14,79,82,.13);border-radius:100px;background:rgba(253,248,245,.72);">
-      <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.08em;padding:7px 9px;border-radius:100px;">EN</a>
-      <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">मराठी</a>
-      <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">ગુજરાતી</a>
-    </nav>
 
     <div style="display:flex;align-items:center;gap:clamp(8px,1.6vw,12px);flex:0 0 auto;">
       <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(14,79,82,.2);display:flex;align-items:center;justify-content:center;color:#0E4F52;text-decoration:none;transition:background .3s,border-color .3s,color .3s;" style-hover="background:#0E4F52;border-color:#0E4F52;color:#FDF8F5;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </a>
-      <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20concern%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 17px;border-radius:100px;white-space:nowrap;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;box-shadow:0 6px 16px rgba(238,123,91,.28);" style-hover="transform:translateY(-1px);box-shadow:0 10px 22px rgba(238,123,91,.36);">
+      <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 17px;border-radius:100px;white-space:nowrap;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;box-shadow:0 6px 16px rgba(238,123,91,.28);" style-hover="transform:translateY(-1px);box-shadow:0 10px 22px rgba(238,123,91,.36);">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
         <span id="pbrWaLabel">Message Dr Rutvi</span>
       </a>
@@ -65,7 +57,7 @@
     <div style="display:flex;align-items:center;justify-content:space-between;">
       <div style="display:flex;align-items:center;gap:11px;">
         <img src="/assets/pbr-logo-mark-96.webp" alt="" loading="eager" decoding="async" width="40" height="40" style="width:40px;height:40px;border-radius:11px;object-fit:cover;background:#FDF8F5;flex:0 0 auto;">
-        <div style="font-family:'Fraunces',serif;font-weight:600;font-size:16px;letter-spacing:.15em;color:#FDF8F5;">PHYSIO <span style="color:#F39A7B;font-size:9px;letter-spacing:.26em;">BY RUTVI</span></div>
+        <div style="font-family:'Fraunces',serif;font-weight:600;font-size:16px;letter-spacing:.15em;color:#FDF8F5;">PHYSIO <span style="color:#EE7B5B;font-size:9px;letter-spacing:.26em;">BY RUTVI</span></div>
       </div>
       <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(246,242,236,.28);background:transparent;color:#FDF8F5;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s;" style-hover="background:rgba(246,242,236,.12);transform:rotate(90deg);">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -95,17 +87,10 @@
         </nav>
 
       <div style="background:rgba(253,248,245,.06);border:1px solid rgba(246,242,236,.14);border-radius:24px;padding:clamp(22px,3vw,32px);">
-        <div id="pbrLangSwitchMenu" aria-label="Language" style="display:none;align-items:center;gap:6px;margin-bottom:20px;padding:5px;border:1px solid rgba(246,242,236,.16);border-radius:100px;background:rgba(253,248,245,.06);">
-          <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;letter-spacing:.08em;padding:9px 10px;border-radius:100px;">EN</a>
-          <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">मराठी</a>
-          <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">ગુજરાતી</a>
-        </div>
         <div style="font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#CFE3D8;margin-bottom:14px;">Book a home visit</div>
         <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2.4vw,25px);line-height:1.28;color:#FDF8F5;margin:0 0 20px;">Share what feels difficult, your suburb, and a preferred time.</p>
-        <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20concern%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#0F7A40;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:15px;border-radius:100px;margin-bottom:11px;">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-          Message Dr Rutvi
-        </a>
+        <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#0F7A40;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:15px;border-radius:100px;margin-bottom:11px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>Book a Consultation</a>
         <a href="tel:+918879475065" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid rgba(246,242,236,.28);color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:100px;">Call +91 88794 75065</a>
         <div style="display:flex;align-items:center;gap:8px;margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;"><span style="color:#EE7B5B;">★★★★★</span> 5.0 · MPT · Home visits by appointment</div>
       </div>
@@ -125,47 +110,8 @@
 class Component extends DCLogic {
   PHONE = "918879475065";
   NAMES = { 'back-neck':'back and neck pain','sports-injury':'a sports injury','post-surgery':'post-surgery rehab','knee-joint':'knee or joint pain','sciatica':'sciatica','posture':'posture correction','frozen-shoulder':'frozen shoulder','geriatric':'geriatric mobility' };
-  wa = this.waLink();
-
-  currentLang(){
-    const p = decodeURIComponent(location.pathname || '/').toLowerCase();
-    if (p === '/mr' || p.startsWith('/mr/')) return 'mr';
-    if (p === '/gu' || p.startsWith('/gu/')) return 'gu';
-    return 'en';
-  }
-  cleanPath(){
-    let p = decodeURIComponent(location.pathname || '/');
-    p = p.replace(/^\/(mr|gu)(?=\/|$)/, '');
-    if (!p) p = '/';
-    return p;
-  }
-  langHref(lang){
-    const clean = this.cleanPath();
-    const hash = location.hash || '';
-    if (lang === 'en') return clean + hash;
-    return '/' + lang + (clean === '/' ? '/' : clean) + hash;
-  }
-  paintLanguage = () => {
-    const active = this.currentLang();
-    document.querySelectorAll('[data-pbr-lang-option]').forEach((a) => {
-      const on = a.getAttribute('data-pbr-lang-option') === active;
-      a.setAttribute('aria-current', on ? 'page' : 'false');
-      a.style.background = on ? '#EE7B5B' : 'transparent';
-      a.style.color = on ? '#1B2021' : (a.closest('#pbrLangSwitchMenu') ? '#FDF8F5' : '#0E4F52');
-    });
-  };
-
-  waLink(){
-    const path = decodeURIComponent(location.pathname || '').toLowerCase();
-    const slug = (location.hash || '').replace('#','').trim();
-    let msg = "Hi Dr Rutvi, I would like to start with my symptoms. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.";
-    if (path.includes('condition') && slug && this.NAMES[slug]) msg = "Hi Dr Rutvi, I need help with " + this.NAMES[slug] + " and would like to check home physiotherapy availability. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.";
-    else if (path.includes('conditions')) msg = "Hi Dr Rutvi, I am exploring the conditions page. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___. Can home physiotherapy help?";
-    else if (path.includes('about')) msg = "Hi Dr Rutvi, I read about your qualifications and services. I would like to discuss my recovery and book a home visit. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.";
-    return "https://wa.me/" + this.PHONE + "?text=" + encodeURIComponent(msg);
-  }
-
-  setOverlay(open){
+  wa = "https://calendly.com/gandhirutvi13/30min";
+setOverlay(open){
     const o = document.getElementById('pbrOverlay');
     if(!o) return;
     o.setAttribute('data-open', open ? '1' : '0');
@@ -199,9 +145,8 @@ class Component extends DCLogic {
     window.addEventListener('scroll', this.onScroll, { passive:true });
     window.addEventListener('resize', this.onResize);
     window.addEventListener('keydown', this.onKey);
-    this.wa = this.waLink();
-    this.onScroll(); this.onResize(); this.paintLanguage();
-  }
+    this.wa = "https://calendly.com/gandhirutvi13/30min";
+this.onScroll(); this.onResize(); }
   componentWillUnmount(){
     window.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('resize', this.onResize);
