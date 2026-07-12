@@ -47,6 +47,12 @@
         event_label: href
       });
     }
+    if (href.indexOf('calendly.com/') !== -1) {
+      window.gtag('event', 'click_calendly', {
+        event_category: 'lead',
+        event_label: 'free_15_minute_consultation'
+      });
+    }
     if (href.indexOf('tel:') === 0) {
       window.gtag('event', 'click_call', {
         event_category: 'lead',
