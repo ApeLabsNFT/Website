@@ -32,11 +32,15 @@ const TEMPLATE = \`<!DOCTYPE html>
 </main>
 
 <dc-import name="Footer"></dc-import>
+<div id="pbrVoiceAgent" style="position:relative;z-index:90;">
+  <elevenlabs-convai agent-id="agent_4701kwskch1ker1v5s2mpjdabvwq"></elevenlabs-convai>
+</div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {}
 </script>
 <script defer src="/site-analytics.min.js"></script>
+<script defer src="/voice-widget-loader.js"></script>
 </body>
 </html>\`;
 
