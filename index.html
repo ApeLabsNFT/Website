@@ -379,8 +379,8 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  wa = "https://wa.me/918879475065?text=" + encodeURIComponent("Hi Rutvi, I'd like to book a home physiotherapy session.");
-  book = "https://wa.me/918879475065?text=" + encodeURIComponent("Hi Rutvi, I'd like to book a home visit. My name is ___, suburb ___, and I need help with ___.");
+  wa = "https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20book%20a%20home%20physiotherapy%20session.";
+  book = "https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20book%20a%20home%20visit.%20My%20name%20is%20___%2C%20suburb%20___%2C%20and%20I%20need%20help%20with%20___.";
 
   componentDidMount(){
     this.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
