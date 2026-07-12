@@ -194,7 +194,6 @@
 </helmet>
 <dc-import name="Header" hint-size="100%,66px"></dc-import>
 <main id="main-content">
-<main id="main-content">
 <!-- ===================== HERO CAROUSEL ===================== -->
 <section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
   <div id="heroVp" style="position:relative;width:100%;height:clamp(800px,100vh,960px);overflow:hidden;cursor:grab;touch-action:pan-y;">
@@ -535,6 +534,9 @@
     <div data-reveal data-delay="200" style="display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:30px;color:rgba(246,242,236,.7);font-size:13px;font-weight:500;"><span>Private first message</span><span>&middot;</span><span>Appointment-based home visits</span><span>&middot;</span><span>Clear next step</span></div>
   </div>
 </section>
+</section>
+</main>
+<dc-import name="MobileCTA"></dc-import>
 <dc-import name="Footer" hint-size="100%,520px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -582,7 +584,7 @@ class Component extends DCLogic {
   initReveal(){
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
     if (this.reduce) return;
-    els.forEach((el) => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1)'; el.setAttribute('data-rvl','1'); });
+    /* removed opacity hiding */
     const reveal = (el) => {
       if (el.getAttribute('data-rvl') !== '1') return;
       el.setAttribute('data-rvl','0');
