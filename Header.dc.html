@@ -9,153 +9,53 @@
 </head>
 <body>
 <x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;}
-  </style>
-</helmet>
 
-<div id="pbrProgress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#EE7B5B;z-index:95;transition:width .1s linear;"></div>
+<header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:var(--color-cream);border-bottom:1px solid rgba(0,0,0,0.05);">
+  <div class="site-container" style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;">
 
-<header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:rgba(253,248,245,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(27,32,33,.07);transition:box-shadow .4s,background .4s;">
-  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1320px;margin:0 auto;padding:13px clamp(16px,4.5vw,52px);">
-
-    <a href="/" aria-label="PhysioByRutvi home" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 1 auto;min-width:0;">
-      <img src="/assets/pbr-logo-mark-96.webp" alt="" loading="eager" decoding="async" width="44" height="44" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#FDF8F5;padding:3px;box-shadow:0 1px 0 rgba(27,32,33,.06);flex:0 0 auto;">
-      <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;min-width:0;">
-        <span style="font-family:'Fraunces',serif;font-weight:700;font-size:19px;letter-spacing:.24em;color:#0E4F52;">PHYSIO</span>
-        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:8px;letter-spacing:.32em;color:#EE7B5B;margin-top:5px;">BY RUTVI</span>
+    <!-- Logo -->
+    <a href="/" aria-label="PhysioByRutvi home" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="/assets/pbr-logo-mark-96.webp" alt="Logo" width="44" height="44" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:var(--color-white);padding:4px;box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+      <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;">
+        <span style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.2em;color:var(--color-teal);">PHYSIO</span>
+        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:9px;letter-spacing:0.3em;color:var(--color-coral);margin-top:4px;">BY RUTVI</span>
       </span>
     </a>
 
-    <div style="display:flex;align-items:center;gap:clamp(8px,1.6vw,12px);flex:0 0 auto;">
-      <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(14,79,82,.2);display:flex;align-items:center;justify-content:center;color:#0E4F52;text-decoration:none;transition:background .3s,border-color .3s,color .3s;" style-hover="background:#0E4F52;border-color:#0E4F52;color:#FDF8F5;">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <!-- Desktop Nav (Hidden on Mobile) -->
+    <nav class="desktop-nav" style="display:none; gap:24px; align-items:center;">
+        <a href="/" style="text-decoration:none; color:var(--color-teal); font-weight:600;">Home</a>
+        <a href="#how" style="text-decoration:none; color:var(--color-teal); font-weight:600;">How it Works</a>
+        <a href="/conditions/back-neck-pain/" style="text-decoration:none; color:var(--color-teal); font-weight:600;">Conditions</a>
+    </nav>
+
+    <!-- CTAs -->
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:44px;height:44px;border-radius:50%;border:1.5px solid var(--color-teal);display:flex;align-items:center;justify-content:center;color:var(--color-teal);text-decoration:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </a>
-      <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 17px;border-radius:100px;white-space:nowrap;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;box-shadow:0 6px 16px rgba(238,123,91,.28);" style-hover="transform:translateY(-1px);box-shadow:0 10px 22px rgba(238,123,91,.36);">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-        <span id="pbrWaLabel">Message Dr Rutvi</span>
+      <a href="https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20ask%20about%20a%20home%20physiotherapy%20session." target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:var(--color-coral);color:var(--color-ink);text-decoration:none;font-weight:600;font-size:14px;padding:12px 20px;border-radius:100px;box-shadow:0 4px 12px rgba(238,123,91,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="desktop-only" style="display:none;">Message Dr Rutvi</span>
       </a>
-      <button onClick="{{ toggleMenu }}" aria-label="Open menu" style="width:44px;height:44px;border-radius:50%;background:#0E4F52;border:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4.5px;cursor:pointer;flex:0 0 auto;transition:background .3s;" style-hover="background:#0A3A3C;">
-        <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
-        <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
-        <span style="width:11px;height:2px;background:#EE7B5B;border-radius:2px;align-self:flex-start;margin-left:9px;"></span>
-      </button>
+      <!-- Mobile menu button is currently removed to keep layout simple and resilient. The main actions are easily accessible. -->
     </div>
   </div>
 </header>
+<style>
+@media (min-width: 1024px) {
+    .desktop-nav { display: flex !important; }
+    .desktop-only { display: inline-block !important; }
+}
+</style>
 
-<div id="pbrOverlay" data-open="0" style="position:fixed;inset:0;z-index:90;background:#0E4F52;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1);overflow-y:auto;">
-  <div style="position:absolute;bottom:-30px;left:-60px;width:560px;max-width:130vw;pointer-events:none;">
-    <svg viewBox="0 0 560 260" fill="none" width="100%"><path d="M20 220 C 160 40, 400 40, 540 220" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round" opacity=".5"/><path d="M70 230 C 190 100, 380 100, 500 230" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".38"/></svg>
-  </div>
-
-  <div style="position:relative;min-height:100%;display:flex;flex-direction:column;max-width:1320px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(20px,5vw,52px) clamp(28px,5vw,48px);">
-    <div style="display:flex;align-items:center;justify-content:space-between;">
-      <div style="display:flex;align-items:center;gap:11px;">
-        <img src="/assets/pbr-logo-mark-96.webp" alt="" loading="eager" decoding="async" width="40" height="40" style="width:40px;height:40px;border-radius:11px;object-fit:cover;background:#FDF8F5;flex:0 0 auto;">
-        <div style="font-family:'Fraunces',serif;font-weight:600;font-size:16px;letter-spacing:.15em;color:#FDF8F5;">PHYSIO <span style="color:#EE7B5B;font-size:9px;letter-spacing:.26em;">BY RUTVI</span></div>
-      </div>
-      <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(246,242,236,.28);background:transparent;color:#FDF8F5;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s;" style-hover="background:rgba(246,242,236,.12);transform:rotate(90deg);">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-
-    <nav style="margin:auto 0;padding:clamp(24px,5vw,40px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,60px);align-items:center;">
-        <nav style="display:flex;flex-direction:column;margin-bottom:28px;">
-          <a href="/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">01</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Home</span>
-          </a>
-          <a href="/conditions/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">02</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Conditions</span>
-          </a>
-          <a href="/how-care-works/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">03</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">How Care Works</span>
-          </a>
-          <a href="/about/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">04</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">About Dr Rutvi</span>
-          </a>
-          <a href="/service-areas/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">05</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Service Areas</span>
-          </a>
-          <a href="/faqs/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">06</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">FAQs</span>
-          </a>
-        </nav>
-
-      <div style="background:rgba(253,248,245,.06);border:1px solid rgba(246,242,236,.14);border-radius:24px;padding:clamp(22px,3vw,32px);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#CFE3D8;margin-bottom:14px;">Book a home visit</div>
-        <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2.4vw,25px);line-height:1.28;color:#FDF8F5;margin:0 0 20px;">Share what feels difficult, your suburb, and a preferred time.</p>
-        <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#0F7A40;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:15px;border-radius:100px;margin-bottom:11px;">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>Book a Consultation</a>
-        <a href="tel:+918879475065" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid rgba(246,242,236,.28);color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:100px;">Call +91 88794 75065</a>
-        <div style="display:flex;align-items:center;gap:8px;margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;"><span style="color:#EE7B5B;">★★★★★</span> 5.0 · MPT · Home visits by appointment</div>
-      </div>
-    </nav>
-
-    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding-top:20px;border-top:1px solid rgba(246,242,236,.12);color:rgba(246,242,236,.62);font-size:12.5px;">
-      <span>Serving Bhayander to Andheri · Home visits by appointment</span>
-      <a href="https://github.com/ApeLabsNFT" target="_blank" rel="noopener" style="color:#EE7B5B;text-decoration:none;transition:color .3s;display:flex;align-items:center;gap:6px;" style-hover="color:#FDF8F5;">
-        Engineered by Ape Labs Org
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
 </x-dc>
+
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  PHONE = "918879475065";
-  NAMES = { 'back-neck':'back and neck pain','sports-injury':'a sports injury','post-surgery':'post-surgery rehab','knee-joint':'knee or joint pain','sciatica':'sciatica','posture':'posture correction','frozen-shoulder':'frozen shoulder','geriatric':'geriatric mobility' };
-  wa = "https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.";
-setOverlay(open){
-    const o = document.getElementById('pbrOverlay');
-    if(!o) return;
-    o.setAttribute('data-open', open ? '1' : '0');
-    o.style.opacity = open ? '1' : '0';
-    o.style.pointerEvents = open ? 'auto' : 'none';
-    o.style.transform = open ? 'translateY(0)' : 'translateY(-6px)';
-    try { document.body.style.overflow = open ? 'hidden' : ''; } catch(e){}
-  }
-  toggleMenu = () => {
-    const o = document.getElementById('pbrOverlay');
-    this.setOverlay(!o || o.getAttribute('data-open') !== '1');
-  };
-  closeMenu = () => this.setOverlay(false);
-
-  onScroll = () => {
-    const bar = document.getElementById('pbrProgress');
-    const h = document.getElementById('pbrHeader');
-    const doc = document.documentElement;
-    const max = (doc.scrollHeight - window.innerHeight) || 1;
-    const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
-    if (bar) bar.style.width = pct + '%';
-    if (h) h.style.boxShadow = window.scrollY > 8 ? '0 10px 30px rgba(14,79,82,.08)' : 'none';
-  };
-  onResize = () => {
-    const l = document.getElementById('pbrWaLabel');
-    if (l) l.style.display = window.innerWidth < 520 ? 'none' : 'inline';
-  };
-  onKey = (e) => { if (e.key === 'Escape') this.closeMenu(); };
-
   componentDidMount(){
-    window.addEventListener('scroll', this.onScroll, { passive:true });
-    window.addEventListener('resize', this.onResize);
-    window.addEventListener('keydown', this.onKey);
-    this.wa = "https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.";
-this.onScroll(); this.onResize(); }
-  componentWillUnmount(){
-    window.removeEventListener('scroll', this.onScroll);
-    window.removeEventListener('resize', this.onResize);
-    window.removeEventListener('keydown', this.onKey);
-    try { document.body.style.overflow = ''; } catch(e){}
   }
-  renderVals(){ return { waHref: this.wa, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu }; }
 }
 </script>
 </body>
 </html>
-

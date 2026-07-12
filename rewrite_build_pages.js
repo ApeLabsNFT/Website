@@ -1,7 +1,9 @@
-import fs from 'fs';
+const fs = require('fs');
+
+const mjs = `import fs from 'fs';
 import path from 'path';
 
-const TEMPLATE = `<!DOCTYPE html>
+const TEMPLATE = \`<!DOCTYPE html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
@@ -36,14 +38,14 @@ class Component extends DCLogic {}
 </script>
 <script defer src="/site-analytics.min.js"></script>
 </body>
-</html>`;
+</html>\`;
 
 const pages = [
   {
     path: 'privacy-policy/index.html',
     title: 'Privacy Policy | PhysioByRutvi',
     desc: 'Privacy Policy for PhysioByRutvi.',
-    content: `
+    content: \`
       <div style="max-width:800px; margin:0 auto;">
         <h1 style="margin-bottom:40px;">Privacy Policy</h1>
         <div style="font-size:17px; color:var(--color-ink); line-height:1.6;">
@@ -56,13 +58,13 @@ const pages = [
           <p>For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at support@physiobyrutvi.in.</p>
         </div>
       </div>
-    `
+    \`
   },
   {
     path: 'terms/index.html',
     title: 'Terms of Service | PhysioByRutvi',
     desc: 'Terms of Service for PhysioByRutvi.',
-    content: `
+    content: \`
       <div style="max-width:800px; margin:0 auto;">
         <h1 style="margin-bottom:40px;">Terms of Service</h1>
         <div style="font-size:17px; color:var(--color-ink); line-height:1.6;">
@@ -76,7 +78,7 @@ const pages = [
           <p>Questions about the Terms of Service should be sent to us at support@physiobyrutvi.in.</p>
         </div>
       </div>
-    `
+    \`
   }
 ];
 
@@ -84,7 +86,7 @@ const conditions = [
     { slug: 'back-neck-pain', name: 'Back & Neck Pain', desc: 'Relief for acute spasms, slipped discs, sciatica, and chronic postural stiffness.', img: 'cond-1.webp' },
     { slug: 'sports-injury', name: 'Sports Injuries', desc: 'Rehabilitation for ligament tears, muscle strains, and joint sprains.', img: 'cond-2.webp' },
     { slug: 'post-surgery-rehabilitation', name: 'Post-Surgery Rehabilitation', desc: 'Guided recovery after joint replacements, ligament repairs, and fractures.', img: 'cond-3.webp' },
-    { slug: 'knee-joint-pain', name: 'Knee & Joint Pain', desc: 'Treatment for arthritis, runner\'s knee, meniscus tears, and general joint stiffness.', img: 'cond-1.webp' },
+    { slug: 'knee-joint-pain', name: 'Knee & Joint Pain', desc: 'Treatment for arthritis, runner\\'s knee, meniscus tears, and general joint stiffness.', img: 'cond-1.webp' },
     { slug: 'sciatica', name: 'Sciatica', desc: 'Specialized therapy to relieve nerve pain radiating down the leg.', img: 'cond-1.webp' },
     { slug: 'posture', name: 'Posture & Work-Related Discomfort', desc: 'Corrective exercises for text neck, rounded shoulders, and desk-job stiffness.', img: 'cond-1.webp' },
     { slug: 'frozen-shoulder', name: 'Frozen Shoulder', desc: 'Progressive mobilization to restore full range of motion and reduce pain.', img: 'cond-2.webp' },
@@ -93,23 +95,23 @@ const conditions = [
 
 conditions.forEach(c => {
     pages.push({
-        path: `conditions/${c.slug}/index.html`,
-        title: `${c.name} Physiotherapy at Home - Mumbai | PhysioByRutvi`,
+        path: \`conditions/\${c.slug}/index.html\`,
+        title: \`\${c.name} Physiotherapy at Home - Mumbai | PhysioByRutvi\`,
         desc: c.desc,
-        content: `
+        content: \`
             <div style="max-width:800px; margin:0 auto; text-align:center;">
                 <p class="eyebrow" style="font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-teal);margin-bottom:16px;">Condition Guide</p>
-                <h1 style="margin-bottom:24px;">${c.name} Physiotherapy</h1>
-                <p style="font-size:18px; line-height:1.6; margin-bottom:48px;">${c.desc}</p>
-                <img src="/assets/img/${c.img}" alt="${c.name}" style="width:100%; height:auto; border-radius:var(--radius-medium); margin-bottom:48px;">
+                <h1 style="margin-bottom:24px;">\${c.name} Physiotherapy</h1>
+                <p style="font-size:18px; line-height:1.6; margin-bottom:48px;">\${c.desc}</p>
+                <img src="/assets/img/\${c.img}" alt="\${c.name}" style="width:100%; height:auto; border-radius:var(--radius-medium); margin-bottom:48px;">
                 <h2 style="margin-bottom:24px;">Get Assessment-Led Care at Home</h2>
                 <p style="margin-bottom:32px;">Our clinical team matches your condition with a highly qualified practitioner who will visit you at home.</p>
                 <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
                     <a href="#calendly-popup" class="btn-primary">Book a Free 15-Minute Call</a>
-                    <a href="https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20ask%20about%20home%20physiotherapy%20for%20${encodeURIComponent(c.name.toLowerCase())}." class="btn-secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                    <a href="https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20ask%20about%20home%20physiotherapy%20for%20\${encodeURIComponent(c.name.toLowerCase())}." class="btn-secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
                 </div>
             </div>
-        `
+        \`
     });
 });
 
@@ -141,3 +143,5 @@ pages.forEach(p => {
 });
 
 console.log('Done generating static pages.');
+`;
+fs.writeFileSync('build_pages.mjs', mjs);

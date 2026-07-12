@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..800&display=swap');
+
+:root {
+  --color-teal: #0E4F52;
+  --color-teal-dark: #083F42;
+  --color-coral: #EE7B5B;
+  --color-cream: #F6F2EC;
+  --color-ink: #1B2021;
+  --color-white: #FFFFFF;
+
+  --container-width: 1200px;
+  --container-padding-desktop: 48px;
+  --container-padding-tablet: 32px;
+  --container-padding-mobile: 20px;
+
+  --section-space-desktop: 112px;
+  --section-space-tablet: 80px;
+  --section-space-mobile: 56px;
+
+  --radius-small: 12px;
+  --radius-medium: 20px;
+  --radius-large: 28px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-ink);
+    background-color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+    margin-top: 0;
+    color: var(--color-teal);
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 56px);
+}
+h2 {
+    font-size: clamp(28px, 4vw, 42px);
+}
+h3 {
+    font-size: clamp(24px, 3vw, 32px);
+}
+p {
+    font-size: clamp(16px, 1.1vw, 18px);
+    line-height: 1.6;
+    margin-top: 0;
+    max-width: 75ch; /* 55-75 characters */
+}
+
+.site-container {
+  width: min(100% - 40px, var(--container-width));
+  margin-inline: auto;
+  padding: 0 var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+@media (min-width: 1024px) {
+  .site-container {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
+
+.section-padding {
+  padding-top: var(--section-space-mobile);
+  padding-bottom: var(--section-space-mobile);
+}
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: var(--section-space-tablet);
+    padding-bottom: var(--section-space-tablet);
+  }
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: var(--section-space-desktop);
+    padding-bottom: var(--section-space-desktop);
+  }
+}
+
+/* Primary CTA Button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: var(--color-coral);
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 26px;
+    border-radius: 100px;
+    min-height: 44px;
+    box-shadow: 0 12px 28px rgba(238, 123, 91, 0.32);
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(238, 123, 91, 0.4);
+}
+
+/* Secondary CTA Button (WhatsApp) */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366; /* WhatsApp Green */
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 100px;
+    min-height: 44px;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* Base image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Grid Layouts */
+.grid-50-50 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+}
+@media (min-width: 1024px) {
+    .grid-50-50 {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+    }
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+@media (min-width: 768px) {
+    .grid-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+@media (min-width: 1024px) {
+    .grid-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile Nav Hidden by default */
+.mobile-nav {
+    display: none;
+}
+.mobile-nav.open {
+    display: flex;
+}

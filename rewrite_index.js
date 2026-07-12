@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const html = `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
@@ -112,14 +114,14 @@
     <div class="site-container">
       <h2 class="text-center" style="margin-bottom:48px;">How We Can Help</h2>
       <div class="grid-cards">
-        <a href="/conditions/back-neck-pain/" style="text-decoration:none; color:inherit;">
+        <a href="/conditions/back-and-neck-pain/" style="text-decoration:none; color:inherit;">
           <div class="card">
             <img src="/assets/img/cond-1.webp" alt="Back and Neck Pain" class="card-img">
             <h3>Back &amp; Neck Pain</h3>
             <p>Relief for acute spasms, slipped discs, sciatica, and chronic postural stiffness.</p>
           </div>
         </a>
-        <a href="/conditions/sports-injury/" style="text-decoration:none; color:inherit;">
+        <a href="/conditions/sports-injuries/" style="text-decoration:none; color:inherit;">
           <div class="card">
             <img src="/assets/img/cond-2.webp" alt="Sports Injuries" class="card-img">
             <h3>Sports Injuries</h3>
@@ -210,3 +212,7 @@ class Component extends DCLogic {
 <script defer src="/site-analytics.min.js"></script>
 </body>
 </html>
+`;
+
+fs.writeFileSync('index.html', html);
+console.log('Done rewriting index.html');
