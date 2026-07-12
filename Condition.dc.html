@@ -126,7 +126,6 @@
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 </helmet>
-
 <dc-import name="Header" hint-size="100%,66px"></dc-import>
 <!-- LEAD -->
 <section style="position:relative;background:#FDF8F5;padding:clamp(40px,6vw,80px) clamp(20px,5vw,52px) clamp(48px,6vw,80px);overflow:hidden;">
@@ -138,7 +137,6 @@
       <span style="color:#CFE3D8;">/</span>
       <span id="cdCrumb" style="color:#0E4F52;font-weight:600;">Back &amp; Neck Pain</span>
     </div>
-
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4vw,56px);align-items:center;">
       <div>
         <div id="cdKicker" data-reveal style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.5);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Back &amp; Neck</div>
@@ -151,7 +149,6 @@
           <div style="color:#717470;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;">★</span> 5.0 · Home visits · Appointment-based</div>
         </div>
       </div>
-
       <div data-reveal data-delay="120" style="position:relative;">
         <div style="position:absolute;top:-8%;right:-6%;width:64%;pointer-events:none;opacity:.6;z-index:1;"><svg viewBox="0 0 400 240" fill="none" width="100%"><path d="M10 220 C 120 30, 280 30, 390 220" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/></svg></div>
         <img id="cdLead" src="/assets/img/cond-1.webp" alt="Physiotherapist supporting neck and upper-back assessment at home" loading="eager" decoding="async" style="width:100%;height:clamp(300px,42vw,520px);object-fit:cover;border-radius:24px;position:relative;z-index:2;box-shadow:0 18px 44px rgba(14,79,82,.12);">
@@ -159,7 +156,6 @@
     </div>
   </div>
 </section>
-
 <!-- HOW SHE TREATS IT -->
 <section style="background:#F6F2EC;padding:clamp(56px,7vw,100px) clamp(20px,5vw,52px);">
   <div style="max-width:1120px;margin:0 auto;">
@@ -172,7 +168,6 @@
     </div>
   </div>
 </section>
-
 <!-- WHAT A SESSION LOOKS LIKE -->
 <section style="position:relative;background:#0E4F52;color:#FDF8F5;padding:clamp(56px,7vw,100px) clamp(20px,5vw,52px);overflow:hidden;">
   <div data-parallax="0.04" style="position:absolute;top:-6%;right:-4%;width:min(520px,55%);pointer-events:none;opacity:.5;"><svg viewBox="0 0 500 300" fill="none" width="100%"><path d="M20 280 C 160 40, 340 40, 480 280" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 286 C 190 120, 310 120, 420 286" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
@@ -186,7 +181,6 @@
     </div>
   </div>
 </section>
-
 <!-- FAQ -->
 <section style="background:#FDF8F5;padding:clamp(56px,7vw,100px) clamp(20px,5vw,52px);">
   <div style="max-width:820px;margin:0 auto;">
@@ -199,7 +193,6 @@
     </div>
   </div>
 </section>
-
 <!-- RELATED + CTA -->
 <section style="background:#F6F2EC;padding:clamp(40px,5vw,72px) clamp(20px,5vw,52px) clamp(64px,8vw,110px);">
   <div style="max-width:1120px;margin:0 auto;">
@@ -209,7 +202,6 @@
       <a href="/condition/#sciatica" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Sciatica →</a>
       <a href="/condition/#frozen-shoulder" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Frozen Shoulder →</a>
     </div>
-
     <div data-reveal style="position:relative;background:#EE7B5B;border-radius:28px;overflow:hidden;padding:clamp(36px,5vw,64px);text-align:center;">
       <div style="position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:70%;pointer-events:none;opacity:.5;"><svg viewBox="0 0 500 300" fill="none" width="100%"><path d="M20 280 C 160 40, 340 40, 480 280" stroke="#1B2021" stroke-width="2.5" stroke-linecap="round" opacity=".3"/></svg></div>
       <h2 id="cdCtaHead" style="position:relative;font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(26px,4vw,46px);line-height:1;color:#1B2021;">Let's ease that pain.</h2>
@@ -223,7 +215,6 @@
     </div>
   </div>
 </section>
-
 <dc-import name="Footer" hint-size="100%,520px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -231,7 +222,6 @@ class Component extends DCLogic {
   NAMES = { 'back-neck':'Back & Neck Pain','sports-injury':'Sports Injury','post-surgery':'Post-Surgical Rehabilitation','knee-joint':'Knee & Joint Pain / Arthritis','sciatica':'Sciatica & Disc Pain','posture':'Posture Correction','frozen-shoulder':'Frozen Shoulder','geriatric':'Geriatric Mobility','strength-conditioning':'Strength & Conditioning' };
   IMG = { 'back-neck':'cond-1','sports-injury':'cond-2','post-surgery':'cond-3','knee-joint':'cond-4','sciatica':'cond-5','posture':'cond-6','frozen-shoulder':'cond-7','geriatric':'cond-8','strength-conditioning':'cond-2' };
   ALT = { 'back-neck':'Physiotherapist supporting neck and upper-back assessment at home','sports-injury':'Guided sports injury rehabilitation exercise at home','post-surgery':'Physiotherapist guiding gentle post-surgery rehabilitation movement','knee-joint':'Knee assessment during a home physiotherapy session','sciatica':'Guided leg mobility stretch for sciatica support','posture':'Physiotherapist correcting seated desk posture at home','frozen-shoulder':'Shoulder range-of-motion assessment by a physiotherapist','geriatric':'Physiotherapist assisting an elderly patient with safe walking support','strength-conditioning':'Guided sports injury rehabilitation exercise at home' };
-
   DATA = {
     'sports-injury': { kicker:'Sports Injury', ctaHead:"Let's get you back to it.",
       intro:"A sprain, strain or overuse injury shouldn't sideline you for long. Dr Rutvi gets you moving safely and builds a return-to-play plan — at home, around your training.",
@@ -282,7 +272,6 @@ class Component extends DCLogic {
       faq:[{q:'Is this only for athletes?',a:'No. Strength and conditioning is useful for anyone who wants to prevent re-injury, move better or return to activity safely.'},{q:'Do I need equipment?',a:'Not always. Dr Rutvi can build a plan using your home space, resistance bands or simple tools.'},{q:'Can this be combined with pain rehab?',a:'Yes. Strength work is often added once pain settles and movement improves.'}],
       related:['sports-injury','back-neck','knee-joint'] }
   };
-
   componentDidMount(){
     this.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.apply(this.slug());
@@ -297,12 +286,9 @@ class Component extends DCLogic {
     window.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('resize', this.onResize);
   }
-
   slug(){ return (location.hash || '').replace('#','').trim() || 'back-neck'; }
   waLink(slug){ const n = this.NAMES[slug] || 'my condition'; return 'https://wa.me/918879475065?text=' + encodeURIComponent('Hi Dr Rutvi, I need help with ' + n.toLowerCase() + ' and would like to check home physiotherapy availability. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'); }
-
   esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
   schemaData(slug){
     const knownSlug = this.NAMES[slug] ? slug : 'back-neck';
     const name = this.NAMES[knownSlug];
@@ -349,12 +335,10 @@ class Component extends DCLogic {
       ]
     };
   }
-
   updateSchema(slug){
     const script = document.getElementById('condition-schema');
     if (script) script.textContent = JSON.stringify(this.schemaData(slug));
   }
-
   onHash = () => { this.apply(this.slug()); window.scrollTo({ top:0, behavior: this.reduce ? 'auto' : 'smooth' }); };
   onResize = () => { const s = document.getElementById('pbrBottomSpace'); if (s) s.style.height = '0px'; };
   onScroll = () => {
@@ -362,7 +346,6 @@ class Component extends DCLogic {
     const sy = window.scrollY || 0;
     document.querySelectorAll('[data-parallax]').forEach((el) => { const sp = parseFloat(el.getAttribute('data-parallax')) || 0.05; el.style.transform = 'translateY(' + (sy * sp).toFixed(1) + 'px)'; });
   };
-
   apply(slug){
     // WhatsApp links + slot id always update
     this.updateSchema(slug);
@@ -375,10 +358,8 @@ class Component extends DCLogic {
       document.title = pageTitle;
       setTimeout(() => { document.title = pageTitle; }, 0);
     } catch(e){}
-
     const d = this.DATA[slug];
     if (!d) return; // back-neck default already in template
-
     const set = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
     set('cdCrumb', this.NAMES[slug]);
     set('cdName', this.NAMES[slug] + ' Physiotherapy - At Home');
@@ -386,20 +367,15 @@ class Component extends DCLogic {
     set('cdCtaHead', d.ctaHead);
     const kick = document.getElementById('cdKicker');
     if (kick) kick.innerHTML = '<span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>' + this.esc(d.kicker);
-
     const treat = document.getElementById('cdTreat');
     if (treat) treat.innerHTML = d.treat.map((x,i) => '<div style="background:#fff;border:1px solid rgba(27,32,33,.06);border-radius:20px;padding:clamp(24px,2.4vw,32px);"><div style="width:44px;height:44px;border-radius:12px;background:#CFE3D8;color:#0E4F52;font-family:\'Fraunces\',serif;font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center;">'+(i+1)+'</div><h3 style="font-family:\'Fraunces\',serif;font-weight:600;font-size:20px;margin-top:18px;color:#1B2021;">'+this.esc(x.t)+'</h3><p style="color:#4A4F4C;font-size:14.5px;line-height:1.6;margin-top:8px;">'+this.esc(x.d)+'</p></div>').join('');
-
     const sess = document.getElementById('cdSession');
     if (sess) sess.innerHTML = d.session.map((x,i) => '<div><div style="width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#EE7B5B;font-family:\'Fraunces\',serif;font-weight:600;font-size:22px;display:flex;align-items:center;justify-content:center;">0'+(i+1)+'</div><h3 style="font-family:\'Fraunces\',serif;font-weight:600;font-size:21px;margin-top:18px;color:#FDF8F5;">'+this.esc(x.t)+'</h3><p style="color:rgba(246,242,236,.88);font-size:14.5px;line-height:1.6;margin-top:8px;">'+this.esc(x.d)+'</p></div>').join('');
-
     const faq = document.getElementById('cdFaq');
     if (faq) faq.innerHTML = d.faq.map((x) => '<details style="padding:20px 0;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:\'Fraunces\',serif;font-weight:600;font-size:clamp(18px,2.2vw,22px);color:#1B2021;">'+this.esc(x.q)+'<span class="cd-plus" style="flex:0 0 auto;color:#EE7B5B;font-size:24px;transition:transform .3s;">+</span></summary><p style="color:#4A4F4C;font-size:15.5px;line-height:1.65;margin-top:14px;max-width:60ch;">'+this.esc(x.a)+'</p></details>').join('');
-
     const rel = document.getElementById('cdRelated');
     if (rel) rel.innerHTML = (d.related||[]).map((s) => '<a href="/condition/#'+s+'" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" onmouseover="this.style.background=\'#0E4F52\';this.style.color=\'#FDF8F5\'" onmouseout="this.style.background=\'#fff\';this.style.color=\'#0E4F52\'">'+this.esc(this.NAMES[s])+' \u2192</a>').join('');
   }
-
   initReveal(){
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
     if (this.reduce) return;
@@ -407,13 +383,11 @@ class Component extends DCLogic {
     const io = new IntersectionObserver((ents) => { ents.forEach((e) => { if (e.isIntersecting) { const dl = parseFloat(e.target.getAttribute('data-delay') || '0'); e.target.style.transitionDelay = dl + 'ms'; e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     els.forEach((el) => io.observe(el));
   }
-
   renderVals(){ return {}; }
 }
 </script>
 <script defer src="/site-analytics.min.js"></script>
 <script defer src="/google-reviews.min.js"></script>
-<script defer src="/voice-widget-loader.min.js"></script>
 <script defer src="/site-i18n.min.js"></script>
 </body>
 </html>

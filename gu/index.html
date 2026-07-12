@@ -311,18 +311,14 @@
     section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:720px;}
   }
   #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
-
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 </helmet>
-
 <dc-import name="Header" hint-size="100%,66px"></dc-import>
-
 <!-- ===================== HERO CAROUSEL ===================== -->
 <section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
   <div id="heroVp" style="position:relative;width:100%;height:clamp(540px,75vh,720px);overflow:hidden;cursor:grab;touch-action:pan-y;">
     <div id="heroTrack" style="display:flex;height:100%;width:100%;will-change:transform;">
-
       <!-- SLIDE 1 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-1.webp" alt="Physiotherapist treating a patient's shoulders during a home visit in a bright Mumbai apartment" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 50%;pointer-events:none;">
@@ -345,8 +341,6 @@
           </div>
         </div>
       </div>
-
-
       <!-- SLIDE 2 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-2.webp" alt="Physiotherapist reviewing a personalised recovery plan on a tablet with a patient at home" loading="lazy" fetchpriority="low" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 50%;pointer-events:none;">
@@ -369,8 +363,6 @@
           </div>
         </div>
       </div>
-
-
       <!-- SLIDE 3 -->
       <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
         <img src="/assets/img/hero-3.webp" alt="Guided resistance-band recovery exercise during an at-home physiotherapy session" loading="lazy" fetchpriority="low" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;pointer-events:none;">
@@ -393,10 +385,7 @@
           </div>
         </div>
       </div>
-
-
     </div>
-
     <div id="heroDots" style="position:absolute;bottom:42px;left:clamp(20px,5vw,52px);display:flex;gap:8px;z-index:4;">
       <span id="hDot0" role="button" aria-label="Slide 1" tabindex="0" style="width:30px;height:4px;border-radius:3px;background:#EE7B5B;cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
       <span id="hDot1" role="button" aria-label="Slide 2" tabindex="0" style="width:16px;height:4px;border-radius:3px;background:rgba(27,32,33,.18);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
@@ -404,7 +393,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== WELCOME + TRUST ===================== -->
 <section id="approach" style="position:relative;background:#FDF8F5;padding:clamp(64px,9vw,120px) clamp(20px,5vw,52px);scroll-margin-top:70px;">
   <div style="max-width:1220px;margin:0 auto;">
@@ -422,7 +410,6 @@
           <span style="background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">Plan you can repeat</span>
         </div>
       </div>
-
       <div data-reveal data-delay="120" style="position:relative;">
         <div style="position:absolute;top:-6%;right:-5%;width:52%;pointer-events:none;opacity:.6;z-index:2;"><svg viewBox="0 0 360 200" fill="none" width="100%"><path d="M12 180 C 110 30, 250 30, 348 180" stroke="#EE7B5B" stroke-width="2.4" stroke-linecap="round"/></svg></div>
         <div style="position:relative;border-radius:28px;overflow:hidden;box-shadow:0 18px 44px rgba(14,79,82,.12);z-index:1;">
@@ -431,7 +418,6 @@
         </div>
       </div>
     </div>
-
     <div data-reveal data-delay="120" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(44px,5vw,68px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(27,32,33,.1);">
       <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;">MPT</div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Sports &amp; Musculoskeletal specialist</div></div>
       <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;">5.0</div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Average Google rating</div></div>
@@ -440,11 +426,9 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== TEASER TILES ===================== -->
 <section style="background:#F6F2EC;padding:0 clamp(12px,3vw,40px) clamp(12px,3vw,40px);">
   <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(12px,1.6vw,20px);">
-
     <a href="/conditions/" data-reveal aria-label="Conditions" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
       <img src="/assets/img/home-2.webp" alt="Physiotherapist guiding an assisted shoulder movement during a home assessment" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
@@ -454,7 +438,6 @@
         <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Back pain, sciatica, sports, surgery <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </div>
     </a>
-
     <a href="/conditions/" data-reveal data-delay="80" aria-label="Recovery and strength" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
       <img src="/assets/img/home-3.webp" alt="Guided resistance-band strengthening exercise on a mat during a home physiotherapy session" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
@@ -464,7 +447,6 @@
         <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Assessment, exercises, daily changes <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </div>
     </a>
-
     <a href="#how" data-reveal aria-label="How it works" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
       <img src="/assets/img/home-4.webp" alt="A calm home setup for a physiotherapy session with a mat, resistance bands, foam roller and tablet" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
@@ -474,7 +456,6 @@
         <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Message, clarity, first visit <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </div>
     </a>
-
     <a href="#reviews" data-reveal data-delay="80" aria-label="Reviews" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
       <img src="/assets/img/home-5.webp" alt="A patient smiling after a home physiotherapy session" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
@@ -484,10 +465,8 @@
         <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Stories by pain, surgery, mobility <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </div>
     </a>
-
   </div>
 </section>
-
 <!-- ===================== HOW IT WORKS ===================== -->
 <section id="how" style="position:relative;background:#0E4F52;color:#FDF8F5;padding:clamp(64px,9vw,120px) clamp(20px,5vw,52px);overflow:hidden;scroll-margin-top:60px;">
   <div style="position:absolute;top:-6%;right:-4%;width:min(620px,60%);pointer-events:none;opacity:.5;" data-parallax="0.04"><svg viewBox="0 0 500 300" fill="none" width="100%"><path d="M20 280 C 160 40, 340 40, 480 280" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 286 C 190 120, 310 120, 420 286" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
@@ -498,12 +477,10 @@
     </div>
     <h2 data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(32px,5.4vw,64px);line-height:.96;letter-spacing:-.01em;max-width:16ch;">A calmer way to begin physiotherapy at home.</h2>
     <p data-reveal data-delay="120" style="color:rgba(246,242,236,.88);font-size:clamp(16px,1.8vw,19px);line-height:1.6;max-width:52ch;margin-top:20px;">You do not need to fill long forms or know the perfect medical words. Start with what is bothering you, where you live, and when you would like help.</p>
-
     <div id="howSteps" style="position:relative;margin-top:clamp(44px,6vw,72px);">
       <div style="position:absolute;left:27px;top:34px;bottom:34px;width:2px;background:rgba(246,242,236,.16);border-radius:2px;overflow:hidden;">
         <div id="howRailFill" style="position:absolute;top:0;left:0;width:100%;height:0%;background:#EE7B5B;transition:height .12s linear;"></div>
       </div>
-
       <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
         <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">1</div>
         <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.9;">
@@ -514,7 +491,6 @@
           <p style="color:rgba(246,242,236,.88);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">Share your concern, suburb, preferred timing, and any medical history that feels important. A voice note, short text, or photo of a prescription or report can help if you have one.</p>
         </div>
       </div>
-
       <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
         <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">2</div>
         <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.9;">
@@ -525,7 +501,6 @@
           <p style="color:rgba(246,242,236,.88);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">Dr Rutvi asks focused questions to understand urgency, suitability for home physiotherapy, and what the first session should prioritise.</p>
         </div>
       </div>
-
       <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
         <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">3</div>
         <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.9;">
@@ -537,7 +512,6 @@
         </div>
       </div>
     </div>
-
     <div data-reveal style="margin-top:clamp(36px,4vw,52px);">
       <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20concern%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#0F7A40;color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 28px;border-radius:100px;box-shadow:0 12px 30px rgba(37,211,102,.28);transition:transform .3s cubic-bezier(.2,.7,.2,1);" style-hover="transform:translateY(-2px);">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
@@ -546,7 +520,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== REVIEWS ===================== -->
 <section id="reviews" style="background:#F6F2EC;padding:clamp(64px,9vw,120px) 0;scroll-margin-top:70px;overflow:hidden;">
   <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,52px);">
@@ -561,33 +534,28 @@
       </div>
     </div>
   </div>
-
   <div class="pbrScroll" style="display:flex;gap:clamp(14px,2vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,5vw,52px) 12px;scrollbar-width:none;">
     <div data-reveal style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
       <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"Rutvi ma'am is excellent, her treatment helped me recover from severe back pain. Highly recommend."</p>
       <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">P</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Priya S.</div><div style="color:#717470;font-size:12.5px;">Back &amp; Neck Pain · Andheri</div></div></div>
     </div>
-
     <div data-reveal data-delay="80" style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
       <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"Very professional, and brings the clinic right to your home. Made recovery so much easier."</p>
       <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">K</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Kunal M.</div><div style="color:#717470;font-size:12.5px;">Sports Injury · Bandra</div></div></div>
     </div>
-
     <div data-reveal data-delay="160" style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
       <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"After knee surgery, her rehab program helped me walk confidently again. Truly grateful."</p>
       <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">M</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Meena R.</div><div style="color:#717470;font-size:12.5px;">Post-Surgery Rehab · Juhu</div></div></div>
     </div>
-
     <a href="https://www.google.com/search?q=PhysioByRutvi%20Dr%20Rutvi%20Gandhi%20reviews" target="_blank" rel="noopener" data-reveal data-delay="200" style="scroll-snap-align:start;flex:0 0 clamp(220px,60vw,280px);background:#0E4F52;border-radius:24px;padding:clamp(26px,3vw,34px);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 36px rgba(14,79,82,.12);">
       <div style="color:#CFE3D8;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">More reviews</div>
       <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,3vw,32px);color:#FDF8F5;line-height:1.05;">Read every Google review</div><span style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#EE7B5B;font-weight:600;font-size:14.5px;">Open Google reviews</span></div>
     </a>
   </div>
 </section>
-
 <!-- ===================== ABOUT TEASER (sticky) ===================== -->
 <section style="background:#FDF8F5;padding:clamp(56px,7vw,100px) clamp(20px,5vw,52px);">
   <div style="max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px);align-items:start;">
@@ -601,7 +569,6 @@
         </div>
       </div>
     </div>
-
     <div>
       <div data-reveal style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#0E4F52;margin-bottom:18px;">About Dr Rutvi</div>
       <h2 data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(30px,4.6vw,54px);line-height:.98;letter-spacing:-.01em;color:#1B2021;">Meet the person<br>who will treat you.</h2>
@@ -615,7 +582,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== QUICK ANSWERS ===================== -->
 <section id="answers" style="background:#FDF8F5;padding:clamp(56px,8vw,104px) clamp(20px,5vw,52px);scroll-margin-top:70px;">
   <div style="max-width:1120px;margin:0 auto;">
@@ -645,7 +611,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== CLOSING CTA ===================== -->
 <section style="position:relative;background:#0E4F52;color:#FDF8F5;padding:clamp(70px,10vw,140px) clamp(20px,5vw,52px);overflow:hidden;">
   <div data-parallax="0.05" style="position:absolute;top:8%;left:50%;transform:translateX(-50%);width:min(900px,120%);pointer-events:none;opacity:.5;"><svg viewBox="0 0 900 300" fill="none" width="100%"><path d="M40 270 C 280 40, 620 40, 860 270" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M140 276 C 330 120, 570 120, 760 276" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
@@ -663,14 +628,12 @@
     <div data-reveal data-delay="200" style="display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:30px;color:rgba(246,242,236,.7);font-size:13px;font-weight:500;"><span>Private first message</span><span>&middot;</span><span>Appointment-based home visits</span><span>&middot;</span><span>Clear next step</span></div>
   </div>
 </section>
-
 <dc-import name="Footer" hint-size="100%,520px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   wa = "https://wa.me/918879475065?text=" + encodeURIComponent("Hi Dr Rutvi, I would like to start with my symptoms and check if a home physiotherapy visit is right for me. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.");
   book = "https://wa.me/918879475065?text=" + encodeURIComponent("Hi Dr Rutvi, I'd like to book a home visit. My name is ___, suburb is ___, preferred day/time is ___, and I need help with ___.");
-
   componentDidMount(){
     this.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.initReveal();
@@ -688,12 +651,10 @@ class Component extends DCLogic {
     if (this.auto) clearInterval(this.auto);
     if (this._mm) { window.removeEventListener('mousemove', this._mm); window.removeEventListener('mouseup', this._mu); }
   }
-
   onResize = () => {
     const s = document.getElementById('pbrBottomSpace');
     if (s) s.style.height = '0px';
   };
-
   onScroll = () => {
     if (this._revealCheck) this._revealCheck();
     const sy = window.scrollY || window.pageYOffset;
@@ -711,7 +672,6 @@ class Component extends DCLogic {
       fill.style.height = (Math.max(0, Math.min(1, prog)) * 100).toFixed(1) + '%';
     }
   };
-
   initReveal(){
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
     if (this.reduce) return;
@@ -746,7 +706,6 @@ class Component extends DCLogic {
     setTimeout(() => this._revealCheck(), 250);
     setTimeout(() => this._revealCheck(), 800);
   }
-
   initCounts(){
     const els = Array.from(document.querySelectorAll('[data-count]'));
     const run = (el) => {
@@ -767,7 +726,6 @@ class Component extends DCLogic {
     }, { threshold: 0.6 });
     els.forEach((el) => io.observe(el));
   }
-
   initHowNodes(){
     const nodes = Array.from(document.querySelectorAll('[data-hownode]'));
     const setActive = (node, on) => {
@@ -782,7 +740,6 @@ class Component extends DCLogic {
     }, { threshold: 0.6, rootMargin: '-30% 0px -30% 0px' });
     nodes.forEach((n) => io.observe(n));
   }
-
   initCarousel(){
     const vp = document.getElementById('heroVp');
     const track = document.getElementById('heroTrack');
@@ -798,7 +755,6 @@ class Component extends DCLogic {
     };
     set(0, false);
     dots.forEach((d, di) => { if (d) d.addEventListener('click', () => { this.stopAuto(); set(di, true); }); });
-
     let sx = 0, dragging = false, dx = 0;
     const down = (e) => { dragging = true; dx = 0; sx = (e.touches ? e.touches[0].clientX : e.clientX); track.style.transition = 'none'; vp.style.cursor = 'grabbing'; this.stopAuto(); };
     const move = (e) => {
@@ -827,20 +783,14 @@ class Component extends DCLogic {
     vp.addEventListener('touchmove', move, { passive: true });
     vp.addEventListener('touchend', up);
     vp.addEventListener('dragstart', (e) => e.preventDefault());
-
     if (!this.reduce) this.auto = setInterval(() => set((this.idx + 1) % this.n, true), 6500);
   }
   stopAuto(){ if (this.auto) { clearInterval(this.auto); this.auto = null; } }
-
   renderVals(){ return { waHref: this.wa, bookHref: this.book }; }
 }
 </script>
 <script defer src="/site-analytics.min.js"></script>
 <script defer src="/google-reviews.min.js"></script>
-<script defer src="/voice-widget-loader.min.js"></script>
 <script defer src="/site-i18n.min.js"></script>
 </body>
 </html>
-
-
-
