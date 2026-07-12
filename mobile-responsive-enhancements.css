@@ -67,6 +67,16 @@ html, body {
     align-items: center !important;
     margin-top: 16px !important;
   }
+  
+  /* Fix pill-shaped tags wrapping awkwardly on mobile */
+  .mobile-center[style*="border-radius:100px"] {
+    font-size: 10px !important;
+    padding: 6px 14px !important;
+    border-radius: 12px !important; /* Soft radius looks better when wrapped than a pure pill */
+    white-space: normal !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+  }
 
   /* 3. Header & Navigation Refinement */
   #pbrHeader {
