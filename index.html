@@ -1,215 +1,568 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home Physiotherapy in Mumbai | Dr Rutvi Gandhi</title>
-<link rel="stylesheet" href="/styles.css">
-<!-- PBR static SEO -->
-<meta name="description" content="Doctor-led home physiotherapy by Dr Rutvi Gandhi for back pain, sports injury and rehab. Serving Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari, and Andheri.">
-<link rel="canonical" href="https://physiobyrutvi.in/">
-<!-- /PBR static SEO -->
-<script defer src="/vendor/react.production.min.js"></script>
-<script defer src="/vendor/react-dom.production.min.js"></script>
-<script defer src="/support.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  .eyebrow {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-teal);
-    margin-bottom: 16px;
-  }
-  .card {
-    background: var(--color-white);
-    border-radius: var(--radius-medium);
-    padding: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-  .card-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: var(--radius-small);
-    margin-bottom: 16px;
-  }
-  .bg-teal {
-    background: var(--color-teal);
-    color: var(--color-white);
-  }
-  .bg-teal h2, .bg-teal h3 {
-    color: var(--color-white);
-  }
-  .text-center {
-    text-align: center;
-  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#F6F2EC;color:#1B2021;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;}
+  a:focus-visible,button:focus-visible{outline:3px solid #EE7B5B;outline-offset:3px;border-radius:4px;}
+  ::selection{background:#EE7B5B;color:#1B2021;}
+  #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
-</head>
-<body>
-<x-dc>
-<dc-import name="Header"></dc-import>
 
-<main id="main-content">
-  <!-- HERO SECTION -->
-  <section class="section-padding">
-    <div class="site-container grid-50-50">
-      <div>
-        <p class="eyebrow">HOME PHYSIOTHERAPY ACROSS MUMBAI’S WESTERN SUBURBS</p>
-        <h1>The right physiotherapist, at home.</h1>
-        <p>Assessment-led home physiotherapy from Bhayander to Andheri. Our clinically led care team matches your concern, location and goals with a suitable physiotherapist.</p>
-        <div style="display:flex; gap:16px; margin-top:32px; flex-wrap:wrap;">
-           <a href="#calendly-popup" class="btn-primary">Book a Free 15-Minute Call</a>
-           <a href="https://wa.me/918879475065?text=Hi%20Rutvi%2C%20I'd%20like%20to%20ask%20about%20a%20home%20physiotherapy%20session." class="btn-secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        </div>
-        <p style="margin-top:24px; font-size:13px; color:#5A5F5B;">MPT-led care · Therapist matched to your needs · Appointment-based home visits</p>
-      </div>
-      <div>
-         <img src="/assets/img/hero-1.webp" alt="Physiotherapist treating a patient" style="border-radius:var(--radius-medium); width:100%;">
-      </div>
-    </div>
-  </section>
-
-  <!-- INTRO / ABOUT SECTION -->
-  <section class="section-padding" style="background:var(--color-white);">
-    <div class="site-container grid-50-50">
-      <div>
-         <img src="/assets/img/hero-2.webp" alt="Dr Rutvi Gandhi with a patient" style="border-radius:var(--radius-medium); width:100%;">
-      </div>
-      <div>
-        <p class="eyebrow">Meet the clinical lead behind the care standards.</p>
-        <h2>Dr Rutvi Gandhi</h2>
-        <p><strong>Founder and Clinical Lead (PT, MPT)</strong></p>
-        <p>With a master's in Sports and Musculoskeletal Physiotherapy, I ensure every patient receives an accurate diagnosis and a customized recovery plan. My focus is on providing high-quality, assessment-led care that delivers real results.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATISTICS -->
-  <section class="section-padding">
-    <div class="site-container grid-stats text-center">
-      <div>
-        <h2 style="font-size:clamp(40px, 5vw, 56px); margin-bottom:8px;">5.0</h2>
-        <p style="margin:0 auto;">Google Rating</p>
-      </div>
-      <div>
-        <h2 style="font-size:clamp(40px, 5vw, 56px); margin-bottom:8px;">8+</h2>
-        <p style="margin:0 auto;">Years of Clinical Experience</p>
-      </div>
-      <div>
-        <h2 style="font-size:clamp(40px, 5vw, 56px); margin-bottom:8px;">MPT</h2>
-        <p style="margin:0 auto;">Qualified Professionals</p>
-      </div>
-      <div>
-        <h2 style="font-size:clamp(40px, 5vw, 56px); margin-bottom:8px;">Home</h2>
-        <p style="margin:0 auto;">Visit Convenience</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONDITIONS / FEATURE CARDS -->
-  <section class="section-padding" style="background:var(--color-white);">
-    <div class="site-container">
-      <h2 class="text-center" style="margin-bottom:48px;">How We Can Help</h2>
-      <div class="grid-cards">
-        <a href="/conditions/back-neck-pain/" style="text-decoration:none; color:inherit;">
-          <div class="card">
-            <img src="/assets/img/cond-1.webp" alt="Back and Neck Pain" class="card-img">
-            <h3>Back &amp; Neck Pain</h3>
-            <p>Relief for acute spasms, slipped discs, sciatica, and chronic postural stiffness.</p>
-          </div>
-        </a>
-        <a href="/conditions/sports-injury/" style="text-decoration:none; color:inherit;">
-          <div class="card">
-            <img src="/assets/img/cond-2.webp" alt="Sports Injuries" class="card-img">
-            <h3>Sports Injuries</h3>
-            <p>Rehabilitation for ligament tears, muscle strains, and joint sprains.</p>
-          </div>
-        </a>
-        <a href="/conditions/post-surgery-rehabilitation/" style="text-decoration:none; color:inherit;">
-          <div class="card">
-            <img src="/assets/img/cond-3.webp" alt="Post-Surgery Rehabilitation" class="card-img">
-            <h3>Post-Surgery Rehab</h3>
-            <p>Guided recovery after joint replacements, ligament repairs, and fractures.</p>
-          </div>
-        </a>
-        <a href="/conditions/senior-mobility/" style="text-decoration:none; color:inherit;">
-          <div class="card">
-            <img src="/assets/img/cond-4.webp" alt="Senior Mobility" class="card-img">
-            <h3>Senior Mobility</h3>
-            <p>Improving balance, strength, and confidence to prevent falls and restore independence.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section-padding bg-teal">
-    <div class="site-container">
-      <h2 class="text-center" style="margin-bottom:48px;">How Care Works</h2>
-      <div class="grid-cards">
-        <div>
-          <h3 style="color:var(--color-coral);">1. Book a free 15-minute call</h3>
-          <p style="color:var(--color-white);">Discuss your condition directly with our clinical lead to ensure home physiotherapy is right for you.</p>
-        </div>
-        <div>
-          <h3 style="color:var(--color-coral);">2. Share your concern and location</h3>
-          <p style="color:var(--color-white);">Provide your details so we can assign the most appropriate therapist based on your specific needs and area.</p>
-        </div>
-        <div>
-          <h3 style="color:var(--color-coral);">3. Get matched with a suitable physiotherapist</h3>
-          <p style="color:var(--color-white);">Our clinically led care team matches you with a highly qualified practitioner.</p>
-        </div>
-        <div>
-          <h3 style="color:var(--color-coral);">4. Begin with an assessment-led home visit</h3>
-          <p style="color:var(--color-white);">Your assigned physiotherapist will arrive at your home, conduct a thorough assessment, and begin treatment immediately.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="section-padding">
-    <div class="site-container text-center">
-      <h2 style="margin-bottom:48px;">Patient Success Stories</h2>
-      <div class="grid-cards" style="text-align:left;">
-        <div class="card">
-          <p>"Dr. Rutvi is an excellent physiotherapist. Her knowledge and expertise helped me recover from my shoulder pain completely. Highly recommend her home visit services!"</p>
-          <p><strong>- Shreya S.</strong></p>
-        </div>
-        <div class="card">
-          <p>"Very professional and punctual. The convenience of getting quality physiotherapy at home is unmatched. My mother's knee pain has improved significantly."</p>
-          <p><strong>- Amit M.</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="section-padding bg-teal text-center">
-    <div class="site-container">
-      <h2 style="font-size:clamp(40px, 6vw, 64px); margin-bottom:24px;">Let's get you moving again.</h2>
-      <a href="#calendly-popup" class="btn-primary" style="margin-top:24px;">Book a Free 15-Minute Call</a>
-    </div>
-  </section>
-
-</main>
-
-<dc-import name="Footer"></dc-import>
-<div id="pbrVoiceAgent" style="position:relative;z-index:90;">
-  <elevenlabs-convai agent-id="agent_4701kwskch1ker1v5s2mpjdabvwq"></elevenlabs-convai>
-</div>
-</x-dc>
-
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  componentDidMount(){
-    // Lightweight setup if needed
-  }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://physiobyrutvi.in/about#dr-rutvi-gandhi",
+      "name": "Dr Rutvi Gandhi",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Physiotherapist",
+      "description": "PT, MPT - Musculoskeletal and Sports Physiotherapy. Founder of PhysioByRutvi, a doctor-led home-visit physiotherapy practice serving Bhayander to Andheri.",
+      "worksFor": {"@id": "https://physiobyrutvi.in/#business"},
+      "url": "https://physiobyrutvi.in/about"
+    },
+    {
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://physiobyrutvi.in/#business",
+      "name": "PhysioByRutvi",
+      "url": "https://physiobyrutvi.in/",
+      "telephone": "+918879475065",
+      "email": "support@physiobyrutvi.in",
+      "founder": {"@id": "https://physiobyrutvi.in/about#dr-rutvi-gandhi"},
+      "medicalSpecialty": ["Physiotherapy", "Sports Medicine", "Musculoskeletal", "Post-operative rehabilitation"],
+      "areaServed": [
+        {"@type": "Place", "name": "Mumbai Western Suburbs"}
+      ]
+    }
+  ]
 }
 </script>
+</head>
+<body>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#F6F2EC;color:#1B2021;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;}
+  a:focus-visible,button:focus-visible{outline:3px solid #EE7B5B;outline-offset:3px;border-radius:4px;}
+  ::selection{background:#EE7B5B;color:#1B2021;}
+  #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0E4F52"/><path d="M18 78 C 40 30, 60 30, 82 78" stroke="#EE7B5B" stroke-width="4" fill="none" stroke-linecap="round"/><text x="50" y="60" font-family="Georgia,serif" font-size="40" fill="#FDF8F5" text-anchor="middle" font-weight="700">R</text></svg></template>
+
+
+<header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:#FDF8F5;border-bottom:1px solid rgba(27,32,33,0.06);">
+  <div style="max-width:1220px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,52px);">
+    <a href="/" aria-label="PhysioByRutvi home" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="/assets/pbr-logo-mark-96.webp" alt="Logo" width="44" height="44" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#fff;padding:4px;box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+      <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;">
+        <span style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.2em;color:#0E4F52;">PHYSIO</span>
+        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:9px;letter-spacing:0.3em;color:#EE7B5B;margin-top:4px;">BY RUTVI</span>
+      </span>
+    </a>
+    <nav class="desktop-nav" style="display:none; gap:24px; align-items:center;">
+        <a href="/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Home</a>
+        <a href="/conditions/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Conditions</a>
+        <a href="/how-care-works/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">How Care Works</a>
+        <a href="/about/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">About</a>
+        <a href="/#reviews" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Reviews</a>
+        <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" style="text-decoration:none; color:#EE7B5B; font-weight:700; font-size:14.5px;">Book Consultation</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #0E4F52;display:flex;align-items:center;justify-content:center;color:#0E4F52;text-decoration:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:14px;padding:12px 20px;border-radius:100px;box-shadow:0 4px 12px rgba(238,123,91,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="desktop-only" style="display:none;">Message Dr Rutvi</span>
+      </a>
+    </div>
+  </div>
+</header>
+<style>
+@media (min-width: 1024px) {
+    .desktop-nav { display: flex !important; }
+    .desktop-only { display: inline-block !important; }
+}
+</style>
+
+
+<!-- ===================== HERO CAROUSEL ===================== -->
+<section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
+  <div id="heroVp" style="position:relative;width:100%;height:clamp(620px,90vh,880px);overflow:hidden;cursor:grab;touch-action:pan-y;">
+    <div id="heroTrack" style="display:flex;height:100%;width:100%;will-change:transform;">
+
+      <!-- SLIDE 1 -->
+      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img src="assets/img/hero-1.webp" alt="Physiotherapist treating a patient's shoulders during a home visit in a bright Mumbai apartment" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 50%;pointer-events:none;">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+        <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div style="max-width:min(600px,94%);">
+            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Doctor-led home physiotherapy</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">THE RIGHT<br><span style="color:#0E4F52;">PHYSIOTHERAPIST,</span><br>AT HOME.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">Expert, one-on-one care from Dr Rutvi Gandhi, in your own home, across Mumbai's western suburbs.</p>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                Chat on WhatsApp
+              </a>
+              <a href="#how" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">How it works
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · MPT Sports &amp; Musculoskeletal · </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img src="assets/img/hero-2.webp" alt="Physiotherapist reviewing a personalised recovery plan on a tablet with a patient at home" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 50%;pointer-events:none;">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+        <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#0E4F52" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#EE7B5B" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div style="max-width:min(600px,94%);">
+            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Continuity of care</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">CLINICALLY<br><span style="color:#0E4F52;">LED CARE,</span><br>AT HOME.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">No rotating aggregator therapists. One specialist who knows your history and your goals.</p>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a href="#how" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">See how it works
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="About.dc.html" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Meet Dr Rutvi</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · Personalized care across western suburbs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img src="assets/img/hero-3.webp" alt="Guided resistance-band recovery exercise during an at-home physiotherapy session" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;pointer-events:none;">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+        <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div style="max-width:min(620px,94%);">
+            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Movement, restored, personally</div>
+            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,96px);line-height:.9;letter-spacing:-.02em;color:#1B2021;"><span style="color:#0E4F52;">Guided Recovery</span><br>At Home.</h1>
+            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">Hands-on treatment, movement coaching, and home exercises designed around your body.</p>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                Start on WhatsApp
+              </a>
+              <a href="Conditions.dc.html" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Explore conditions</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · Trusted across the western suburbs</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="position:absolute;bottom:clamp(20px,3.5vw,34px);left:clamp(20px,5vw,52px);display:flex;gap:8px;z-index:4;">
+      <span id="hDot0" role="button" aria-label="Slide 1" tabindex="0" style="width:30px;height:4px;border-radius:3px;background:#EE7B5B;cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
+      <span id="hDot1" role="button" aria-label="Slide 2" tabindex="0" style="width:16px;height:4px;border-radius:3px;background:rgba(27,32,33,.18);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
+      <span id="hDot2" role="button" aria-label="Slide 3" tabindex="0" style="width:16px;height:4px;border-radius:3px;background:rgba(27,32,33,.18);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .4s;"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WELCOME + TRUST ===================== -->
+<section id="approach" style="position:relative;background:#FDF8F5;padding:clamp(64px,9vw,120px) clamp(20px,5vw,52px);scroll-margin-top:70px;">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:clamp(32px,5vw,68px);align-items:center;">
+      <div>
+        <div data-reveal style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+          <svg width="70" height="18" viewBox="0 0 70 18" fill="none"><path d="M3 15C16 3 54 3 67 15" stroke="#EE7B5B" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#0E4F52;">Movement, restored, personally</span>
+        </div>
+        <p data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,3.4vw,40px);line-height:1.22;letter-spacing:-.01em;color:#1B2021;text-wrap:balance;">Dr Rutvi Gandhi brings <span style="color:#0E4F52;">doctor-led physiotherapy</span> into your home.</p>
+        <p data-reveal data-delay="120" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.8vw,18px);line-height:1.6;color:#4A4F4C;max-width:52ch;margin-top:20px;">Across Mumbai's western suburbs, for acute injuries, post-surgical recovery, chronic pain, or preventive care. One-on-one, the same specialist, every visit.</p>
+        <div data-reveal data-delay="160" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;">
+          <span style="display:inline-flex;align-items:center;gap:7px;background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;"><span style="color:#EE7B5B;">★</span> 5.0 Rated</span>
+          <span style="background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">MPT · Sports &amp; Musculoskeletal</span>
+          <span style="background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">Home visits · Western suburbs</span>
+        </div>
+      </div>
+
+      <div data-reveal data-delay="120" style="position:relative;">
+        <div style="position:absolute;top:-6%;right:-5%;width:52%;pointer-events:none;opacity:.6;z-index:2;"><svg viewBox="0 0 360 200" fill="none" width="100%"><path d="M12 180 C 110 30, 250 30, 348 180" stroke="#EE7B5B" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+        <div style="position:relative;border-radius:28px;overflow:hidden;box-shadow:0 18px 44px rgba(14,79,82,.12);z-index:1;">
+          <img src="assets/img/home-1.webp" alt="Physiotherapist laying out a home therapy kit with resistance bands, massage tools and an exercise plan" loading="lazy" decoding="async" style="display:block;width:100%;height:clamp(320px,42vw,520px);object-fit:cover;object-position:center;">
+          <div style="position:absolute;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(253,248,245,.92);backdrop-filter:blur(6px);color:#0E4F52;font-size:12px;font-weight:600;padding:9px 14px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#EE7B5B;"></span>Everything, brought to your door</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="120" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(44px,5vw,68px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(27,32,33,.1);">
+      <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;"><span data-count="1" data-suffix=" on 1">1 on 1</span></div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Personalized home care</div></div>
+      <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;">5.0</div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Average Google rating</div></div>
+      <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;"><span data-count="8" data-suffix="+">8+</span></div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Conditions treated</div></div>
+      <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5vw,52px);color:#0E4F52;line-height:1;"><span data-count="100" data-suffix="%">100%</span></div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Care in your own home</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEASER TILES ===================== -->
+<section style="background:#F6F2EC;padding:0 clamp(12px,3vw,40px) clamp(12px,3vw,40px);">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(12px,1.6vw,20px);">
+
+    <a href="Conditions.dc.html" data-reveal aria-label="Conditions" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
+      <img src="assets/img/home-2.webp" alt="Physiotherapist guiding an assisted shoulder movement during a home assessment" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
+      <div style="position:absolute;top:0;left:0;padding:clamp(22px,2.6vw,34px);pointer-events:none;"><span style="display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1B2021;background:#EE7B5B;padding:7px 13px;border-radius:100px;">01 · Conditions</span></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,2.8vw,36px);pointer-events:none;">
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;color:#FDF8F5;font-size:clamp(28px,3.4vw,44px);line-height:.98;">Care, Planned<br>Around You</h3>
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Back, neck, sports, post-surgery <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+
+    <a href="Conditions.dc.html" data-reveal data-delay="80" aria-label="Recovery and strength" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
+      <img src="assets/img/home-3.webp" alt="Guided resistance-band strengthening exercise on a mat during a home physiotherapy session" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
+      <div style="position:absolute;top:0;left:0;padding:clamp(22px,2.6vw,34px);pointer-events:none;"><span style="display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1B2021;background:#EE7B5B;padding:7px 13px;border-radius:100px;">02 · Recovery &amp; Strength</span></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,2.8vw,36px);pointer-events:none;">
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;color:#FDF8F5;font-size:clamp(28px,3.4vw,44px);line-height:.98;">Stay In<br>Motion</h3>
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Home programming &amp; prevention <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+
+    <a href="#how" data-reveal aria-label="How it works" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
+      <img src="assets/img/home-4.webp" alt="A calm home setup for a physiotherapy session with a mat, resistance bands, foam roller and tablet" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
+      <div style="position:absolute;top:0;left:0;padding:clamp(22px,2.6vw,34px);pointer-events:none;"><span style="display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1B2021;background:#EE7B5B;padding:7px 13px;border-radius:100px;">03 · How It Works</span></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,2.8vw,36px);pointer-events:none;">
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;color:#FDF8F5;font-size:clamp(28px,3.4vw,44px);line-height:.98;">How A Home<br>Visit Works</h3>
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Three simple steps <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+
+    <a href="#reviews" data-reveal data-delay="80" aria-label="Reviews" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
+      <img src="assets/img/home-5.webp" alt="A patient smiling after a home physiotherapy session" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,79,82,0) 32%,rgba(14,79,82,.5) 68%,rgba(14,79,82,.84) 100%);pointer-events:none;"></div>
+      <div style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:clamp(22px,2.6vw,34px);pointer-events:none;"><span style="display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1B2021;background:#EE7B5B;padding:7px 13px;border-radius:100px;">04 · Reviews</span><span style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,3vw,40px);color:#FDF8F5;line-height:1;">5.0<span style="font-size:.5em;color:#EE7B5B;"> ★</span></span></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,2.8vw,36px);pointer-events:none;">
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;color:#FDF8F5;font-size:clamp(28px,3.4vw,44px);line-height:.98;">Real<br>Recoveries</h3>
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;color:#FDF8F5;font-weight:600;font-size:14.5px;">Patient wins &amp; mobility outcomes <span style="width:34px;height:34px;border-radius:50%;background:#EE7B5B;color:#1B2021;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how" style="position:relative;background:#0E4F52;color:#FDF8F5;padding:clamp(64px,9vw,120px) clamp(20px,5vw,52px);overflow:hidden;scroll-margin-top:60px;">
+  <div style="position:absolute;top:-6%;right:-4%;width:min(620px,60%);pointer-events:none;opacity:.5;" data-parallax="0.04"><svg viewBox="0 0 500 300" fill="none" width="100%"><path d="M20 280 C 160 40, 340 40, 480 280" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 286 C 190 120, 310 120, 420 286" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
+  <div style="position:relative;max-width:1080px;margin:0 auto;">
+    <div data-reveal style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+      <span style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#EE7B5B;">How it works</span>
+      <span style="flex:1;height:1px;background:rgba(246,242,236,.2);max-width:80px;"></span>
+    </div>
+    <h2 data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(32px,5.4vw,64px);line-height:.96;letter-spacing:-.01em;max-width:16ch;">Four steps to feeling better.</h2>
+    <p data-reveal data-delay="120" style="color:rgba(246,242,236,.72);font-size:clamp(16px,1.8vw,19px);line-height:1.6;max-width:52ch;margin-top:20px;">No forms. No call centre. No waiting room. Just a message, and expert care at your door.</p>
+
+    <div id="howSteps" style="position:relative;margin-top:clamp(44px,6vw,72px);">
+      <div style="position:absolute;left:27px;top:34px;bottom:34px;width:2px;background:rgba(246,242,236,.16);border-radius:2px;overflow:hidden;">
+        <div id="howRailFill" style="position:absolute;top:0;left:0;width:100%;height:0%;background:#EE7B5B;transition:height .12s linear;"></div>
+      </div>
+
+      <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
+        <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">1</div>
+        <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.62;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:#FDF8F5;">Book Call</h3>
+          </div>
+          <p style="color:rgba(246,242,236,.72);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">Tell Rutvi what's hurting. One quick message, she replies personally, usually the same day.</p>
+        </div>
+      </div>
+
+      <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
+        <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">2</div>
+        <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.62;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:#FDF8F5;">Get Clarity</h3>
+          </div>
+          <p style="color:rgba(246,242,236,.72);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">A short chat to understand your history and goals, then pick a visit time that suits your home.</p>
+        </div>
+      </div>
+
+      <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
+        <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">3</div>
+        <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.62;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:#FDF8F5;">Get Matched</h3>
+          </div>
+          <p style="color:rgba(246,242,236,.72);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">The same specialist arrives with everything needed, assessment, hands-on treatment, and a plan you can follow.</p>
+        </div>
+      </div>
+
+      <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
+        <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">4</div>
+        <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.62;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:#FDF8F5;">Begin Assessment</h3>
+          </div>
+          <p style="color:rgba(246,242,236,.72);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">Your assigned physiotherapist arrives for the comprehensive initial assessment and treatment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal style="margin-top:clamp(36px,4vw,52px);">
+      <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 28px;border-radius:100px;box-shadow:0 12px 30px rgba(37,211,102,.28);transition:transform .3s cubic-bezier(.2,.7,.2,1);" style-hover="transform:translateY(-2px);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+        Start on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" style="background:#F6F2EC;padding:clamp(64px,9vw,120px) 0;scroll-margin-top:70px;overflow:hidden;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,52px);">
+    <div data-reveal style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:clamp(28px,4vw,44px);">
+      <div>
+        <div style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#0E4F52;margin-bottom:14px;">Real recoveries</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(30px,5vw,58px);line-height:.96;letter-spacing:-.01em;color:#1B2021;">Rated 5.0<br>on Google</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:16px 22px;box-shadow:0 12px 30px rgba(14,79,82,.08);">
+        <div style="font-family:'Fraunces',serif;font-weight:600;font-size:44px;color:#0E4F52;line-height:1;">5.0</div>
+        <div><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><div style="color:#717470;font-size:12.5px;margin-top:4px;">Verified patient reviews</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pbrScroll" style="display:flex;gap:clamp(14px,2vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,5vw,52px) 12px;scrollbar-width:none;">
+    <div data-reveal style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
+      <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"Rutvi ma'am is excellent, her treatment helped me recover from severe back pain. Highly recommend."</p>
+      <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">P</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Priya S.</div><div style="color:#717470;font-size:12.5px;">Back &amp; Neck Pain · Andheri</div></div></div>
+    </div>
+
+    <div data-reveal data-delay="80" style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
+      <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"Very professional, and brings the clinic right to your home. Made recovery so much easier."</p>
+      <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">K</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Kunal M.</div><div style="color:#717470;font-size:12.5px;">Sports Injury · Bandra</div></div></div>
+    </div>
+
+    <div data-reveal data-delay="160" style="scroll-snap-align:start;flex:0 0 clamp(280px,80vw,400px);background:#fff;border-radius:24px;padding:clamp(26px,3vw,34px);box-shadow:0 14px 36px rgba(14,79,82,.08);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;"><div style="color:#EE7B5B;font-size:16px;letter-spacing:2px;">★★★★★</div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></div>
+      <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:#1B2021;margin-bottom:22px;">"After knee surgery, her rehab program helped me walk confidently again. Truly grateful."</p>
+      <div style="display:flex;align-items:center;gap:12px;"><div style="width:42px;height:42px;border-radius:50%;background:#CFE3D8;color:#0E4F52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">M</div><div><div style="font-weight:600;font-size:14.5px;color:#1B2021;">Meena R.</div><div style="color:#717470;font-size:12.5px;">Post-Surgery Rehab · Juhu</div></div></div>
+    </div>
+
+    <a href="Home.dc.html#reviews" data-reveal data-delay="200" style="scroll-snap-align:start;flex:0 0 clamp(220px,60vw,280px);background:#0E4F52;border-radius:24px;padding:clamp(26px,3vw,34px);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 36px rgba(14,79,82,.12);">
+      <div style="color:#CFE3D8;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">More reviews</div>
+      <div><div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,3vw,32px);color:#FDF8F5;line-height:1.05;">See every 5-star recovery</div><span style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#EE7B5B;font-weight:600;font-size:14.5px;">Read on Google →</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== ABOUT TEASER (sticky) ===================== -->
+<section style="background:#FDF8F5;padding:clamp(56px,7vw,100px) clamp(20px,5vw,52px);">
+  <div style="max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px);align-items:start;">
+    <div style="position:sticky;top:clamp(84px,12vh,120px);align-self:start;">
+      <div style="position:relative;border-radius:28px;overflow:hidden;background:#F0E9DC;border:1px solid rgba(27,32,33,.06);box-shadow:0 30px 60px rgba(14,79,82,.1);min-height:clamp(360px,44vw,540px);">
+        <div style="position:absolute;top:8%;left:-6%;width:80%;pointer-events:none;opacity:.7;"><svg viewBox="0 0 400 240" fill="none" width="100%"><path d="M10 220 C 120 30, 280 30, 390 220" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <img src="assets/rutvi-3.png" alt="Illustration of Dr Rutvi Gandhi" loading="lazy" decoding="async" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:96%;width:auto;pointer-events:none;">
+        <div style="position:absolute;left:20px;bottom:20px;background:rgba(14,79,82,.94);color:#FDF8F5;border-radius:16px;padding:14px 18px;backdrop-filter:blur(6px);">
+          <div style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;">Dr Rutvi Gandhi</div>
+          <div style="color:#CFE3D8;font-size:12px;margin-top:3px;">MPT · Sports &amp; Musculoskeletal</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div data-reveal style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#0E4F52;margin-bottom:18px;">About Dr Rutvi</div>
+      <h2 data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(30px,4.6vw,54px);line-height:.98;letter-spacing:-.01em;color:#1B2021;">One specialist.<br>Your corner.</h2>
+      <p data-reveal data-delay="120" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.8vw,19px);line-height:1.62;color:#4A4F4C;margin-top:24px;max-width:52ch;">Dr Rutvi is a Master of Physiotherapy specialising in sports and musculoskeletal care. She founded Physio by Rutvi on a simple belief: recovery happens faster when the same expert who assessed you is the one guiding every step, in the comfort of your own home.</p>
+      <div data-reveal data-delay="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:34px;">
+        <div style="border-left:2px solid #EE7B5B;padding-left:16px;"><div style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:#0E4F52;">MPT</div><div style="color:#717470;font-size:13px;margin-top:4px;">Master of Physiotherapy</div></div>
+        <div style="border-left:2px solid #EE7B5B;padding-left:16px;"><div style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:#0E4F52;">Sports</div><div style="color:#717470;font-size:13px;margin-top:4px;">&amp; Musculoskeletal focus</div></div>
+      </div>
+      <a data-reveal data-delay="200" href="About.dc.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:#0E4F52;color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:100px;transition:transform .3s cubic-bezier(.2,.7,.2,1);" style-hover="transform:translateY(-2px);">Read her story
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLOSING CTA ===================== -->
+<section style="position:relative;background:#0E4F52;color:#FDF8F5;padding:clamp(70px,10vw,140px) clamp(20px,5vw,52px);overflow:hidden;">
+  <div data-parallax="0.05" style="position:absolute;top:8%;left:50%;transform:translateX(-50%);width:min(900px,120%);pointer-events:none;opacity:.5;"><svg viewBox="0 0 900 300" fill="none" width="100%"><path d="M40 270 C 280 40, 620 40, 860 270" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M140 276 C 330 120, 570 120, 760 276" stroke="#CFE3D8" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
+  <div style="position:relative;max-width:900px;margin:0 auto;text-align:center;">
+    <div data-reveal style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#EE7B5B;margin-bottom:22px;">Movement, restored, personally</div>
+    <h2 data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(38px,7vw,88px);line-height:.92;letter-spacing:-.02em;">Let's get you<br><span style="color:#EE7B5B;">moving again.</span></h2>
+    <p data-reveal data-delay="120" style="color:rgba(246,242,236,.75);font-size:clamp(16px,1.9vw,20px);line-height:1.6;max-width:46ch;margin:24px auto 0;">Message Dr Rutvi today, the same specialist, at your door, every visit.</p>
+    <div data-reveal data-delay="160" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px;">
+      <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:16.5px;padding:17px 30px;border-radius:100px;box-shadow:0 14px 34px rgba(37,211,102,.3);transition:transform .3s cubic-bezier(.2,.7,.2,1);" style-hover="transform:translateY(-2px);">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:700;font-size:16.5px;padding:17px 30px;border-radius:100px;transition:transform .3s cubic-bezier(.2,.7,.2,1);" style-hover="transform:translateY(-2px);">Book a home visit</a>
+    </div>
+    <div data-reveal data-delay="200" style="display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:30px;color:rgba(246,242,236,.7);font-size:13px;font-weight:500;"><span><span style="color:#EE7B5B;">★</span> 5.0 Google rated</span><span>·</span><span>MPT certified</span><span>·</span><span></span></div>
+  </div>
+</section>
+
+
+<footer style="background:#1B2021;color:#FDF8F5;padding:clamp(64px,9vw,100px) clamp(20px,5vw,52px) 40px;position:relative;">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;">
+    <div>
+      <a href="/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
+        <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;">
+          <span style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.2em;color:#CFE3D8;">PHYSIO</span>
+          <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:9px;letter-spacing:0.3em;color:#EE7B5B;margin-top:4px;">BY RUTVI</span>
+        </span>
+      </a>
+      <p style="color:rgba(253,248,245,0.7);font-size:14.5px;line-height:1.6;margin-top:20px;max-width:32ch;">Movement, restored with clinically led home physiotherapy.</p>
+    </div>
+    
+    <div>
+      <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:#CFE3D8;margin-bottom:16px;">Contact</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;color:rgba(253,248,245,0.8);font-size:14.5px;">
+        <a href="tel:+918879475065" style="text-decoration:none;">+91 88794 75065</a>
+        <a href="mailto:support@physiobyrutvi.in" style="text-decoration:none;">support@physiobyrutvi.in</a>
+        <span>Mumbai, Maharashtra</span>
+      </div>
+    </div>
+    
+    <div>
+      <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:#CFE3D8;margin-bottom:16px;">Important Links</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;color:rgba(253,248,245,0.8);font-size:14.5px;">
+        <a href="/conditions/" style="text-decoration:none;">Conditions Treated</a>
+        <a href="/about/" style="text-decoration:none;">About Dr Rutvi</a>
+        <a href="/privacy-policy/" style="text-decoration:none;">Privacy Policy</a>
+        <a href="/terms/" style="text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  
+  <div style="max-width:1120px;margin:50px auto 0;padding-top:30px;border-top:1px solid rgba(253,248,245,0.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;color:rgba(253,248,245,0.5);font-size:13px;">
+    <span>&copy; 2026 PhysioByRutvi. All rights reserved.</span>
+    <span>Clinical supervision by Dr Rutvi Gandhi, PT, MPT</span>
+  </div>
+</footer>
+
+<div id="pbrBottomSpace" style="height:0;background:#0A3A3C;"></div>
+
+<div id="pbrBottomSpace" style="height:0px;transition:height 0.3s;width:100%;pointer-events:none;"></div>
+<div style="position:fixed;bottom:0;left:0;width:100%;background:#FDF8F5;padding:12px 16px;box-shadow:0 -4px 20px rgba(14,79,82,0.08);border-top:1px solid rgba(27,32,33,0.06);z-index:80;display:flex;gap:10px;">
+  <a href="https://wa.me/918879475065?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:12px;box-shadow:0 4px 12px rgba(238,123,91,0.2);">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;background:#0E4F52;color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:12px;">
+    Book a Call
+  </a>
+</div>
+<style>
+@media (min-width: 720px) {
+  #pbrBottomSpace { display: none !important; }
+  div[style*="z-index:80"] { display: none !important; }
+}
+</style>
+<script>
+  (function(){
+    if(window.matchMedia('(max-width: 719px)').matches) {
+      document.getElementById('pbrBottomSpace').style.height = '72px';
+    }
+  })();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Reveal
+    if (!reduce) {
+        const els = Array.from(document.querySelectorAll('[data-reveal]'));
+        els.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(18px)';
+            el.style.transition = 'opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1)';
+        });
+        const io = new IntersectionObserver((ents) => {
+            ents.forEach((e) => {
+                if (e.isIntersecting) {
+                    const dl = parseFloat(e.target.getAttribute('data-delay') || '0');
+                    e.target.style.transitionDelay = dl + 'ms';
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'none';
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        els.forEach(el => io.observe(el));
+    }
+    
+    // Parallax
+    if (!reduce) {
+        window.addEventListener('scroll', () => {
+            const sy = window.scrollY || 0;
+            document.querySelectorAll('[data-parallax]').forEach((el) => {
+                const sp = parseFloat(el.getAttribute('data-parallax')) || 0.05;
+                el.style.transform = 'translateX(-50%) translateY(' + (sy * sp).toFixed(1) + 'px)';
+            });
+        }, { passive: true });
+    }
+    
+    // Counts
+    if (!reduce) {
+        const counts = Array.from(document.querySelectorAll('[data-count]'));
+        const ioCount = new IntersectionObserver((ents) => {
+            ents.forEach((e) => {
+                if (e.isIntersecting) {
+                    const el = e.target;
+                    const to = parseFloat(el.getAttribute('data-count'));
+                    const suf = el.getAttribute('data-suffix') || '';
+                    const dur = 1500, t0 = performance.now();
+                    const tick = (t) => {
+                        const p = Math.min(1, (t - t0) / dur);
+                        const ex = 1 - Math.pow(1 - p, 3);
+                        el.textContent = Math.round(to * ex) + suf;
+                        if (p < 1) requestAnimationFrame(tick);
+                        else el.textContent = to + suf;
+                    };
+                    requestAnimationFrame(tick);
+                    ioCount.unobserve(el);
+                }
+            });
+        }, { threshold: 0.6 });
+        counts.forEach(el => ioCount.observe(el));
+    }
+});
+</script>
+
 <script defer src="/site-analytics.min.js"></script>
+<script defer src="/google-reviews.min.js"></script>
 <script defer src="/voice-widget-loader.js"></script>
 </body>
 </html>

@@ -12,13 +12,13 @@
       '#pbrVoiceAgent{position:fixed!important;right:clamp(12px,3vw,24px)!important;bottom:clamp(12px,3vw,24px)!important;z-index:92!important;max-width:min(390px,calc(100vw - 24px));}',
       'body.pbr-voice-collapsed #pbrVoiceAgent{transform:translateY(calc(100% - 68px)) scale(.88);opacity:.94;}',
       'body.pbr-voice-collapsed elevenlabs-convai{transform:translateY(calc(100% - 68px)) scale(.88);opacity:.94;}',
-      '@media (max-width:760px){#pbrVoiceAgent{right:10px!important;bottom:10px!important;max-width:calc(100vw - 20px);}body.pbr-voice-collapsed #pbrVoiceAgent,body.pbr-voice-collapsed elevenlabs-convai{transform:translateY(calc(100% - 58px)) scale(.84);}}',
+      '@media (max-width:760px){#pbrVoiceAgent{right:14px!important;bottom:80px!important;max-width:calc(100vw - 28px);}body.pbr-voice-collapsed #pbrVoiceAgent,body.pbr-voice-collapsed elevenlabs-convai{transform:translateY(calc(100% - 58px)) scale(.84);}}',
       '#pbrVoiceLauncher{position:fixed;right:clamp(12px,3vw,24px);bottom:clamp(12px,3vw,24px);z-index:93;width:68px;height:68px;border-radius:50%;background:var(--color-coral,#EE7B5B);border:none;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px) scale(.9);transition:transform .3s cubic-bezier(.2,.7,.2,1),opacity .3s;box-shadow:0 8px 24px rgba(238,123,91,.4);display:flex;align-items:center;justify-content:center;}',
       '.pbrVoiceOrb{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);position:relative;display:block;}',
       '.pbrVoiceOrb:after{content:"";position:absolute;inset:8px 7px 9px 9px;border-radius:50%;background:linear-gradient(140deg,rgba(255,255,255,.86),rgba(255,255,255,0) 52%);transform:rotate(-18deg);}',
       'body.pbr-voice-collapsed #pbrVoiceAgent{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(12px) scale(.96);}',
       'body.pbr-voice-collapsed #pbrVoiceLauncher{opacity:1;pointer-events:auto;transform:none;}',
-      '@media (max-width:760px){#pbrVoiceLauncher{right:14px;bottom:14px;width:58px;height:58px;}.pbrVoiceOrb{width:40px;height:40px;}}'
+      '@media (max-width:760px){#pbrVoiceLauncher{right:14px;bottom:80px;width:58px;height:58px;}.pbrVoiceOrb{width:40px;height:40px;}}'
     ].join('\n');
     document.head.appendChild(style);
 
