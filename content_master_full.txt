@@ -1,0 +1,1922 @@
+
+
+
+
+
+
+
+
+PHYSIOBYRUTVI
+
+Complete WebsiteContent Master
+
+A clinically led, team-based content system for home physiotherapy
+
+POSITIONING  ·  Team-based, clinically led
+
+MARKET  ·  Mumbai western suburbs
+
+VERSION  ·  1.0 · 11 July 2026
+
+CORE BRAND IDEA
+
+The right physiotherapist, at home—with care standards led by Dr Rutvi.
+
+
+
+Implementation principle: Dr Rutvi is the founder and clinical lead. A qualified physiotherapist may be assigned based on condition, locality, language and availability. Continuity is prioritised, not falsely guaranteed.
+
+Contents
+
+1. Strategic Foundation
+
+2. Recommended Website Architecture
+
+3. Global Website Copy
+
+4. Homepage
+
+5. Conditions Hub
+
+6. Condition Page — Back and Neck Pain
+
+7. Condition Page — Sports Injuries
+
+8. Condition Page — Post-Surgery Rehabilitation
+
+9. Condition Page — Knee and Joint Pain
+
+10. Condition Page — Sciatica and Nerve-Related Leg Pain
+
+11. Condition Page — Frozen Shoulder
+
+12. Condition Page — Senior Mobility and Fall Prevention
+
+13. Condition Page — Posture and Work-Related Discomfort
+
+14. Condition Page — Strength and Return to Activity
+
+15. How Care Works
+
+16. Our Physiotherapists and Care Standards
+
+17. About Dr Rutvi
+
+18. Service Areas
+
+19. Reviews and Recovery Stories
+
+20. Frequently Asked Questions
+
+21. Contact and Booking Page
+
+22. System Messages and Microcopy
+
+23. Content and Compliance Requirements Before Publishing
+
+24. Implementation Priorities
+
+25. Final Homepage Message Hierarchy
+
+
+
+1. Strategic Foundation
+
+1.1 The product in one sentence
+
+PhysioByRutvi helps people receive appropriate physiotherapy at home by matching them with a qualified physiotherapist and supporting that care through clear clinical standards led by Dr Rutvi Gandhi.
+
+1.2 Recommended positioning
+
+The right physiotherapist, at home—with care standards led by Dr Rutvi.
+
+PhysioByRutvi should not behave like a generic directory and should not promise that Dr Rutvi personally handles every appointment. The brand advantage is a more considered middle ground:
+
+More personal and accountable than an anonymous marketplace.
+
+More flexible and scalable than a solo physiotherapist.
+
+More human and condition-aware than a large home-healthcare call centre.
+
+Clear about who will visit, how matching works and what the patient can expect.
+
+1.3 Core promise
+
+Patients receive:
+
+A physiotherapist selected for the concern, location and availability.
+
+A structured first assessment before a longer plan is recommended.
+
+Continuity with the assigned physiotherapist wherever possible.
+
+Clear explanations, home exercises and progress checkpoints.
+
+Escalation or referral when home physiotherapy is not the appropriate next step.
+
+1.4 Role of Dr Rutvi
+
+Use this language consistently:
+
+PhysioByRutvi was founded by Dr Rutvi Gandhi, PT, MPT, to make home physiotherapy easier to begin and more consistent to continue. She leads the care standards, therapist network and escalation process behind the service.
+
+Do not claim that Dr Rutvi personally assesses, treats or replies to every patient unless that becomes an operational guarantee.
+
+1.5 Brand voice
+
+The voice should be:
+
+Calm, not dramatic.
+
+Clinically grounded, not overly medical.
+
+Specific, not inspirational for its own sake.
+
+Reassuring, not promising outcomes.
+
+Human, without becoming casual about health.
+
+Words to favour
+
+Assess, understand, match, guide, progress, appropriate, qualified, practical, home visit, recovery goal, movement, function, next step.
+
+Words to reduce or avoid
+
+Miracle, cure, guaranteed, pain-free, fastest recovery, world-class, best, perfect, root cause, permanent relief, one specialist every visit.
+
+1.6 Content ratio
+
+60% useful service information.
+
+25% credibility and proof.
+
+15% emotional reassurance.
+
+
+
+2. Recommended Website Architecture
+
+Primary navigation
+
+Home
+
+Conditions
+
+How Care Works
+
+Our Physiotherapists
+
+About Dr Rutvi
+
+Service Areas
+
+FAQs
+
+Book a Home Visit
+
+Required public pages
+
+Homepage
+
+Conditions hub
+
+Back and neck pain
+
+Sports injuries
+
+Post-surgery rehabilitation
+
+Knee and joint pain
+
+Sciatica and nerve-related leg pain
+
+Frozen shoulder
+
+Senior mobility and fall prevention
+
+Posture and work-related discomfort
+
+Strength and return-to-activity support
+
+How Care Works
+
+Our Physiotherapists and Care Standards
+
+About Dr Rutvi
+
+Service Areas
+
+Reviews and Recovery Stories
+
+FAQs
+
+Contact and Booking
+
+Privacy Policy
+
+Terms of Service
+
+Each condition must have its own indexable URL. Do not continue using hash fragments on one generic condition page.
+
+
+
+3. Global Website Copy
+
+3.1 Announcement strip
+
+Home visits across Bhayander to Andheri · By appointment
+
+3.2 Navigation CTA
+
+Check Availability
+
+3.3 WhatsApp pre-filled message
+
+Hi PhysioByRutvi, I would like to check home-visit availability. My name is ___. I am located in ___. I need help with ___. My preferred day and time is ___.
+
+3.4 Call CTA
+
+Call +91 88794 75065
+
+3.5 Standard trust line
+
+Qualified physiotherapists · Assessment-led care · Continuity wherever possible
+
+3.6 Standard service-area line
+
+Serving Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri.
+
+3.7 Standard safety note
+
+PhysioByRutvi is not an emergency service. Sudden severe symptoms, new weakness, loss of bladder or bowel control, severe trauma, chest pain or difficulty breathing require urgent medical attention.
+
+3.8 Footer description
+
+PhysioByRutvi is a clinically led home-physiotherapy service founded by Dr Rutvi Gandhi, PT, MPT. We help patients across Mumbai's western suburbs begin appropriate physiotherapy at home with clearer matching, assessment and follow-through.
+
+3.9 Footer links
+
+Conditions · How Care Works · Our Physiotherapists · About Dr Rutvi · Service Areas · FAQs · Contact · Privacy · Terms
+
+3.10 Footer disclaimer
+
+Website information is educational and does not replace an individual assessment, diagnosis or medical advice.
+
+
+
+4. Homepage
+
+SEO
+
+Title: Home Physiotherapy in Mumbai | PhysioByRutvi
+
+Meta description: Book qualified physiotherapists for home visits across Bhayander to Andheri. Assessment-led care for pain, injury, post-surgery recovery and mobility needs.
+
+Hero
+
+Eyebrow: CLINICALLY LED HOME PHYSIOTHERAPY
+
+The right physiotherapist. At your home.
+
+PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time—with care standards led by Dr Rutvi Gandhi, PT, MPT.
+
+Primary CTA: Check Home-Visit Availability
+
+Secondary CTA: Explore Conditions
+
+Trust line: Qualified physiotherapists · In-home assessment · Continuity wherever possible
+
+Immediate clarity strip
+
+What we help with
+
+Pain and stiffness · Sports injuries · Post-surgery rehabilitation · Joint recovery · Senior mobility · Strength and return to activity
+
+Where we visit
+
+Bhayander to Andheri, by appointment
+
+How to begin
+
+Share your concern, suburb and preferred time
+
+Section: Start with what movement has become difficult
+
+You do not need to know the diagnosis before you contact us.
+
+Tell us what has changed: sleeping, walking, climbing stairs, working at a desk, lifting, exercising or recovering after surgery. We will ask a few focused questions and help identify the most appropriate next step.
+
+Back and neck pain
+
+For pain, stiffness or discomfort affecting work, sleep, lifting and everyday movement.
+
+Link: View back and neck care
+
+Post-surgery rehabilitation
+
+For guided recovery after knee, hip, ACL, shoulder, fracture or spine procedures, in coordination with medical advice.
+
+Link: View post-surgery care
+
+Sports injuries
+
+For sprains, strains, recurring injuries and a planned return to running, the gym or sport.
+
+Link: View sports rehabilitation
+
+Knee and joint pain
+
+For stiffness, swelling and difficulty with walking, stairs, standing or daily activity.
+
+Link: View knee and joint care
+
+Sciatica and nerve-related leg pain
+
+For pain, tingling or numbness travelling from the lower back into the leg.
+
+Link: View sciatica care
+
+Senior mobility
+
+For balance, strength, walking confidence and safer movement within the home.
+
+Link: View senior mobility care
+
+Section CTA: See All Conditions
+
+Section: How the service works
+
+Eyebrow: FROM FIRST MESSAGE TO FIRST VISIT
+
+A clearer way to begin home physiotherapy.
+
+1. Tell us what is happening
+
+Share the concern, location, medical or surgical context and preferred timing. A prescription, scan or discharge summary can be shared if relevant.
+
+2. We check suitability and availability
+
+We ask focused questions, identify whether home physiotherapy appears appropriate and match a physiotherapist based on the concern, locality, language and availability.
+
+3. Begin with an assessment
+
+The first visit reviews history, symptoms, movement and functional difficulty. Treatment may begin during the same visit when appropriate.
+
+4. Receive the next-step plan
+
+The physiotherapist explains the findings, home exercises, expected frequency and any need for medical review or further investigation.
+
+CTA: See How Care Works
+
+Section: Who will visit?
+
+Eyebrow: YOUR PHYSIOTHERAPIST
+
+Matched for your need—not assigned at random.
+
+The physiotherapist visiting you may be Dr Rutvi or another qualified member of the PhysioByRutvi care team. Matching considers the nature of the concern, therapist experience, location, language and availability.
+
+Once care begins, we aim to maintain continuity with the assigned physiotherapist. If a change becomes necessary, it is communicated clearly and the relevant case information is handed over.
+
+CTA: Meet the Care Team
+
+Section: Why home can be clinically useful
+
+Recovery has to work where life actually happens.
+
+At home, the physiotherapist can see the chair that aggravates your back, the stairs you are trying to climb, the bed you need to get in and out of, or the space available for exercises. This makes the plan more practical and easier to follow between visits.
+
+No difficult commute
+
+Useful after surgery, during painful flare-ups or when mobility is limited.
+
+Real-world assessment
+
+Daily movements and environmental barriers can be observed directly.
+
+Family participation
+
+Where appropriate, a family member or caregiver can learn how to support exercises safely.
+
+Practical home programme
+
+Exercises are adapted to the patient's current ability, available space and equipment.
+
+Section: The PhysioByRutvi care standard
+
+Eyebrow: WHAT PATIENTS SHOULD EXPECT
+
+Personal care needs a dependable process.
+
+Assessment before a package
+
+We do not recommend a long course of sessions before understanding the condition and functional goal.
+
+Clear explanations
+
+Patients should understand what is being assessed, what the plan is trying to improve and what to practise between visits.
+
+Progress checkpoints
+
+Plans should change as movement, strength, pain and confidence change.
+
+Appropriate escalation
+
+When symptoms need medical review, imaging or another specialist, physiotherapy should not delay that next step.
+
+Section: Founder
+
+Eyebrow: FOUNDED AND CLINICALLY LED BY
+
+Dr Rutvi Gandhi, PT, MPT
+
+Dr Rutvi Gandhi specialises in musculoskeletal and sports physiotherapy. She founded PhysioByRutvi to build a home-care experience that remains personal as the team grows: thoughtful matching, clear assessment, practical plans and honest escalation when physiotherapy is not enough.
+
+Credentials: MPT, Musculoskeletal and Sports Physiotherapy · BPT · Training across manual therapy, sports rehabilitation and therapeutic exercise
+
+CTA: About Dr Rutvi
+
+Section: Reviews
+
+Eyebrow: PATIENT EXPERIENCES
+
+What good care should leave behind: more clarity and more confidence.
+
+Only verified reviews should appear here. Do not add condition, location, treatment result or patient identity unless it is present in the original review or separately approved by the patient.
+
+CTA: Read Verified Reviews
+
+Section: Service areas
+
+Eyebrow: HOME VISITS ACROSS WESTERN MUMBAI
+
+Check availability in your suburb.
+
+Bhayander · Mira Road · Dahisar · Borivali · Kandivali · Malad · Goregaon · Jogeshwari · Andheri
+
+Availability depends on the therapist, condition, travel time and requested slot.
+
+CTA: Check Your Area
+
+Homepage FAQs
+
+Will Dr Rutvi personally conduct my session?
+
+Not necessarily. Depending on your condition, location and availability, your session may be conducted by Dr Rutvi or another qualified physiotherapist from the PhysioByRutvi care team. You will be told who is being assigned before the visit is confirmed.
+
+Will I see the same physiotherapist every time?
+
+We aim to maintain continuity with the same assigned physiotherapist because it supports better follow-through. If a change is required, it will be communicated and the relevant case information will be handed over.
+
+How long is a home visit?
+
+Most visits are planned for approximately 45–60 minutes, depending on the assessment, condition and treatment required. [Confirm operationally before publishing.]
+
+Do I need a doctor's prescription?
+
+Not for every concern. If you have a prescription, scan, surgery note or discharge summary, keep it available. Some symptoms may require medical review before or alongside physiotherapy.
+
+How much does a session cost?
+
+The fee is confirmed before booking and may vary by location, therapist, visit type and care requirement. No visit should be scheduled without the patient first knowing the applicable charge.
+
+Closing CTA
+
+Eyebrow: START WITH A SHORT MESSAGE
+
+Tell us what has become difficult.
+
+Share your concern, suburb, medical context and preferred time. We will help you understand whether a home physiotherapy assessment is an appropriate next step.
+
+Primary CTA: Check Availability on WhatsApp
+
+Secondary CTA: Call +91 88794 75065
+
+
+
+5. Conditions Hub
+
+SEO
+
+Title: Conditions Treated with Home Physiotherapy | PhysioByRutvi
+
+Meta description: Explore home physiotherapy for back pain, sports injuries, post-surgery recovery, knee pain, sciatica, frozen shoulder and senior mobility in Mumbai.
+
+Hero
+
+Eyebrow: CONDITIONS AND RECOVERY NEEDS
+
+Find the concern that sounds closest to yours.
+
+You do not need to diagnose yourself. These pages explain common reasons people seek home physiotherapy, what an assessment may cover and when medical review may be needed first.
+
+CTA: Not Sure? Describe Your Symptoms
+
+Condition cards
+
+Back and neck pain
+
+Pain, stiffness or restricted movement affecting sleep, work, lifting or daily activity.
+
+Sports injuries
+
+Sprains, strains, overuse problems and structured return to running, gym or sport.
+
+Post-surgery rehabilitation
+
+Stage-appropriate movement and strengthening after orthopaedic surgery.
+
+Knee and joint pain
+
+Joint stiffness, swelling and difficulty with walking, stairs or weight-bearing tasks.
+
+Sciatica and nerve-related leg pain
+
+Pain, tingling, numbness or sensitivity travelling from the lower back into the leg.
+
+Frozen shoulder
+
+A painful, gradually stiffening shoulder that limits reaching, dressing or sleeping.
+
+Senior mobility and fall prevention
+
+Balance, strength, transfers, walking confidence and safer movement at home.
+
+Posture and work-related discomfort
+
+Symptoms associated with prolonged sitting, repetitive work and workstation setup.
+
+Strength and return to activity
+
+Progressive exercise after pain or injury, or before returning to demanding activity.
+
+Important note
+
+The same symptom can have different causes. Website information cannot establish a diagnosis or determine whether treatment is safe for an individual. The first visit begins with assessment, and referral may be recommended when necessary.
+
+CTA
+
+Not sure where your concern fits?
+
+Describe the movement, activity or symptom that is bothering you. We will ask the next relevant questions.
+
+CTA: Message PhysioByRutvi
+
+
+
+6. Condition Page — Back and Neck Pain
+
+SEO
+
+Title: Back and Neck Pain Physiotherapy at Home in Mumbai
+
+Meta description: Home physiotherapy assessment for back pain, neck stiffness and movement-related discomfort across Bhayander to Andheri.
+
+Hero
+
+Eyebrow: BACK AND NECK PAIN
+
+When sitting, sleeping or ordinary movement starts to hurt.
+
+Back and neck symptoms can affect work, rest, lifting, driving and exercise. A home assessment looks beyond the painful area to understand movement, strength, daily habits and warning signs that may need medical review.
+
+CTA: Check Home-Visit Availability
+
+This service may be relevant if
+
+Pain or stiffness increases with sitting, standing, bending or lifting.
+
+Neck discomfort is linked with desk work or prolonged screen use.
+
+Symptoms return repeatedly after temporary relief.
+
+You are struggling to resume normal activity after a minor strain.
+
+Your doctor has recommended physiotherapy.
+
+What the physiotherapist may assess
+
+Symptom history and aggravating movements.
+
+Neck, back, hip and shoulder mobility where relevant.
+
+Strength, control and tolerance for daily tasks.
+
+Workstation, sleeping or lifting habits.
+
+Sensation, reflexes or neural signs when indicated.
+
+How home physiotherapy may help
+
+Treatment may include education, movement modification, mobility work, hands-on techniques and progressive strengthening. The aim is not simply to provide temporary relief, but to make everyday movement more manageable and build the capacity required for work, exercise and daily life.
+
+Seek medical advice promptly if
+
+There is significant trauma, fever, unexplained weight loss, new weakness, worsening numbness, loss of bladder or bowel control, severe unrelenting pain or other symptoms that concern you.
+
+FAQs
+
+Should I take complete bed rest?
+
+Complete rest is not routinely helpful for many common back and neck problems. The appropriate level of activity depends on symptoms and assessment.
+
+Will treatment include massage?
+
+Hands-on treatment may be used when appropriate, but it is only one part of care. Education, movement and progressive exercise are often important for longer-term improvement.
+
+Can the physiotherapist assess my workstation?
+
+Yes, when work setup appears relevant, the physiotherapist can review practical changes within the actual home or work-from-home environment.
+
+CTA
+
+Tell us what movement triggers the pain.
+
+Share where it hurts, how long it has been present, what makes it worse and your suburb.
+
+CTA: Message About Back or Neck Pain
+
+
+
+7. Condition Page — Sports Injuries
+
+SEO
+
+Title: Sports Injury Physiotherapy at Home in Mumbai
+
+Meta description: Assessment and progressive rehabilitation for sprains, strains and return to running, gym or sport through home physiotherapy in Mumbai.
+
+Hero
+
+Eyebrow: SPORTS INJURY REHABILITATION
+
+Return to activity with a plan—not guesswork.
+
+A sports injury needs more than waiting for pain to settle. Rehabilitation should rebuild the movement, strength, control and confidence required by the activity you want to return to.
+
+CTA: Discuss Your Injury
+
+This service may be relevant if
+
+You have a recent sprain, strain or overuse injury.
+
+Pain returns whenever training intensity increases.
+
+You can manage daily activity but do not feel ready for sport.
+
+You are returning after a period of rest, immobilisation or surgery.
+
+You want a structured strengthening and return-to-activity plan.
+
+What the physiotherapist may assess
+
+Injury history, swelling, tenderness and movement tolerance.
+
+Strength and control compared with the uninjured side.
+
+Running, landing, jumping, lifting or sport-specific movement where appropriate.
+
+Training load, recovery pattern and previous injuries.
+
+Signs that require imaging or an orthopaedic opinion.
+
+How rehabilitation may progress
+
+Settle and protect
+
+Reduce aggravation while maintaining safe movement and capacity.
+
+Rebuild
+
+Progress mobility, strength, balance and control based on the injured tissue and activity.
+
+Reintroduce demand
+
+Gradually restore running, lifting, change of direction or other activity-specific tasks.
+
+Test readiness
+
+Use functional checkpoints instead of relying only on the absence of pain.
+
+FAQs
+
+How soon after an injury should physiotherapy begin?
+
+It depends on the injury. Some conditions benefit from early assessment and guided movement, while suspected fractures, dislocations or major tears need medical evaluation first.
+
+Do I need gym equipment at home?
+
+Not always. Many early exercises use body weight, bands or simple equipment. Later-stage rehabilitation may require access to heavier resistance or a suitable facility.
+
+Can home physiotherapy prepare me fully for sport?
+
+Home care can cover substantial parts of rehabilitation. High-speed, heavy-load or field-based testing may eventually require an appropriate gym, ground or sports setting.
+
+CTA
+
+Tell us the sport, injury and goal.
+
+Share what happened, when it happened and what activity you want to return to.
+
+CTA: Message About a Sports Injury
+
+
+
+8. Condition Page — Post-Surgery Rehabilitation
+
+SEO
+
+Title: Post-Surgery Physiotherapy at Home in Mumbai
+
+Meta description: Home rehabilitation after knee, hip, ACL, shoulder, fracture and spine procedures, aligned with the surgeon's guidance and stage of recovery.
+
+Hero
+
+Eyebrow: POST-SURGERY REHABILITATION
+
+Recover at home with the right progression for each stage.
+
+After surgery, everyday tasks can become the first rehabilitation goals: getting out of bed, using the bathroom, walking safely or managing stairs. Home physiotherapy supports these early needs and progresses toward mobility, strength and independence.
+
+CTA: Check Post-Surgery Availability
+
+Common recovery needs
+
+Total knee or hip replacement.
+
+ACL or meniscus surgery.
+
+Rotator cuff or shoulder procedures.
+
+Fracture rehabilitation after medical clearance.
+
+Spine surgery rehabilitation with appropriate medical guidance.
+
+Recovery after a period of immobilisation.
+
+Before the first visit
+
+Keep the discharge summary, surgeon's protocol, imaging reports, precautions and medication information available. Tell us the surgery date, current walking status and whether stairs are involved at home.
+
+What the physiotherapist may work on
+
+Safe bed mobility, standing, transfers and walking.
+
+Range of motion within prescribed precautions.
+
+Swelling management and circulation exercises.
+
+Progressive strength and balance.
+
+Use of walking aids where appropriate.
+
+A home programme for the period between visits.
+
+Care coordination
+
+The rehabilitation plan should respect the surgeon's instructions, weight-bearing status and procedure-specific precautions. If healing, wound, swelling or pain appears outside the expected course, medical review may be recommended before progression.
+
+FAQs
+
+When should home physiotherapy start after surgery?
+
+The timing depends on the procedure and surgeon's instructions. Contact us with the surgery details so the appropriate start point can be discussed.
+
+Can a family member be present?
+
+Yes. A caregiver can be shown safe ways to support transfers, walking or prescribed exercises where appropriate.
+
+Will I need equipment?
+
+This depends on the procedure. The physiotherapist will explain whether bands, weights, walking aids or other equipment would be useful.
+
+CTA
+
+Share the surgery date and discharge instructions.
+
+We will check availability and what information the physiotherapist needs before the first visit.
+
+CTA: Message About Post-Surgery Care
+
+
+
+9. Condition Page — Knee and Joint Pain
+
+SEO
+
+Title: Knee and Joint Pain Physiotherapy at Home in Mumbai
+
+Meta description: Home physiotherapy for knee stiffness, arthritis-related limitations and joint pain affecting walking, stairs and daily activity.
+
+Hero
+
+Eyebrow: KNEE AND JOINT CARE
+
+Make walking, standing and stairs more manageable.
+
+Joint pain is not only about the painful joint. Strength, balance, movement habits, previous injury and daily load can all influence what the body can tolerate.
+
+CTA: Discuss Knee or Joint Pain
+
+This service may be relevant if
+
+The knee feels stiff after sitting or first thing in the morning.
+
+Walking, standing, squatting or stairs have become difficult.
+
+Arthritis is reducing activity or confidence.
+
+Symptoms continue after a minor joint injury.
+
+You need strengthening before or after an orthopaedic procedure.
+
+What the physiotherapist may assess
+
+Joint movement, swelling and symptom behaviour.
+
+Strength of the surrounding muscles.
+
+Walking, stair use, sit-to-stand and balance.
+
+Foot, hip and trunk contribution where relevant.
+
+Activity level, footwear and recovery goals.
+
+How physiotherapy may help
+
+The plan may combine load management, mobility, strength, balance and functional practice. For arthritis-related pain, the aim is often to improve what the joint can tolerate and help the person remain active—not to eliminate all movement.
+
+FAQs
+
+Can physiotherapy help arthritis?
+
+Physiotherapy can help many people improve strength, mobility and confidence while managing arthritis-related symptoms. The individual response depends on joint health and other medical factors.
+
+Should I avoid stairs completely?
+
+Not necessarily. The physiotherapist can assess technique, strength and current tolerance, then guide safer progression.
+
+Does swelling need medical review?
+
+Sudden, severe or unexplained swelling—especially with heat, redness, fever, trauma or inability to bear weight—should be medically assessed.
+
+CTA
+
+Tell us which movements the joint is limiting.
+
+Share the affected joint, duration, swelling, previous reports and your suburb.
+
+CTA: Message About Joint Pain
+
+
+
+10. Condition Page — Sciatica and Nerve-Related Leg Pain
+
+SEO
+
+Title: Sciatica Physiotherapy at Home in Mumbai
+
+Meta description: Home assessment for lower-back-related leg pain, tingling and numbness, with guidance on movement, strength and when medical review is required.
+
+Hero
+
+Eyebrow: SCIATICA AND LEG SYMPTOMS
+
+When pain or tingling travels into the leg.
+
+Symptoms described as sciatica may come from different structures and can vary greatly in severity. Assessment helps identify how movement affects the symptoms and whether physiotherapy is an appropriate option.
+
+CTA: Discuss Your Symptoms
+
+Symptoms people commonly report
+
+Pain travelling from the back or buttock into the thigh, calf or foot.
+
+Tingling, pins and needles or altered sensation.
+
+Symptoms aggravated by sitting, bending, coughing or walking.
+
+Recurrent episodes linked with back pain.
+
+What the physiotherapist may assess
+
+Distribution and behaviour of symptoms.
+
+Back, hip and lower-limb movement.
+
+Strength, sensation and neural sensitivity.
+
+Sitting, sleeping and activity tolerance.
+
+Red flags requiring urgent medical assessment.
+
+Important safety information
+
+Seek urgent medical attention for new bladder or bowel changes, numbness around the groin or saddle area, rapidly worsening weakness, severe symptoms in both legs or other sudden neurological changes.
+
+How physiotherapy may help
+
+When appropriate, care may include education, positions or movements that reduce symptoms, gradual restoration of activity, neural mobility and progressive strengthening. Advice should be individual; generic stretching can aggravate some presentations.
+
+FAQs
+
+Should I stretch the painful leg?
+
+Not automatically. Some nerve-related symptoms worsen with aggressive stretching. Assessment should guide the appropriate movement.
+
+Do I need an MRI before physiotherapy?
+
+Not everyone needs imaging before beginning conservative care. Medical review or imaging may be appropriate when symptoms, neurological findings or clinical history indicate it.
+
+Can I continue working?
+
+This depends on symptoms and job demands. The physiotherapist may suggest changes to sitting, movement breaks and activity while recovery progresses.
+
+CTA
+
+Describe where the symptoms travel.
+
+Tell us whether there is tingling, numbness or weakness and how long it has been present.
+
+CTA: Message About Sciatica
+
+
+
+11. Condition Page — Frozen Shoulder
+
+SEO
+
+Title: Frozen Shoulder Physiotherapy at Home in Mumbai
+
+Meta description: Home physiotherapy for painful shoulder stiffness affecting reaching, dressing and sleep, with stage-appropriate mobility and strengthening.
+
+Hero
+
+Eyebrow: FROZEN SHOULDER
+
+Restore useful shoulder movement without forcing the process.
+
+Frozen shoulder often develops gradually and can affect dressing, reaching overhead, fastening clothing and sleeping. Treatment should reflect the stage, irritability and movement available—not push through severe pain indiscriminately.
+
+CTA: Discuss Shoulder Stiffness
+
+What the physiotherapist may assess
+
+Onset, pain pattern and night symptoms.
+
+Active and assisted shoulder movement.
+
+Neck and shoulder contribution.
+
+Functional tasks such as dressing and reaching.
+
+Medical factors or injuries that may require further review.
+
+How physiotherapy may help
+
+Depending on the stage, care may include pain-management education, gentle mobility, hands-on techniques, home exercises and later strengthening. Progress is usually measured through useful movement and function, not only a single range measurement.
+
+FAQs
+
+Should frozen shoulder exercises be painful?
+
+Exercises may feel like a controlled stretch, but repeatedly provoking severe or lasting pain can be counterproductive. Intensity should match the stage and irritability.
+
+How long does recovery take?
+
+Frozen shoulder can take time and varies between people. Assessment helps set realistic expectations and monitor whether the pattern is typical.
+
+Can diabetes affect frozen shoulder?
+
+Frozen shoulder is more common in people with diabetes and may behave differently. Relevant medical history should be shared with the physiotherapist.
+
+CTA
+
+Tell us which shoulder movements have become difficult.
+
+Share when the stiffness began, whether sleep is affected and any relevant medical history.
+
+CTA: Message About Shoulder Stiffness
+
+
+
+12. Condition Page — Senior Mobility and Fall Prevention
+
+SEO
+
+Title: Senior Physiotherapy and Mobility Support at Home in Mumbai
+
+Meta description: Home physiotherapy for senior strength, balance, walking, transfers and fall-prevention support across Mumbai's western suburbs.
+
+Hero
+
+Eyebrow: SENIOR MOBILITY
+
+Support safer movement and greater independence at home.
+
+For an older adult, progress may mean standing from a chair with less help, walking to the bathroom safely or feeling steadier outdoors. Home physiotherapy focuses on the movements that matter in the person's actual environment.
+
+CTA: Discuss Mobility Support
+
+This service may be relevant for
+
+Reduced strength after illness, hospitalisation or inactivity.
+
+Difficulty standing, walking, turning or using stairs.
+
+Repeated falls or fear of falling.
+
+Arthritis-related loss of mobility.
+
+Recovery after a fracture or surgery, with medical clearance.
+
+Caregiver guidance for safer movement at home.
+
+What the physiotherapist may assess
+
+Sit-to-stand, bed mobility and transfers.
+
+Walking pattern and use of mobility aids.
+
+Balance, lower-limb strength and endurance.
+
+Home hazards and daily movement demands.
+
+Medical history, medication-related concerns and recent falls.
+
+What care may include
+
+Supervised strength and balance exercises, walking practice, transfer training, pacing, caregiver education and practical home-safety suggestions. Recommendations may include medical review or another service when dizziness, sudden decline or other concerns are present.
+
+FAQs
+
+Does a family member need to be present?
+
+It depends on the person's cognition, mobility and level of assistance. We may recommend caregiver presence for safety or carryover between visits.
+
+Can physiotherapy prevent every fall?
+
+No service can guarantee that. Strength, balance, appropriate aids and home-safety changes can help reduce modifiable risks.
+
+Can you help after hospital discharge?
+
+Yes, when physiotherapy is appropriate and discharge instructions are available. Share the medical summary and current assistance needs before booking.
+
+CTA
+
+Tell us what assistance is currently needed.
+
+Share recent falls, walking ability, medical context, caregiver availability and home location.
+
+CTA: Message About Senior Mobility
+
+
+
+13. Condition Page — Posture and Work-Related Discomfort
+
+SEO
+
+Title: Posture and Workstation Physiotherapy at Home in Mumbai
+
+Meta description: Home assessment for neck, back and shoulder discomfort associated with prolonged sitting, repetitive work and workstation setup.
+
+Hero
+
+Eyebrow: POSTURE AND WORK-RELATED DISCOMFORT
+
+Make your work setup support movement—not replace it.
+
+There is no single perfect posture that prevents every symptom. The more useful goal is a setup that reduces unnecessary strain, allows position changes and supports the strength and movement your work demands.
+
+CTA: Discuss Work-Related Pain
+
+What the physiotherapist may assess
+
+Workstation height, screen position and seating.
+
+Time spent in one position and frequency of movement breaks.
+
+Neck, shoulder, back and wrist movement.
+
+Strength and endurance for sustained work.
+
+Tasks outside work that may also influence symptoms.
+
+What care may include
+
+Practical workstation changes, movement breaks, symptom-management strategies, mobility and strengthening. The plan should be realistic for the patient's working day rather than a long routine that is unlikely to be followed.
+
+FAQs
+
+Is poor posture the only reason for neck pain?
+
+No. Symptoms can be influenced by many factors. Posture and workstation setup are assessed in context rather than treated as the sole explanation.
+
+Do I need an expensive ergonomic chair?
+
+Not necessarily. Useful improvements can often be made through positioning, support and movement habits before purchasing new equipment.
+
+Can this be done during a home visit?
+
+Yes. A home visit is particularly useful when the workstation itself needs to be reviewed.
+
+CTA
+
+Show us where and how you work.
+
+Share the symptom, work hours, setup and activities that increase discomfort.
+
+CTA: Message About Work-Related Pain
+
+
+
+14. Condition Page — Strength and Return to Activity
+
+SEO
+
+Title: Strength and Return-to-Activity Physiotherapy in Mumbai
+
+Meta description: Progressive home-based strength and movement support after pain, injury or inactivity, with clear goals and safe progression.
+
+Hero
+
+Eyebrow: STRENGTH AND RETURN TO ACTIVITY
+
+Move from “feeling better” to being ready again.
+
+Pain settling is not always the end of rehabilitation. Strength, control, endurance and confidence may still need to be rebuilt before returning to demanding work, exercise or sport.
+
+CTA: Discuss Your Activity Goal
+
+This service may be relevant if
+
+Symptoms have improved but the body still feels weak or guarded.
+
+You are returning after injury, surgery or prolonged inactivity.
+
+Previous flare-ups occur whenever activity increases.
+
+You want guidance on safely resuming gym, running or recreational sport.
+
+What the physiotherapist may assess
+
+Current strength, control, balance and endurance.
+
+Demands of the intended activity.
+
+Movement confidence and symptom response.
+
+Equipment and space available at home.
+
+Need for gym-, field- or sport-based progression later.
+
+What the programme may include
+
+A staged exercise plan with measurable progression. Exercises may use body weight, resistance bands, household equipment or external gym access depending on the goal.
+
+FAQs
+
+Is this personal training?
+
+The service is physiotherapy-led and intended for rehabilitation, movement limitations or a clinically relevant return to activity. General fitness coaching without a physiotherapy need may be better served by a qualified fitness professional.
+
+How will progress be measured?
+
+Measures may include repetitions, resistance, balance time, movement quality, walking tolerance or activity-specific tasks.
+
+Can sessions happen at a gym?
+
+The current service is positioned around home visits. External-location sessions should only be advertised if operationally available.
+
+CTA
+
+Tell us what you want to return to.
+
+Share the activity, previous injury or limitation and current exercise level.
+
+CTA: Message About Return to Activity
+
+
+
+15. How Care Works
+
+SEO
+
+Title: How Home Physiotherapy Works | PhysioByRutvi
+
+Meta description: Learn how PhysioByRutvi checks suitability, matches a physiotherapist, conducts the first assessment and supports progress at home.
+
+Hero
+
+Eyebrow: HOW CARE WORKS
+
+Know who is coming, why they are coming and what happens next.
+
+Home physiotherapy should not feel like an unknown person arriving with an unclear plan. Our process is designed to make matching, assessment, treatment and follow-up easier to understand.
+
+Step 1: Initial enquiry
+
+Share:
+
+Patient name and age.
+
+Main concern and how long it has been present.
+
+Suburb and preferred timing.
+
+Relevant surgery, injury or medical history.
+
+Current ability to walk or move independently.
+
+Prescription, report or discharge summary where relevant.
+
+Step 2: Suitability check
+
+We may ask additional questions to understand urgency, home-visit suitability and the kind of physiotherapist required. If the information suggests that medical review should happen first, we will say so.
+
+Step 3: Therapist matching
+
+Matching considers:
+
+Nature of the condition.
+
+Therapist qualification and relevant experience.
+
+Patient location and travel feasibility.
+
+Language and communication needs.
+
+Timing and continuity availability.
+
+The therapist's name should be shared before confirmation. [Confirm whether profiles and qualifications will also be shared.]
+
+Step 4: Fee and appointment confirmation
+
+Before the visit, the patient should receive:
+
+Confirmed date and arrival window.
+
+Assigned therapist's name.
+
+Applicable fee and payment method.
+
+What documents or equipment to keep ready.
+
+Cancellation and rescheduling terms.
+
+Step 5: First assessment
+
+The first visit may include:
+
+Review of symptoms, history and goals.
+
+Relevant movement, strength and functional assessment.
+
+Treatment when appropriate.
+
+Initial home exercises or activity advice.
+
+Explanation of findings and next steps.
+
+Step 6: Ongoing plan
+
+If further care is recommended, the physiotherapist should explain:
+
+Primary treatment goals.
+
+Suggested visit frequency.
+
+What the patient should practise independently.
+
+How progress will be checked.
+
+When the plan will be reviewed or concluded.
+
+Step 7: Change, escalation or discharge
+
+Care may conclude when goals are met, independent management is appropriate or physiotherapy is no longer the right service. Medical review or another specialist may be recommended when progress, symptoms or clinical findings indicate it.
+
+Cancellation microcopy
+
+Need to change the time? Let us know as early as possible so the physiotherapist's travel schedule can be adjusted. [Insert confirmed cancellation window and charge.]
+
+CTA
+
+Ready to check whether a home visit is suitable?
+
+CTA: Start on WhatsApp
+
+
+
+16. Our Physiotherapists and Care Standards
+
+SEO
+
+Title: Our Home Physiotherapists and Care Standards | PhysioByRutvi
+
+Meta description: Understand how PhysioByRutvi selects, matches and supports physiotherapists delivering assessment-led care at home.
+
+Hero
+
+Eyebrow: THE PHYSIOBYRUTVI CARE TEAM
+
+A personal service supported by shared care standards.
+
+PhysioByRutvi is built around qualified physiotherapists—not anonymous bookings. Patients should know who is visiting, what their role is and what standard of communication and follow-through to expect.
+
+Who may conduct the visit
+
+The visit may be conducted by Dr Rutvi Gandhi or another physiotherapist from the PhysioByRutvi care team. Assignment depends on the condition, location, language, relevant experience and availability.
+
+What every therapist should provide
+
+Identity and qualification clarity
+
+The patient's confirmation should identify the assigned physiotherapist. Qualification and verification claims must match the actual onboarding process.
+
+Assessment-led care
+
+Treatment should follow an appropriate history and assessment rather than a fixed routine applied to every patient.
+
+A practical home plan
+
+Instructions should be understandable, achievable in the home environment and proportionate to the patient's current ability.
+
+Progress review
+
+The therapist should review change over time and adapt the plan rather than repeat an unchanged session indefinitely.
+
+Honest escalation
+
+Physiotherapists should recognise when medical review, imaging, another discipline or emergency care is more appropriate.
+
+Respect and privacy
+
+Consent, communication, physical boundaries, patient information and home conduct should be handled professionally.
+
+Continuity policy
+
+We aim to keep the same assigned physiotherapist through an episode of care. Continuity can be affected by availability, leave, location or a change in clinical need. When a therapist changes, the patient should be informed and relevant case information handed over securely.
+
+Recommended therapist profile format
+
+Every published therapist card should include only verified information:
+
+Full name.
+
+BPT/MPT qualification.
+
+Primary clinical interests.
+
+Languages.
+
+Service areas.
+
+Professional photograph.
+
+Registration or verification detail where applicable.
+
+Do not publish inflated labels such as “expert” or “specialist” without defined criteria.
+
+CTA
+
+Tell us what kind of support is needed.
+
+We will check suitability and match the most appropriate available physiotherapist.
+
+CTA: Check Therapist Availability
+
+
+
+17. About Dr Rutvi
+
+SEO
+
+Title: About Dr Rutvi Gandhi, PT, MPT | PhysioByRutvi
+
+Meta description: Meet Dr Rutvi Gandhi, founder and clinical lead of PhysioByRutvi, with a focus on musculoskeletal and sports physiotherapy.
+
+Hero
+
+Eyebrow: FOUNDER AND CLINICAL LEAD
+
+Building home physiotherapy around clarity, continuity and appropriate care.
+
+Dr Rutvi Gandhi, PT, MPT, founded PhysioByRutvi to make physiotherapy at home easier to begin and more dependable to continue. Her focus is musculoskeletal and sports physiotherapy, with a practical approach to movement, strength and everyday function.
+
+CTA: Check Home-Visit Availability
+
+Founder story
+
+Home physiotherapy reveals things that are easy to miss in a clinic: the stairs a patient avoids, the chair that changes symptoms, the limited space available for exercise or the family member helping after surgery.
+
+PhysioByRutvi began with the belief that these realities should shape care. As the service expands beyond one practitioner, Dr Rutvi's role is to protect that principle through better therapist matching, clear care standards and appropriate clinical escalation.
+
+Care philosophy
+
+Good physiotherapy should help a patient understand what is happening, what they can do safely and how progress will be judged.
+
+The aim is not to make patients dependent on repeated sessions. It is to provide the assessment, treatment, guidance and progression needed for greater confidence and independent movement.
+
+Education
+
+Master of Physiotherapy
+
+Musculoskeletal and Sports Physiotherapy, NMIMS School of Science, Mumbai, 2024–2026.
+
+Bachelor of Physiotherapy
+
+Sumandeep Vidyapeeth University, 2023.
+
+Clinical Nutrition and Sports/Fitness Nutrition
+
+VLCC, Mumbai, 2019.
+
+Additional training
+
+Training includes kinesiology taping, instrument-assisted soft-tissue mobilisation, cupping therapy, myofascial release, clinical sports assessment, core and diaphragm activation, respiratory care and CPR seminars.
+
+Keep this section concise. Do not publish every workshop as if it were a separate clinical specialisation.
+
+Clinical interests
+
+Musculoskeletal pain and movement limitations.
+
+Sports injury rehabilitation.
+
+Post-operative orthopaedic rehabilitation.
+
+Strength and return to activity.
+
+Home exercise planning.
+
+Role within PhysioByRutvi
+
+Founder and clinical lead.
+
+Care-standard development.
+
+Therapist onboarding and service quality.
+
+Complex-case discussion and escalation, where operationally applicable.
+
+Continued development of the home-physiotherapy model.
+
+Do not claim direct supervision of every patient unless documented and consistently delivered.
+
+CTA
+
+Begin with the concern—not a package.
+
+Share what is difficult, where the patient is located and the preferred time. The team will help identify the appropriate next step.
+
+CTA: Message PhysioByRutvi
+
+
+
+18. Service Areas
+
+SEO
+
+Title: Home Physiotherapy Service Areas in Mumbai | PhysioByRutvi
+
+Meta description: Check home-physiotherapy availability across Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri.
+
+Hero
+
+Eyebrow: WHERE WE VISIT
+
+Home physiotherapy across Mumbai's western suburbs.
+
+PhysioByRutvi currently coordinates appointment-based home visits from Bhayander to Andheri. Availability depends on therapist coverage, travel time, condition and requested slot.
+
+Areas
+
+Bhayander and Mira Road
+
+Home visits subject to therapist and slot availability.
+
+Dahisar and Borivali
+
+Home visits for assessment, pain and injury rehabilitation, post-surgery recovery and mobility support.
+
+Kandivali and Malad
+
+Appointment-based visits across residential areas, subject to travel feasibility.
+
+Goregaon and Jogeshwari
+
+Home-visit availability varies by day, therapist and care requirement.
+
+Andheri
+
+Selected western-suburb coverage based on therapist availability and travel schedule. [Clarify East/West coverage before publishing.]
+
+Availability explanation
+
+Because physiotherapists travel between homes, an exact time may not always be immediately available. The team will confirm the therapist, fee and arrival window before the visit is booked.
+
+Outside the current area
+
+If the patient is outside the listed corridor, share the location. We will confirm whether an appropriate therapist is available rather than promise coverage in advance.
+
+CTA
+
+Check your pin code and preferred time.
+
+CTA: Ask About Your Area
+
+
+
+19. Reviews and Recovery Stories
+
+SEO
+
+Title: Patient Reviews and Recovery Experiences | PhysioByRutvi
+
+Meta description: Read verified patient feedback about home physiotherapy, communication and recovery support from PhysioByRutvi.
+
+Hero
+
+Eyebrow: PATIENT EXPERIENCES
+
+Care is remembered in the details.
+
+Patients often remember whether they felt heard, understood the plan, knew what to do between visits and felt more confident with everyday movement.
+
+Review rules
+
+Pull reviews from the verified Google Business Profile.
+
+Display the original wording without inventing outcomes.
+
+Do not attach a diagnosis, suburb or therapist unless confirmed.
+
+Obtain explicit consent before creating a detailed recovery story.
+
+Do not imply that one patient's outcome will apply to another.
+
+Recovery story template
+
+The starting difficulty
+
+What activity, movement or stage of recovery was difficult?
+
+The assessment focus
+
+What did the physiotherapist need to understand?
+
+The care plan
+
+What kinds of treatment, exercise or guidance were used? Avoid disclosing private medical details without permission.
+
+The progress that mattered
+
+Use a functional outcome such as stairs, walking, sleep, return to work or return to activity.
+
+Patient reflection
+
+Use an approved direct quote.
+
+CTA
+
+Want to understand whether home physiotherapy may suit your situation?
+
+CTA: Describe Your Concern
+
+
+
+20. Frequently Asked Questions
+
+SEO
+
+Title: Home Physiotherapy FAQs | PhysioByRutvi Mumbai
+
+Meta description: Answers about home visits, therapist assignment, session duration, pricing, safety, continuity, reports, service areas and booking.
+
+Booking and assignment
+
+How do I book a home visit?
+
+Message or call with the patient's concern, suburb and preferred time. We may ask for medical or surgical details before confirming suitability and therapist availability.
+
+Will Dr Rutvi personally visit?
+
+Not necessarily. The appointment may be assigned to Dr Rutvi or another qualified physiotherapist from the PhysioByRutvi care team. The assigned therapist's name should be shared before confirmation.
+
+How is the physiotherapist selected?
+
+Matching considers the condition, relevant experience, location, language and availability.
+
+Will the same physiotherapist continue?
+
+We aim for continuity with the assigned physiotherapist. If a change is required, it should be communicated and relevant case information handed over securely.
+
+First visit and treatment
+
+What happens during the first visit?
+
+The physiotherapist reviews the history, symptoms and goals; assesses relevant movement and function; and explains the initial plan. Treatment may begin during the same visit when appropriate.
+
+How long does a session last?
+
+Most visits are expected to take approximately 45–60 minutes. The actual duration may vary based on assessment and care needs. [Confirm before publishing.]
+
+Will I receive exercises?
+
+Where appropriate, the physiotherapist will provide a practical home programme and explain how often it should be performed.
+
+Do you provide equipment?
+
+Some therapists may bring small portable tools. Patients may be advised to purchase simple equipment such as a resistance band if it supports the plan. Do not advertise electrotherapy availability unless equipment access is confirmed for the assigned therapist.
+
+Medical information and safety
+
+Do I need a prescription?
+
+Not for every concern. Prescriptions, scans, discharge summaries and surgery protocols should be shared when relevant.
+
+Can physiotherapy replace a doctor's consultation?
+
+No. Physiotherapists assess movement and rehabilitation needs, but some symptoms require medical diagnosis, investigation or emergency care.
+
+Is home physiotherapy safe after surgery?
+
+It can be appropriate when aligned with the surgeon's instructions and the patient's medical status. Share the procedure, date, precautions and discharge information before booking.
+
+What symptoms require urgent attention?
+
+Sudden severe symptoms, new weakness, loss of bladder or bowel control, severe trauma, chest pain, difficulty breathing or rapid neurological change require urgent medical attention.
+
+Pricing and policies
+
+What is the session fee?
+
+The applicable fee is confirmed before booking and may vary by location, therapist and visit requirement. [Insert transparent price or validated range when approved.]
+
+How can I pay?
+
+[Insert confirmed payment methods: UPI, cash, card or payment link.]
+
+What is the cancellation policy?
+
+Because therapists travel between homes, rescheduling should be requested as early as possible. [Insert confirmed notice period and charge.]
+
+Do you sell packages?
+
+An initial assessment should happen before a longer plan or package is recommended. Any package terms, expiry and refund conditions must be clearly stated.
+
+Service area and language
+
+Which areas are covered?
+
+Current coverage includes Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri, subject to therapist availability.
+
+Which languages are supported?
+
+The service aims to support English, Hindi, Marathi and Gujarati. Language availability depends on the assigned therapist.
+
+CTA
+
+Still unsure?
+
+Send the concern and location. The team will tell you what information is needed next.
+
+CTA: Ask PhysioByRutvi
+
+
+
+21. Contact and Booking Page
+
+SEO
+
+Title: Book Home Physiotherapy in Mumbai | PhysioByRutvi
+
+Meta description: Check home-physiotherapy availability across Bhayander to Andheri. Share the concern, location and preferred appointment time.
+
+Hero
+
+Eyebrow: BOOK A HOME VISIT
+
+Start with the information we need to help properly.
+
+You do not need to write a long medical explanation. Share the essentials below and the team will ask any necessary follow-up questions.
+
+Booking form labels
+
+Patient name
+
+Age
+
+Phone number
+
+Suburb / pin code
+
+What do you need help with?
+
+How long has this been present?
+
+Relevant surgery, injury or medical diagnosis — optional
+
+Can the patient walk independently? — Yes / With support / No
+
+Preferred day
+
+Preferred time window
+
+Preferred language — English / Hindi / Marathi / Gujarati / No preference
+
+Upload prescription, scan or discharge summary — optional
+
+Consent checkbox: I consent to PhysioByRutvi using this information to assess service suitability, coordinate an appointment and contact me about this enquiry. I understand that submitting the form does not confirm an appointment.
+
+Submit button: Request Availability
+
+Confirmation message
+
+Request received.
+
+We will review the concern, location and therapist availability, then contact you to confirm the next step. Your appointment is not booked until the therapist, fee, date and time are confirmed.
+
+WhatsApp alternative
+
+Prefer WhatsApp? Send the patient name, concern, suburb and preferred time.
+
+CTA: Continue on WhatsApp
+
+What happens next
+
+We may ask a few additional questions.
+
+We check whether home physiotherapy appears suitable.
+
+We match an available physiotherapist.
+
+We confirm the therapist, fee and appointment time.
+
+Emergency note
+
+This form is not monitored as an emergency channel. For urgent or severe symptoms, contact an appropriate emergency medical service.
+
+
+
+22. System Messages and Microcopy
+
+Availability unavailable
+
+We do not currently have a suitable home-visit slot for the requested location and time. Share another time window if possible, and we will recheck availability.
+
+Outside service area
+
+This location is outside our regular service corridor. We will check whether a suitable physiotherapist can travel there before making any commitment.
+
+Medical review recommended
+
+Based on the information shared, medical assessment may be the safer next step before booking physiotherapy. This is not a diagnosis; it is a precaution so appropriate care is not delayed.
+
+Therapist assignment
+
+Your home visit is proposed with [Therapist name, qualification] on [date] between [time window]. The fee is ₹[amount]. Reply CONFIRM to approve the appointment.
+
+Appointment confirmed
+
+Your PhysioByRutvi home visit is confirmed with [Therapist name] for [date/time] at [location]. Please keep relevant prescriptions, reports or discharge papers ready.
+
+Appointment reminder
+
+Reminder: your physiotherapy home visit is scheduled for [date/time]. Let us know as early as possible if the timing needs to change.
+
+Post-first-visit follow-up
+
+We hope the first visit gave you clarity about the next steps. If anything in the plan is unclear, reply here and we will help coordinate the appropriate response.
+
+Review request
+
+If the care experience has been helpful, would you be comfortable sharing an honest Google review? Your feedback helps other patients understand what to expect. [Review link]
+
+
+
+23. Content and Compliance Requirements Before Publishing
+
+Operational facts to confirm
+
+Whether every team physiotherapist is employed, contracted or referral-based.
+
+Minimum qualification and verification process.
+
+Whether professional registration details can be published.
+
+Exact role of Dr Rutvi in supervision and escalation.
+
+Whether the same therapist can be guaranteed or only prioritised.
+
+Standard session duration.
+
+Service hours and days.
+
+Exact service boundaries, including Andheri East/West.
+
+Fee structure, travel surcharge and package terms.
+
+Cancellation and refund policy.
+
+Supported payment methods.
+
+Availability of electrotherapy and other portable equipment.
+
+Secure method for storing reports and patient information.
+
+Who can access booking and clinical data.
+
+Consent process for reviews, photographs and recovery stories.
+
+Claims that must not publish without proof
+
+“5.0 rated” unless linked to the live verified profile.
+
+“Certified,” “vetted” or “background checked” unless the process exists.
+
+“Specialist” for every therapist unless qualification supports it.
+
+“Same therapist every visit” unless contractually guaranteed.
+
+“Dr Rutvi supervises every case” unless consistently documented.
+
+Exact patient outcomes or recovery time.
+
+Any claim that physiotherapy will avoid surgery or permanently cure a condition.
+
+Required legal pages
+
+Privacy Policy should cover enquiry data, uploaded medical documents, WhatsApp communication, analytics, cookies, data retention, sharing with assigned therapists, user rights and contact information.
+
+Terms should cover service scope, non-emergency status, appointment confirmation, fees, cancellation, patient responsibilities, therapist access to the home, clinical limitations, third-party tools and dispute/contact information.
+
+These pages should be reviewed by an Indian healthcare/privacy professional before publication.
+
+
+
+24. Implementation Priorities
+
+Priority 1 — Before paid traffic
+
+Replace the solo-practitioner promise across all English, Marathi and Gujarati pages.
+
+Publish the new homepage, How Care Works and Our Physiotherapists pages.
+
+Add Privacy, Terms and explicit enquiry consent.
+
+Fix Google Reviews integration and remove unverified review details.
+
+Remove or correctly mount the voice assistant.
+
+Correct all copy and component defects.
+
+Confirm GA4 conversion events and booking-source capture.
+
+Priority 2 — Search and conversion
+
+Give every condition a unique URL, metadata and schema.
+
+Build the contact and booking form.
+
+Add service-area pages or sections based on real coverage.
+
+Connect qualified enquiries to a CRM or operating sheet.
+
+Record assigned therapist, enquiry source, booking and attendance.
+
+Priority 3 — Trust and scale
+
+Publish verified therapist profiles.
+
+Add consented recovery stories.
+
+Create patient exercise and follow-up resources.
+
+Add transparent pricing or a validated pricing explanation.
+
+Translate the approved English master into Marathi and Gujarati using a human clinical review—not uncontrolled machine translation.
+
+
+
+25. Final Homepage Message Hierarchy
+
+If the design allows only seven major messages, use these in this order:
+
+The right physiotherapist, at your home.
+
+Conditions and recovery needs served.
+
+How suitability and matching work.
+
+Who may visit and how continuity works.
+
+The PhysioByRutvi care standard.
+
+Verified proof and service areas.
+
+Check availability with clear booking expectations.
+
+This hierarchy removes the current repetition and gives every section a separate job.
+
