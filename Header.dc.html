@@ -154,7 +154,7 @@ this.onScroll(); this.onResize(); }
     window.removeEventListener('keydown', this.onKey);
     try { document.body.style.overflow = ''; } catch(e){}
   }
-  renderVals(){ return { waHref: this.wa, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu, langEnHref: this.langHref('en'), langMrHref: this.langHref('mr'), langGuHref: this.langHref('gu') }; }
+  renderVals(){ return { waHref: this.wa, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu }; }
 }
 </script>
 </body>
