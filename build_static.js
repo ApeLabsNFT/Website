@@ -6,7 +6,8 @@ const DOMAIN = 'https://physiobyrutvi.in';
 const PHONE = '+91 88794 75065';
 const PHONE_LINK = 'tel:+918879475065';
 const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, and preferred day/time is ___.');
-// The currently verified Calendly event is still the 30-minute event. Do not label it as 15 minutes.
+// The account owner confirmed this event is configured as a 15-minute consultation;
+// the legacy Calendly slug is retained so existing links continue to work.
 const CALENDLY = 'https://calendly.com/gandhirutvi13/30min';
 
 const pages = [
@@ -19,7 +20,7 @@ const pages = [
     type: 'home'
   },
   {
-    source: 'About Dr Rutvi.dc.html',
+    body: aboutEditorialBody(),
     output: 'about/index.html',
     route: '/about/',
     title: 'Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP | PhysioByRutvi',
@@ -187,7 +188,7 @@ function normalizeBody(source, type) {
 }
 
 function brand() {
-  return `<span class="pbr-brand__mark" aria-hidden="true">R</span><span><span class="pbr-brand__name">PHYSIO</span><span class="pbr-brand__by">BY RUTVI</span></span>`;
+  return `<img class="pbr-brand__image" src="/assets/pbr-logo-horizontal.webp" width="1200" height="272" alt="PhysioByRutvi">`;
 }
 
 function header() {
@@ -207,7 +208,7 @@ function header() {
     <a class="pbr-brand" href="/" aria-label="PhysioByRutvi home">${brand()}</a>
     <div class="pbr-header__actions">
       <a class="pbr-icon-btn pbr-icon-btn--call" href="${PHONE_LINK}" aria-label="Call PhysioByRutvi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <a class="pbr-book-btn" href="${CALENDLY}" target="_blank" rel="noopener">Book a Free Consultation</a>
+      <a class="pbr-book-btn" href="${CALENDLY}" target="_blank" rel="noopener">Free 15-Minute Consultation</a>
       <button class="pbr-icon-btn pbr-menu-btn" id="pbrMenuOpen" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="pbrMenu"><svg width="19" height="16" viewBox="0 0 19 16" fill="none"><path d="M1 2h17M1 8h17M1 14h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 14h4" stroke="#EE7B5B" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
@@ -217,7 +218,7 @@ function header() {
     <div class="pbr-menu__top"><a class="pbr-brand" href="/">${brand()}</a><button class="pbr-icon-btn" id="pbrMenuClose" type="button" aria-label="Close menu"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
     <div class="pbr-menu__grid">
       <nav class="pbr-menu__links" aria-label="Primary navigation">${links}</nav>
-      <aside class="pbr-menu__card"><small>FREE CONSULTATION</small><p>Tell our care team what feels difficult, where you live and when you would prefer help.</p><a class="pbr-menu__cta pbr-menu__cta--book" href="${CALENDLY}" target="_blank" rel="noopener">Book a Free Consultation</a><a class="pbr-menu__cta pbr-menu__cta--wa" href="${WHATSAPP}" target="_blank" rel="noopener">Chat on WhatsApp</a></aside>
+      <aside class="pbr-menu__card"><small>FREE 15-MINUTE CONSULTATION</small><p>Tell our care team what feels difficult, where you live and when you would prefer help.</p><a class="pbr-menu__cta pbr-menu__cta--book" href="${CALENDLY}" target="_blank" rel="noopener">Book a Free 15-Minute Call</a><a class="pbr-menu__cta pbr-menu__cta--wa" href="${WHATSAPP}" target="_blank" rel="noopener">Chat on WhatsApp</a></aside>
     </div>
   </div>
 </div>`;
@@ -230,14 +231,144 @@ function footer() {
       <div class="pbr-footer__brand"><a class="pbr-brand" href="/">${brand()}</a><h2>Movement, restored,<br><em>personally.</em></h2><p>Clinically led home physiotherapy across Mumbai’s western suburbs, with assessment-led care and a physiotherapist matched to the patient’s needs.</p></div>
       <div><div class="pbr-footer__title">Service areas</div><p>Bhayander · Mira Road<br>Dahisar · Borivali<br>Kandivali · Malad<br>Goregaon · Jogeshwari<br>Andheri</p></div>
       <div><div class="pbr-footer__title">Explore</div><ul><li><a href="/conditions/">Conditions</a></li><li><a href="/services/">Services</a></li><li><a href="/how-care-works/">How Care Works</a></li><li><a href="/about/">About</a></li><li><a href="/faqs/">FAQs</a></li></ul></div>
-      <div><div class="pbr-footer__title">Get in touch</div><div class="pbr-footer__buttons"><a class="pbr-footer__button pbr-footer__button--wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a class="pbr-footer__button pbr-footer__button--book" href="${CALENDLY}" target="_blank" rel="noopener">Book Consultation</a><a href="${PHONE_LINK}">${PHONE}</a></div></div>
+      <div><div class="pbr-footer__title">Get in touch</div><div class="pbr-footer__buttons"><a class="pbr-footer__button pbr-footer__button--wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a class="pbr-footer__button pbr-footer__button--book" href="${CALENDLY}" target="_blank" rel="noopener">Free 15-Minute Call</a><a href="${PHONE_LINK}">${PHONE}</a></div></div>
     </div>
     <div class="pbr-footer__trust"><span class="pbr-footer__chip">MPT-led clinical standards</span><span class="pbr-footer__chip">Home visits by appointment</span><span class="pbr-footer__chip">Bhayander to Andheri</span><span class="pbr-footer__chip">English · Hindi · Marathi · Gujarati support</span></div>
     <p style="margin-top:26px;color:rgba(246,242,236,.55);font-size:12.5px;">For severe, rapidly worsening or potentially urgent symptoms, contact an appropriate emergency or medical service rather than waiting for a website response.</p>
     <div class="pbr-footer__legal"><span>© 2026 PhysioByRutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span><span><a href="/privacy-policy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/medical-disclaimer/">Medical Disclaimer</a> · <a href="/cancellation-policy/">Cancellation</a></span></div>
   </div>
 </footer>
-<div class="pbr-mobile-cta" role="group" aria-label="Booking actions"><a class="pbr-mobile-cta__wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a class="pbr-mobile-cta__book" href="${CALENDLY}" target="_blank" rel="noopener">Book Consultation</a></div>`;
+<div class="pbr-mobile-cta" role="group" aria-label="Booking actions"><a class="pbr-mobile-cta__wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a class="pbr-mobile-cta__book" href="${CALENDLY}" target="_blank" rel="noopener">Free 15-Min Call</a></div>`;
+}
+
+function aboutEditorialBody() {
+  return `<main id="main-content" class="about-page">
+<section class="about-hero about-section">
+  <div class="about-shell about-hero__grid">
+    <div class="about-hero__copy">
+      <a class="about-breadcrumb" href="/">Home <span>/</span> About</a>
+      <p class="about-eyebrow" data-reveal>Founder &amp; Clinical Lead</p>
+      <h1 data-reveal data-delay="60">Care standards<br>led by <em>Dr Rutvi.</em></h1>
+      <p class="about-hero__name" data-reveal data-delay="100">Dr Rutvi K Gandhi (PT)<br><span>MPT, BPT, MIAP</span></p>
+      <p class="about-lede" data-reveal data-delay="140">A musculoskeletal and sports physiotherapist building thoughtful, assessment-led home care across Mumbai’s western suburbs.</p>
+      <div class="about-actions" data-reveal data-delay="180">
+        <a class="about-button about-button--primary" href="${CALENDLY}" target="_blank" rel="noopener">Book a Free 15-Minute Call</a>
+        <a class="about-button about-button--text" href="${WHATSAPP}" target="_blank" rel="noopener">Message the Care Team →</a>
+      </div>
+    </div>
+    <figure class="about-hero__visual" data-reveal data-delay="90">
+      <img class="about-hero__portrait" src="/assets/img/dr-rutvi-founder-about-portrait.webp" alt="Dr Rutvi K Gandhi, Founder and Clinical Lead of PhysioByRutvi" width="1200" height="1500">
+      <img class="about-hero__mark" src="/assets/pbr-logo-mark.webp" alt="" aria-hidden="true" width="599" height="600">
+      <figcaption>Founder · PhysioByRutvi</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="about-credentials about-section" aria-labelledby="credentials-title">
+  <div class="about-shell about-credentials__grid">
+    <div>
+      <p class="about-eyebrow" data-reveal>Verified education &amp; training</p>
+      <h2 id="credentials-title" data-reveal data-delay="60">The clinical foundation behind the care.</h2>
+    </div>
+    <dl class="about-credential-list" data-reveal data-delay="100">
+      <div><dt>MPT</dt><dd>Musculoskeletal &amp; Sports Physiotherapy<br><span>Sunandan Divatia School of Science, NMIMS Mumbai · 2024–2026</span></dd></div>
+      <div><dt>BPT</dt><dd>Bachelor of Physiotherapy<br><span>Sumandeep Vidyapeeth · 2023</span></dd></div>
+      <div><dt>Clinical</dt><dd>Hospital-based clinical training<br><span>Nanavati Hospital, Mumbai</span></dd></div>
+      <div><dt>Nutrition</dt><dd>Clinical Nutrition and Sports &amp; Fitness Nutrition<br><span>VLCC Mumbai · 2019</span></dd></div>
+      <div><dt>MIAP</dt><dd>Member, Indian Association of Physiotherapists</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="about-philosophy about-section">
+  <div class="about-shell about-philosophy__inner">
+    <p class="about-eyebrow about-eyebrow--light" data-reveal>Care philosophy</p>
+    <blockquote data-reveal data-delay="60">“Good physiotherapy should leave you <em>clearer and more capable</em>—not dependent.”</blockquote>
+    <p data-reveal data-delay="110">The treating physiotherapist explains the plan, guides appropriate treatment and helps the patient understand what to practise between visits. Dr Rutvi leads the shared clinical standards used across the care team.</p>
+  </div>
+</section>
+
+<section class="about-standards about-section" aria-labelledby="standards-title">
+  <div class="about-shell about-standards__grid">
+    <div class="about-standards__intro">
+      <p class="about-eyebrow" data-reveal>How care is shaped</p>
+      <h2 id="standards-title" data-reveal data-delay="60">Four standards. One considered plan.</h2>
+    </div>
+    <ol class="about-standard-list">
+      <li data-reveal><span>01</span><div><h3>Start with assessment</h3><p>Movement, strength, symptoms, daily tasks and relevant warning signs are considered before a plan is recommended.</p></div></li>
+      <li data-reveal data-delay="50"><span>02</span><div><h3>Use the home context</h3><p>Stairs, beds, chairs, workstations and routines can become part of practical rehabilitation.</p></div></li>
+      <li data-reveal data-delay="100"><span>03</span><div><h3>Explain the reasoning</h3><p>Patients should understand what is being addressed, what to practise and when progress needs review.</p></div></li>
+      <li data-reveal data-delay="150"><span>04</span><div><h3>Stay clinically honest</h3><p>Recovery timelines differ. Medical review is recommended when findings fall outside appropriate physiotherapy care.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="about-founder about-section">
+  <div class="about-shell about-founder__grid">
+    <figure class="about-founder__image" data-reveal>
+      <img src="/assets/img/dr-rutvi-founder-at-work.webp" alt="Dr Rutvi preparing physiotherapy equipment for a home visit" loading="lazy" width="1200" height="900">
+    </figure>
+    <div class="about-founder__copy">
+      <p class="about-eyebrow" data-reveal>Founder’s perspective</p>
+      <h2 data-reveal data-delay="60">Musculoskeletal care for real life.</h2>
+      <p data-reveal data-delay="100">Pain and movement concerns show up in ordinary moments—climbing stairs, sitting at a desk, lifting a child, returning to training or regaining confidence after surgery. Home visits make those real demands visible.</p>
+      <p data-reveal data-delay="140">PhysioByRutvi was founded to make careful physiotherapy easier to access at home. Dr Rutvi sets the clinical approach; visits may be delivered by a physiotherapist suitably matched to the patient’s needs, location and availability.</p>
+      <div class="about-founder__signature" data-reveal data-delay="180"><strong>Dr Rutvi K Gandhi (PT)</strong><span>MPT, BPT, MIAP · Founder &amp; Clinical Lead</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about-training about-section" aria-labelledby="training-title">
+  <div class="about-shell">
+    <div class="about-training__head">
+      <div>
+        <p class="about-eyebrow" data-reveal>Training &amp; clinical skills</p>
+        <h2 id="training-title" data-reveal data-delay="60">Active rehabilitation, supported by skilled hands.</h2>
+      </div>
+      <p data-reveal data-delay="100">Hands-on techniques are considered only where clinically suitable and as part of a wider plan focused on movement, strength and function.</p>
+    </div>
+    <div class="about-training__body">
+      <figure data-reveal><img src="/assets/img/dr-rutvi-founder-landscape.webp" alt="Dr Rutvi K Gandhi discussing physiotherapy care" loading="lazy" width="1400" height="933"></figure>
+      <div class="about-skill-columns">
+        <div data-reveal data-delay="50"><h3>Hands-on methods</h3><ul><li>Kinesiology taping</li><li>IASTM</li><li>Cupping therapy</li><li>Myofascial Release</li><li>Muscle Energy Techniques</li><li>Joint and soft-tissue mobilisation</li></ul></div>
+        <div data-reveal data-delay="100"><h3>Rehabilitation skills</h3><ul><li>Exercise prescription</li><li>Gait re-education</li><li>Balance and proprioception</li><li>Functional strengthening</li><li>Return-to-sport progression</li><li>TENS, IFT and ultrasound when suitable</li></ul></div>
+        <div data-reveal data-delay="150"><h3>Additional learning</h3><ul><li>Clinical sports assessment</li><li>Musculoskeletal clinical translation</li><li>Diaphragm and core activation in pregnancy</li><li>Respiratory failure and oxygen therapy</li><li>Non-invasive ventilation</li><li>CPR seminar</li></ul></div>
+      </div>
+    </div>
+    <p class="about-safety" data-reveal><strong>Clinical note:</strong> A modality is never selected from a website checklist. Suitability depends on assessment, consent, precautions, current health and the goals of care.</p>
+  </div>
+</section>
+
+<section class="about-scope about-section" aria-labelledby="scope-title">
+  <div class="about-shell about-scope__grid">
+    <div>
+      <p class="about-eyebrow about-eyebrow--light" data-reveal>Areas of support</p>
+      <h2 id="scope-title" data-reveal data-delay="60">From pain and stiffness to confident movement.</h2>
+      <p data-reveal data-delay="100">Care is matched to assessment findings—not a one-size-fits-all protocol.</p>
+      <a class="about-button about-button--coral" href="/services/" data-reveal data-delay="140">Explore all services</a>
+    </div>
+    <div class="about-scope__list">
+      <a href="/conditions/" data-reveal><span>01</span><div><strong>Musculoskeletal concerns</strong><small>Back, neck, shoulder, knee and joint movement concerns</small></div><b>→</b></a>
+      <a href="/services/sports-rehabilitation/" data-reveal data-delay="40"><span>02</span><div><strong>Sports rehabilitation</strong><small>Graded strength, capacity and return to activity</small></div><b>→</b></a>
+      <a href="/services/post-operative-rehabilitation/" data-reveal data-delay="80"><span>03</span><div><strong>Post-operative rehabilitation</strong><small>Home recovery aligned with available medical guidance</small></div><b>→</b></a>
+      <a href="/services/myofascial-release-iastm-cupping/" data-reveal data-delay="120"><span>04</span><div><strong>Release, IASTM &amp; cupping</strong><small>Adjunct techniques used only when clinically suitable</small></div><b>→</b></a>
+      <a href="/services/senior-physiotherapy/" data-reveal data-delay="160"><span>05</span><div><strong>Senior mobility</strong><small>Strength, balance, walking confidence and daily function</small></div><b>→</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta about-section">
+  <div class="about-shell about-cta__inner" data-reveal>
+    <p class="about-eyebrow">Free 15-minute consultation</p>
+    <h2>Not sure where to start?</h2>
+    <p>Tell the care team what feels difficult, where you live and when you would prefer help. We will guide the next appropriate step.</p>
+    <div class="about-actions">
+      <a class="about-button about-button--primary" href="${CALENDLY}" target="_blank" rel="noopener">Book Your Free 15-Minute Call</a>
+      <a class="about-button about-button--whatsapp" href="${WHATSAPP}" target="_blank" rel="noopener">Start on WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>`;
 }
 
 function leadSection(eyebrow, title, intro) {

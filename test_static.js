@@ -4,7 +4,7 @@ const path = require('path');
 const ROOT = __dirname;
 const pages = [
   { file: 'index.html', minSections: 7, required: ['pbrMenu', 'Clinical standards', 'dr-rutvi-founder-about-portrait.webp'] },
-  { file: 'about/index.html', minSections: 8, required: ['Dr Rutvi K Gandhi (PT)', 'MPT', 'BPT', 'MIAP', 'Nanavati', 'IASTM', 'Myofascial Release', 'dr-rutvi-founder-at-work.webp'] },
+  { file: 'about/index.html', minSections: 8, required: ['Dr Rutvi K Gandhi (PT)', 'MPT', 'BPT', 'MIAP', 'Nanavati', 'IASTM', 'Myofascial Release', 'dr-rutvi-founder-at-work.webp', 'dr-rutvi-founder-landscape.webp', 'Free 15-Minute'] },
   { file: 'conditions/index.html', minSections: 3, required: ['Conditions', 'Bhayander', 'Andheri'] }
 ];
 
@@ -66,6 +66,10 @@ if (!robots.includes('Sitemap: https://physiobyrutvi.in/sitemap.xml')) fail('rob
 const assetFiles = [
   'assets/css/site.css',
   'assets/js/site.js',
+  'assets/pbr-logo-horizontal.png',
+  'assets/pbr-logo-horizontal.webp',
+  'assets/pbr-logo-mark.png',
+  'assets/pbr-logo-mark.webp',
   'assets/img/dr-rutvi-founder-about-portrait.webp',
   'assets/img/dr-rutvi-founder-landscape.webp',
   'assets/img/dr-rutvi-founder-at-work.webp'
@@ -73,9 +77,10 @@ const assetFiles = [
 for (const file of assetFiles) if (!fs.existsSync(path.join(ROOT, file))) fail(`Missing asset: ${file}`);
 
 const generated = pages.map(page => fs.readFileSync(path.join(ROOT, page.file), 'utf8')).join('\n');
-if (generated.includes('15-Minute') && generated.includes('calendly.com/gandhirutvi13/30min')) {
-  fail('A 30-minute Calendly event is incorrectly labelled as 15 minutes');
-}
+if (!generated.includes('Free 15-Minute Consultation')) fail('The confirmed 15-minute consultation label is missing');
+if (!generated.includes('calendly.com/gandhirutvi13/30min')) fail('The existing Calendly event link is missing');
+const analytics = fs.readFileSync(path.join(ROOT, 'site-analytics.js'), 'utf8');
+if (!analytics.includes("'click_calendly'") || !analytics.includes("'free_15_minute_consultation'")) fail('Calendly lead-click tracking is missing');
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
 for (const file of allGeneratedFiles) {
