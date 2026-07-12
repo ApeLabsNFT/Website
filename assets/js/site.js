@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('menu-open', open);
     if (open) {
       returnFocus = document.activeElement;
-      (closeButton || focusables()[0])?.focus({ preventScroll: true });
+      setTimeout(() => (closeButton || focusables()[0])?.focus({ preventScroll: true }), 100);
     } else {
       (returnFocus || openButton).focus();
     }
