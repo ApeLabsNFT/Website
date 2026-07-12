@@ -40,6 +40,34 @@ const normalizeText = (value) => {
   return value.text || value.originalText || '';
 };
 
+await mkdir(path.dirname(outFile), { recursive: true });
+
+let oldPayload = '';
+let existingReviews = [];
+try {
+  oldPayload = await readFile(outFile, 'utf8');
+  const parsed = JSON.parse(oldPayload);
+  if (Array.isArray(parsed.reviews)) {
+    existingReviews = parsed.reviews;
+  }
+} catch {
+  oldPayload = '';
+}
+
+const newReviews = reviews
+  .filter((review) => normalizeText(review.text || review.originalText))
+  .map((review) => ({
+    author: review.authorAttribution?.displayName || 'Google reviewer',
+    authorUri: review.authorAttribution?.uri || '',
+    photoUri: review.authorAttribution?.photoUri || '',
+    rating: Number(review.rating || 0),
+    text: normalizeText(review.text || review.originalText),
+    relativeTime: review.relativePublishTimeDescription || '',
+    publishTime: review.publishTime || ''
+  }));
+
+const finalReviews = newReviews.length > 0 ? newReviews : existingReviews;
+
 const payload = {
   connected: true,
   source: 'google_places_api',
@@ -49,27 +77,8 @@ const payload = {
   rating: Number(place.rating || 0),
   userRatingCount: Number(place.userRatingCount || 0),
   googleMapsUri: place.googleMapsUri || 'https://www.google.com/search?q=PhysioByRutvi%20reviews',
-  reviews: reviews
-    .filter((review) => normalizeText(review.text || review.originalText))
-    .map((review) => ({
-      author: review.authorAttribution?.displayName || 'Google reviewer',
-      authorUri: review.authorAttribution?.uri || '',
-      photoUri: review.authorAttribution?.photoUri || '',
-      rating: Number(review.rating || 0),
-      text: normalizeText(review.text || review.originalText),
-      relativeTime: review.relativePublishTimeDescription || '',
-      publishTime: review.publishTime || ''
-    }))
+  reviews: finalReviews
 };
-
-await mkdir(path.dirname(outFile), { recursive: true });
-
-let oldPayload = '';
-try {
-  oldPayload = await readFile(outFile, 'utf8');
-} catch {
-  oldPayload = '';
-}
 
 const nextPayload = `${JSON.stringify(payload, null, 2)}\n`;
 if (oldPayload !== nextPayload) {
