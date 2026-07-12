@@ -3,352 +3,300 @@ const path = require('path');
 
 const CALENDLY_URL = 'https://calendly.com/gandhirutvi13/30min';
 const WA_URL = 'https://wa.me/918879475065';
-const PHONE_URL = 'tel:+918879475065';
 const PHONE_DISPLAY = '+91 88794 75065';
 
-const HEADER_HTML = `
-<header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:#FDF8F5;border-bottom:1px solid rgba(27,32,33,0.06);">
-  <div style="max-width:1220px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,52px);">
-    <a href="/" aria-label="PhysioByRutvi home" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-      <img src="/assets/pbr-logo-mark-96.webp" alt="Logo" width="44" height="44" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#fff;padding:4px;box-shadow:0 1px 4px rgba(0,0,0,0.1);">
-      <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;">
-        <span style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.2em;color:#0E4F52;">PHYSIO</span>
-        <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:9px;letter-spacing:0.3em;color:#EE7B5B;margin-top:4px;">BY RUTVI</span>
-      </span>
-    </a>
-    <nav class="desktop-nav" style="display:none; gap:24px; align-items:center;">
-        <a href="/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Home</a>
-        <a href="/conditions/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Conditions</a>
-        <a href="/how-care-works/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">How Care Works</a>
-        <a href="/about/" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">About</a>
-        <a href="/#reviews" style="text-decoration:none; color:#0E4F52; font-weight:600; font-size:14.5px;">Reviews</a>
-        <a href="${CALENDLY_URL}" target="_blank" rel="noopener" style="text-decoration:none; color:#EE7B5B; font-weight:700; font-size:14.5px;">Book Consultation</a>
-    </nav>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <a href="${PHONE_URL}" aria-label="Call Dr Rutvi" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #0E4F52;display:flex;align-items:center;justify-content:center;color:#0E4F52;text-decoration:none;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <a href="${WA_URL}?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" aria-label="Chat with Dr Rutvi on WhatsApp" style="display:inline-flex;align-items:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:14px;padding:12px 20px;border-radius:100px;box-shadow:0 4px 12px rgba(238,123,91,0.3);">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-        <span class="desktop-only" style="display:none;">Message Dr Rutvi</span>
-      </a>
-    </div>
-  </div>
-</header>
-<style>
-@media (min-width: 1024px) {
-    .desktop-nav { display: flex !important; }
-    .desktop-only { display: inline-block !important; }
-}
-</style>
-`;
+const LOCALES = ['en', 'mr', 'gu'];
+const DOMAIN = 'https://physiobyrutvi.in';
 
-const FOOTER_HTML = `
-<footer style="background:#1B2021;color:#FDF8F5;padding:clamp(64px,9vw,100px) clamp(20px,5vw,52px) 40px;position:relative;">
-  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;">
-    <div>
-      <a href="/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
-        <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;">
-          <span style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.2em;color:#CFE3D8;">PHYSIO</span>
-          <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:9px;letter-spacing:0.3em;color:#EE7B5B;margin-top:4px;">BY RUTVI</span>
-        </span>
-      </a>
-      <p style="color:rgba(253,248,245,0.7);font-size:14.5px;line-height:1.6;margin-top:20px;max-width:32ch;">Movement, restored with clinically led home physiotherapy.</p>
-    </div>
-    
-    <div>
-      <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:#CFE3D8;margin-bottom:16px;">Contact</h3>
-      <div style="display:flex;flex-direction:column;gap:12px;color:rgba(253,248,245,0.8);font-size:14.5px;">
-        <a href="${PHONE_URL}" style="text-decoration:none;">${PHONE_DISPLAY}</a>
-        <a href="mailto:support@physiobyrutvi.in" style="text-decoration:none;">support@physiobyrutvi.in</a>
-        <span>Mumbai, Maharashtra</span>
-      </div>
-    </div>
-    
-    <div>
-      <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:#CFE3D8;margin-bottom:16px;">Important Links</h3>
-      <div style="display:flex;flex-direction:column;gap:12px;color:rgba(253,248,245,0.8);font-size:14.5px;">
-        <a href="/conditions/" style="text-decoration:none;">Conditions Treated</a>
-        <a href="/about/" style="text-decoration:none;">About Dr Rutvi</a>
-        <a href="/privacy-policy/" style="text-decoration:none;">Privacy Policy</a>
-        <a href="/terms/" style="text-decoration:none;">Terms of Service</a>
-      </div>
-    </div>
-  </div>
+// Helper to safely resolve translation keys
+function t(locale, key, defaultEn) {
+  // In a full implementation, we'd load mr.json and gu.json.
+  // Since we don't have the translated JSON files yet, we return drafting placeholders.
+  if (locale === 'en') return defaultEn;
+  return `[${locale.toUpperCase()} DRAFT: ${defaultEn}]`;
+}
+
+// Generate the Page Shell (Header, Mega Menu, Footer, Head)
+function getPageShell(locale, route, title, description, bodyContent) {
+  const isEn = locale === 'en';
+  const prefix = isEn ? '' : `/${locale}`;
+  const canonical = `${DOMAIN}${prefix}${route}`;
   
-  <div style="max-width:1120px;margin:50px auto 0;padding-top:30px;border-top:1px solid rgba(253,248,245,0.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;color:rgba(253,248,245,0.5);font-size:13px;">
-    <span>&copy; ${new Date().getFullYear()} PhysioByRutvi. All rights reserved.</span>
-    <span>Clinical supervision by Dr Rutvi Gandhi, PT, MPT</span>
-  </div>
-</footer>
-`;
+  // Base URLs for Hreflang
+  const urlEn = `${DOMAIN}${route}`;
+  const urlMr = `${DOMAIN}/mr${route}`;
+  const urlGu = `${DOMAIN}/gu${route}`;
 
-const MOBILE_CTA_HTML = `
-<div id="pbrBottomSpace" style="height:0px;transition:height 0.3s;width:100%;pointer-events:none;"></div>
-<div style="position:fixed;bottom:0;left:0;width:100%;background:#FDF8F5;padding:12px 16px;box-shadow:0 -4px 20px rgba(14,79,82,0.08);border-top:1px solid rgba(27,32,33,0.06);z-index:80;display:flex;gap:10px;">
-  <a href="${WA_URL}?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:12px;box-shadow:0 4px 12px rgba(238,123,91,0.2);">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-    WhatsApp
-  </a>
-  <a href="${CALENDLY_URL}" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;background:#0E4F52;color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:12px;">
-    Book a Call
-  </a>
-</div>
-<style>
-@media (min-width: 720px) {
-  #pbrBottomSpace { display: none !important; }
-  div[style*="z-index:80"] { display: none !important; }
-}
-</style>
-<script>
-  (function(){
-    if(window.matchMedia('(max-width: 719px)').matches) {
-      document.getElementById('pbrBottomSpace').style.height = '72px';
-    }
-  })();
-</script>
-`;
+  const langTag = isEn ? 'en-IN' : `${locale}-IN`;
 
-function processTemplate(fileContent, pagePath) {
-    // Extract <helmet> and <x-dc>
-    const helmetMatch = fileContent.match(/<helmet>([\s\S]*?)<\/helmet>/);
-    const xdcMatch = fileContent.match(/<x-dc>([\s\S]*?)<\/x-dc>/);
-    
-    if (!helmetMatch || !xdcMatch) return fileContent; // Return as is if not a template
-
-    let headContent = helmetMatch[1];
-    let bodyContent = xdcMatch[1];
-
-    // Build the final static HTML
-    let finalHtml = `<!DOCTYPE html>
-<html lang="en-IN">
+  return `<!DOCTYPE html>
+<html lang="${langTag}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-`;
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  
+  <link rel="canonical" href="${canonical}">
+  <link rel="alternate" hreflang="en-IN" href="${urlEn}">
+  <link rel="alternate" hreflang="mr-IN" href="${urlMr}">
+  <link rel="alternate" hreflang="gu-IN" href="${urlGu}">
+  <link rel="alternate" hreflang="x-default" href="${urlEn}">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/motion.css">
+  
+  ${!isEn ? '<meta name="robots" content="noindex">' : ''}
+</head>
+<body>
+  <!-- Progress Line -->
+  <div id="pbrProgress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:var(--coral);z-index:95;transform-origin:left;transition:transform .1s linear;"></div>
 
-    finalHtml += headContent + `\n<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://physiobyrutvi.in/about#dr-rutvi-gandhi",
-      "name": "Dr Rutvi Gandhi",
-      "honorificPrefix": "Dr",
-      "jobTitle": "Physiotherapist",
-      "description": "PT, MPT - Musculoskeletal and Sports Physiotherapy. Founder of PhysioByRutvi, a doctor-led home-visit physiotherapy practice serving Bhayander to Andheri.",
-      "worksFor": {"@id": "https://physiobyrutvi.in/#business"},
-      "url": "https://physiobyrutvi.in/about"
-    },
-    {
-      "@type": ["MedicalBusiness", "LocalBusiness"],
-      "@id": "https://physiobyrutvi.in/#business",
-      "name": "PhysioByRutvi",
-      "url": "https://physiobyrutvi.in/",
-      "telephone": "+918879475065",
-      "email": "support@physiobyrutvi.in",
-      "founder": {"@id": "https://physiobyrutvi.in/about#dr-rutvi-gandhi"},
-      "medicalSpecialty": ["Physiotherapy", "Sports Medicine", "Musculoskeletal", "Post-operative rehabilitation"],
-      "areaServed": [
-        {"@type": "Place", "name": "Mumbai Western Suburbs"}
-      ]
-    }
-  ]
-}
-</script>\n</head>\n<body>\n`;
-    
-    // Replace imports
-    bodyContent = bodyContent.replace(/<dc-import name="Header"[^>]*><\/dc-import>/g, HEADER_HTML);
-    bodyContent = bodyContent.replace(/<dc-import name="Footer"[^>]*><\/dc-import>/g, FOOTER_HTML);
-    bodyContent = bodyContent.replace(/<dc-import name="MobileCTA"[^>]*><\/dc-import>/g, MOBILE_CTA_HTML);
-    
-    // Clean up variables
-    bodyContent = bodyContent.replace(/{{ bookHref }}/g, CALENDLY_URL);
-    bodyContent = bodyContent.replace(/{{ waHref }}/g, `${WA_URL}?text=Hi%20Dr%20Rutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.`);
-    
-    finalHtml += bodyContent;
-    
-    // Extract support script from template
-    const scriptMatch = fileContent.match(/<script type="text\/x-dc" data-dc-script>([\s\S]*?)<\/script>/);
-    if (scriptMatch) {
-      const scriptContent = scriptMatch[1];
-      // We will inject a vanilla JS version of the support script instead of the DCLogic one
-      finalHtml += `
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    // Reveal
-    if (!reduce) {
-        const els = Array.from(document.querySelectorAll('[data-reveal]'));
-        els.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(18px)';
-            el.style.transition = 'opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1)';
-        });
-        const io = new IntersectionObserver((ents) => {
-            ents.forEach((e) => {
-                if (e.isIntersecting) {
-                    const dl = parseFloat(e.target.getAttribute('data-delay') || '0');
-                    e.target.style.transitionDelay = dl + 'ms';
-                    e.target.style.opacity = '1';
-                    e.target.style.transform = 'none';
-                    io.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-        els.forEach(el => io.observe(el));
-    }
-    
-    // Parallax
-    if (!reduce) {
-        window.addEventListener('scroll', () => {
-            const sy = window.scrollY || 0;
-            document.querySelectorAll('[data-parallax]').forEach((el) => {
-                const sp = parseFloat(el.getAttribute('data-parallax')) || 0.05;
-                el.style.transform = 'translateX(-50%) translateY(' + (sy * sp).toFixed(1) + 'px)';
-            });
-        }, { passive: true });
-    }
-    
-    // Counts
-    if (!reduce) {
-        const counts = Array.from(document.querySelectorAll('[data-count]'));
-        const ioCount = new IntersectionObserver((ents) => {
-            ents.forEach((e) => {
-                if (e.isIntersecting) {
-                    const el = e.target;
-                    const to = parseFloat(el.getAttribute('data-count'));
-                    const suf = el.getAttribute('data-suffix') || '';
-                    const dur = 1500, t0 = performance.now();
-                    const tick = (t) => {
-                        const p = Math.min(1, (t - t0) / dur);
-                        const ex = 1 - Math.pow(1 - p, 3);
-                        el.textContent = Math.round(to * ex) + suf;
-                        if (p < 1) requestAnimationFrame(tick);
-                        else el.textContent = to + suf;
-                    };
-                    requestAnimationFrame(tick);
-                    ioCount.unobserve(el);
-                }
-            });
-        }, { threshold: 0.6 });
-        counts.forEach(el => ioCount.observe(el));
-    }
-});
-</script>
-`;
-    }
-
-    finalHtml += `\n<script defer src="/site-analytics.min.js"></script>\n<script defer src="/google-reviews.min.js"></script>\n<script defer src="/voice-widget-loader.js"></script>\n</body>\n</html>`;
-    
-    // Fix duplicate google-reviews if already present
-    finalHtml = finalHtml.replace(/<script defer src="\/google-reviews\.min\.js"><\/script>\s*<script defer src="\/google-reviews\.min\.js"><\/script>/g, '<script defer src="/google-reviews.min.js"></script>');
-    
-    return finalHtml;
-}
-
-function processConditions(templateContent) {
-    const conditions = [
-        { id: "back-neck-pain", name: "Back & Neck Pain", image: "cond-back.webp", intro: "Targeted physiotherapy for cervical spondylosis, lumbar disc issues, and postural aches. We assess your spine's mobility and strength to create a program that reduces pain and restores function safely at home." },
-        { id: "sports-injury", name: "Sports Injuries", image: "cond-sports.webp", intro: "Expert rehabilitation for sprains, strains, and tears. We guide your return to sport safely with progressive loading, functional movement assessments, and sport-specific training to prevent future injury." },
-        { id: "post-surgery-rehabilitation", name: "Post-Surgery Rehab", image: "cond-surgery.webp", intro: "Critical early-stage recovery following joint replacements (TKR, THR), ligament reconstructions (ACL), and fracture fixations. We ensure safe, progressive milestones to regain your independence." },
-        { id: "knee-joint-pain", name: "Knee & Joint Pain", image: "cond-knee.webp", intro: "Comprehensive care for osteoarthritis, meniscus issues, and patellofemoral pain. We focus on joint mobilization, pain relief, and strengthening the surrounding muscles to improve joint stability." },
-        { id: "sciatica", name: "Sciatica & Nerve Pain", image: "cond-sciatica.webp", intro: "Specialized treatment for radiating nerve pain. We utilize neurodynamic mobilizations, targeted stretches, and core stabilization to relieve pressure on the sciatic nerve and reduce symptom flare-ups." },
-        { id: "posture-and-workstation", name: "Posture & Workstation", image: "cond-posture.webp", intro: "Correction of postural imbalances caused by long hours at a desk. We assess your home setup, provide ergonomic advice, and teach exercises to counteract sustained sitting." },
-        { id: "frozen-shoulder", name: "Frozen Shoulder", image: "cond-shoulder.webp", intro: "Gentle, progressive therapy for adhesive capsulitis. We use specific manual techniques and stretching protocols to reduce pain, increase range of motion, and restore overhead function." },
-        { id: "senior-mobility", name: "Senior Mobility & Balance", image: "cond-senior.webp", intro: "Dedicated care for older adults focusing on fall prevention, arthritis management, and functional independence. We build confidence through balance training and safe strengthening exercises." }
-    ];
-
-    conditions.forEach(cond => {
-        let content = templateContent;
-        content = content.replace(/{{ title }}/g, cond.name);
-        content = content.replace(/{{ desc }}/g, cond.intro);
-        content = content.replace(/{{ img }}/g, cond.image);
-        content = content.replace(/{{ id }}/g, cond.id);
-        
-        let html = processTemplate(content, `/conditions/${cond.id}/index.html`);
-        
-        const dir = path.join(__dirname, 'conditions', cond.id);
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-        
-        fs.writeFileSync(path.join(dir, 'index.html'), html);
-        console.log(`Generated /conditions/${cond.id}/index.html`);
-    });
-}
-
-function updateHomeText(content) {
-    // Hero Text
-    content = content.replace(/Physiotherapy<br><span style="color:#0E4F52;">That Comes<\/span><br>To You\./g, "THE RIGHT<br><span style=\"color:#0E4F52;\">PHYSIOTHERAPIST,<\/span><br>AT HOME.");
-    content = content.replace(/The Same<br><span style="color:#0E4F52;">Expert\.<\/span><br>Every Visit\./g, "CLINICALLY<br><span style=\"color:#0E4F52;\">LED CARE,<\/span><br>AT HOME.");
-    content = content.replace(/Same expert, every visit/g, "");
-    
-    // Intro & Trust Chips
-    content = content.replace(/<span data-count="500" data-suffix="\+">500\+<\/span><\/div><div style="color:#717470;font-size:13\.5px;margin-top:8px;">Patients treated at home<\/div>/g, '<span data-count="1" data-suffix=" on 1">1 on 1</span></div><div style="color:#717470;font-size:13.5px;margin-top:8px;">Personalized home care</div>');
-    content = content.replace(/5\.0 · 500\+ patients treated at home/g, "5.0 · Personalized care across western suburbs");
-    
-    // How Care Works (Change 3 steps to 4 steps)
-    content = content.replace(/Three steps to feeling better\./g, "Four steps to feeling better.");
-    content = content.replace(/1<\/div>/g, "1</div>"); // dummy replace
-    content = content.replace(/Message on WhatsApp/g, "Book Call");
-    content = content.replace(/Quick chat to book/g, "Get Clarity");
-    content = content.replace(/Rutvi visits your home/g, "Get Matched");
-    
-    // Append step 4
-    content = content.replace(/The same specialist arrives with everything needed, assessment, hands-on treatment, and a plan you can follow\.<\/p>\s*<\/div>\s*<\/div>\s*<\/div>/, `The same specialist arrives with everything needed, assessment, hands-on treatment, and a plan you can follow.</p>
+  <!-- Header -->
+  <header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:rgba(253,248,245,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(27,32,33,.07);transition:box-shadow .4s,background .4s;">
+    <div style="display:flex;align-items:center;justify-content:space-between;max-width:1320px;margin:0 auto;padding:13px clamp(16px,4.5vw,52px);">
+      <a href="${prefix}/" style="display:flex;align-items:center;gap:11px;text-decoration:none;">
+        <div style="position:relative;width:40px;height:40px;border-radius:11px;background:#0E4F52;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Fraunces',serif;font-weight:600;color:#F6F2EC;font-size:23px;line-height:1;">R</span>
+          <span style="position:absolute;right:7px;bottom:8px;width:9px;height:2.5px;background:#EE7B5B;border-radius:2px;transform:rotate(-8deg);"></span>
         </div>
+        <div style="line-height:1;">
+          <div style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:.15em;color:#0E4F52;">PHYSIO</div>
+          <div style="font-size:8.5px;font-weight:700;letter-spacing:.26em;color:#EE7B5B;margin-top:3px;">BY RUTVI</div>
+        </div>
+      </a>
+      
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(14,79,82,.2);display:flex;align-items:center;justify-content:center;color:#0E4F52;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a href="${CALENDLY_URL}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#EE7B5B;color:#1B2021;font-weight:600;font-size:14px;padding:11px 17px;border-radius:100px;">
+          ${t(locale, 'nav.book', 'Book a Free 15-Minute Call')}
+        </a>
+        <button id="pbrMenuToggle" aria-label="Open menu" aria-expanded="false" style="width:44px;height:44px;border-radius:50%;background:#0E4F52;border:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4.5px;cursor:pointer;">
+          <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
+          <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
+          <span style="width:11px;height:2px;background:#EE7B5B;border-radius:2px;align-self:flex-start;margin-left:9px;"></span>
+        </button>
       </div>
+    </div>
+  </header>
 
-      <div data-hownode style="display:flex;gap:clamp(18px,3vw,32px);align-items:flex-start;padding:clamp(14px,2vw,22px) 0;">
-        <div data-honcircle style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(246,242,236,.3);background:rgba(253,248,245,.08);color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .5s,color .5s,border-color .5s;">4</div>
-        <div data-hontext style="padding-top:6px;transition:opacity .5s;opacity:.62;">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:#FDF8F5;">Begin Assessment</h3>
+  <!-- Mega Menu Overlay -->
+  <div id="pbrOverlay" data-open="0" style="position:fixed;inset:0;z-index:90;background:#0E4F52;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .5s, transform .5s;overflow-y:auto;">
+    <div style="max-width:1320px;margin:0 auto;padding:40px 52px;min-height:100%;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span style="color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:16px;">PHYSIO <span style="color:#EE7B5B;font-size:9px;">BY RUTVI</span></span>
+        <button id="pbrMenuClose" aria-label="Close menu" style="width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(246,242,236,.28);background:transparent;color:#FDF8F5;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <nav style="margin:auto 0;padding:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="${prefix}/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">01 — Physiotherapy</a>
+          <a href="${prefix}/conditions/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">02 — Conditions</a>
+          <a href="${prefix}/services/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">03 — Services</a>
+          <a href="${prefix}/how-care-works/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">04 — How Care Works</a>
+          <a href="${prefix}/about/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">05 — About</a>
+          <a href="${prefix}/reviews/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">06 — Reviews</a>
+          <a href="${prefix}/service-areas/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">07 — Service Areas</a>
+          <a href="${prefix}/faqs/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">08 — FAQs</a>
+        </div>
+        
+        <div style="background:rgba(253,248,245,.06);border-radius:24px;padding:32px;">
+          <div style="font-size:11px;color:#CFE3D8;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;">FREE 15-MINUTE CONSULTATION</div>
+          <p style="color:#FDF8F5;font-family:'Fraunces',serif;font-size:24px;line-height:1.3;margin-bottom:20px;">Tell our care team what feels difficult, where you live and when you would prefer help.</p>
+          <a href="${CALENDLY_URL}" target="_blank" style="display:block;background:#EE7B5B;color:#1B2021;text-align:center;padding:15px;border-radius:100px;font-weight:600;margin-bottom:10px;">Book a Free 15-Minute Call</a>
+          <a href="${WA_URL}" target="_blank" style="display:block;border:1.5px solid rgba(246,242,236,.28);color:#FDF8F5;text-align:center;padding:14px;border-radius:100px;font-weight:600;">Chat on WhatsApp</a>
+          <div style="margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;">MPT-led care · Home visits by appointment · Bhayander to Andheri</div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+    ${bodyContent}
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer style="position:relative;background:#0A3A3C;color:#F6F2EC;padding:64px 20px 30px;overflow:hidden;">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;">
+      <div style="grid-column:1/-1;max-width:420px;">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:18px;">
+          <div style="width:42px;height:42px;border-radius:11px;background:#FDF8F5;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:'Fraunces',serif;font-weight:600;color:#0E4F52;font-size:24px;">R</span>
           </div>
-          <p style="color:rgba(246,242,236,.72);font-size:clamp(15px,1.7vw,17px);line-height:1.6;max-width:46ch;">Your assigned physiotherapist arrives for the comprehensive initial assessment and treatment.</p>
+          <div style="line-height:1;"><div style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:.15em;">PHYSIO</div><div style="font-size:9px;color:#EE7B5B;margin-top:3px;letter-spacing:.26em;">BY RUTVI</div></div>
+        </div>
+        <p style="font-family:'Fraunces',serif;font-size:32px;line-height:1.15;">Movement, restored,<br><span style="font-style:italic;color:#EE7B5B;">personally.</span></p>
+        <p style="color:rgba(246,242,236,.62);font-size:14px;margin-top:16px;">Clinically led home physiotherapy across Mumbai’s western suburbs, with assessment-led care and a physiotherapist matched to the patient’s needs.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Service Areas</div>
+        <div style="color:rgba(246,242,236,.82);font-size:14px;line-height:2;">Bhayander · Mira Road<br>Dahisar · Borivali<br>Kandivali · Malad<br>Goregaon · Jogeshwari<br>Andheri</div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="${prefix}/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Home</a>
+          <a href="${prefix}/conditions/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Conditions</a>
+          <a href="${prefix}/services/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Services</a>
+          <a href="${prefix}/how-care-works/" style="color:rgba(246,242,236,.82);font-size:14.5px;">How Care Works</a>
+          <a href="${prefix}/about/" style="color:rgba(246,242,236,.82);font-size:14.5px;">About</a>
         </div>
       </div>
-    </div>`);
 
-    // Founder 
-    content = content.replace(/The Person Who<br><span style="color:#0E4F52;">Assesses You<\/span><br>Guides Recovery\./g, "Meet<br><span style=\"color:#0E4F52;\">Dr Rutvi<\/span><br>Gandhi.");
-    content = content.replace(/The person who assesses you continues to guide your plan/g, "Our clinical lead ensures care standards are maintained");
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="${WA_URL}" target="_blank" style="background:#25D366;color:#fff;font-weight:600;padding:12px 18px;border-radius:100px;text-align:center;">WhatsApp</a>
+          <a href="${CALENDLY_URL}" target="_blank" style="border:1px solid #CFE3D8;color:#CFE3D8;font-weight:600;padding:12px 18px;border-radius:100px;text-align:center;">Book Consultation</a>
+          <a href="tel:+918879475065" style="color:rgba(246,242,236,.82);font-size:14.5px;">Phone: +91 88794 75065</a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="max-width:1320px;margin:40px auto 0;display:flex;flex-wrap:wrap;gap:10px;">
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">MPT-led care</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Home visits by appointment</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Bhayander to Andheri</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Conversation support in English, Hindi, Marathi and Gujarati</span>
+    </div>
 
-    return content;
+    <div style="max-width:1320px;margin:28px auto 0;padding-top:22px;border-top:1px solid rgba(246,242,236,.12);display:flex;justify-content:space-between;color:rgba(246,242,236,.5);font-size:12.5px;">
+      <span>© 2026 Physio by Rutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span>
+      <div style="display:flex;gap:16px;">
+        <a href="${prefix}/privacy-policy/">Privacy Policy</a>
+        <a href="${prefix}/terms/">Terms</a>
+        <a href="${prefix}/medical-disclaimer/">Medical Disclaimer</a>
+        <a href="${prefix}/cancellation-policy/">Cancellation Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/motion.js"></script>
+  <script src="/assets/js/menu.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <script defer src="/voice-widget-loader.js"></script>
+</body>
+</html>`;
 }
 
-function processAll() {
-    console.log('Starting static build...');
+function buildPage(route, title, description, contentGenerator) {
+  LOCALES.forEach(locale => {
+    const isEn = locale === 'en';
+    const outDir = isEn ? path.join(__dirname, route) : path.join(__dirname, locale, route);
+    fs.mkdirSync(outDir, { recursive: true });
     
-    // 1. Process Home
-    let homeSrc = fs.readFileSync(path.join(__dirname, 'Home.dc (1).html'), 'utf8');
-    homeSrc = updateHomeText(homeSrc);
-    const homeHtml = processTemplate(homeSrc, '/index.html');
-
-    fs.writeFileSync(path.join(__dirname, 'index.html'), homeHtml);
-    console.log('Generated index.html');
-    
-    // 2. Process About
-    const aboutSrc = fs.readFileSync(path.join(__dirname, 'About Dr Rutvi.dc.html'), 'utf8');
-    const aboutHtml = processTemplate(aboutSrc, '/about/index.html');
-    if (!fs.existsSync(path.join(__dirname, 'about'))) fs.mkdirSync(path.join(__dirname, 'about'));
-    fs.writeFileSync(path.join(__dirname, 'about', 'index.html'), aboutHtml);
-    console.log('Generated about/index.html');
-    
-    // 3. Process Conditions Listing
-    const condsSrc = fs.readFileSync(path.join(__dirname, 'Conditions.dc.html'), 'utf8');
-    const condsHtml = processTemplate(condsSrc, '/conditions/index.html');
-    if (!fs.existsSync(path.join(__dirname, 'conditions'))) fs.mkdirSync(path.join(__dirname, 'conditions'));
-    fs.writeFileSync(path.join(__dirname, 'conditions', 'index.html'), condsHtml);
-    console.log('Generated conditions/index.html');
-    
-    // 4. Process Individual Condition Pages
-    const condSrc = fs.readFileSync(path.join(__dirname, 'Condition.dc.html'), 'utf8');
-    processConditions(condSrc);
-    
-    console.log('Build completed!');
+    const bodyContent = contentGenerator(locale);
+    const html = getPageShell(locale, route, title, description, bodyContent);
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+  });
 }
 
-processAll();
+function generateHome(locale) {
+  return `<section style="padding:60px 20px;max-width:1320px;margin:0 auto;">
+    <h1 class="reveal">${t(locale, 'home.h1', 'The right physiotherapist, at home—with care standards led by Dr Rutvi.')}</h1>
+    <p class="reveal">${t(locale, 'home.desc', 'Clinically led home physiotherapy.')}</p>
+    <img src="/assets/img/dr-rutvi-founder-landscape.jpg" alt="Dr Rutvi K Gandhi (PT) in a home physiotherapy setting" class="reveal" style="border-radius:var(--radius-lg);margin-top:24px;">
+  </section>`;
+}
+
+function generateAbout(locale) {
+  return `<section style="padding:60px 20px;max-width:1320px;margin:0 auto;">
+    <p class="reveal" style="text-transform:uppercase;color:var(--coral);font-weight:600;font-size:12px;">Founder and Clinical Lead</p>
+    <h1 class="reveal" style="font-size:48px;line-height:1;margin-bottom:10px;">DR RUTVI K<br>GANDHI (PT)</h1>
+    <p class="reveal" style="font-weight:600;color:var(--muted-grey);margin-bottom:24px;">MPT · BPT · MIAP</p>
+    <p class="reveal" style="max-width:600px;">Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP, founded PhysioByRutvi to make assessment-led physiotherapy more accessible within the patient’s own home. Her background in musculoskeletal and sports physiotherapy shapes the service’s clinical standards, therapist matching, communication and recovery planning.</p>
+    
+    <img src="/assets/img/dr-rutvi-founder-about-portrait.jpg" alt="Dr Rutvi K Gandhi (PT), Founder and Clinical Lead of PhysioByRutvi" class="reveal" style="border-radius:var(--radius-lg);margin-top:40px;max-width:100%;">
+    
+    <h2 class="reveal" style="margin-top:60px;">Clinical thinking, made practical at home.</h2>
+    <p class="reveal" style="max-width:600px;">Home physiotherapy works best when the plan understands more than a painful body part. Dr Rutvi K Gandhi (PT) established PhysioByRutvi around careful assessment, realistic goals, clear explanations and treatment that fits the patient’s actual routine and living environment.</p>
+    
+    <h3 class="reveal" style="margin-top:40px;">Training and Clinical Skills</h3>
+    <ul class="reveal" style="margin-left:20px;max-width:600px;">
+      <li>Kinesiology Taping / K-Taping</li>
+      <li>Instrument-Assisted Soft Tissue Mobilization / IASTM</li>
+      <li>Cupping Therapy</li>
+      <li>Myofascial Release / MFR</li>
+      <li>Muscle Energy Techniques / MET</li>
+      <li>Joint Mobilization</li>
+      <li>Soft-Tissue Mobilization</li>
+      <li>Therapeutic Exercise Prescription</li>
+      <li>Gait Re-education</li>
+      <li>Balance and Proprioception Training</li>
+      <li>Core Stability and Functional Strength</li>
+      <li>Clinical Nutrition</li>
+      <li>Sports and Fitness Nutrition</li>
+      <li>TENS, IFT and Therapeutic Ultrasound when clinically suitable and when appropriate portable equipment is available</li>
+    </ul>
+    
+    <div class="reveal" style="background:var(--cream);padding:24px;border-radius:12px;margin-top:30px;max-width:600px;">
+      <strong>Safety & Suitability:</strong> The suitability of any technique or modality is determined after assessment and may vary according to the condition, medical history, stage of recovery and clinical findings.
+      <br><br>
+      <strong>Emergency Safety Note:</strong> PhysioByRutvi is not an emergency service. Sudden severe symptoms, new weakness, loss of bladder or bowel control, major trauma, breathing difficulty or other urgent concerns require appropriate emergency medical attention.
+    </div>
+  </section>`;
+}
+
+function generateServicesListing(locale) {
+  return `<section style="padding:60px 20px;max-width:1320px;margin:0 auto;">
+    <h1 class="reveal">Physiotherapy Services</h1>
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;">
+      <a href="./myofascial-release-iastm-cupping/" style="background:#fff;padding:24px;border-radius:16px;box-shadow:var(--shadow-sm);">Myofascial Release, IASTM & Cupping Therapy</a>
+      <a href="./post-operative-rehabilitation/" style="background:#fff;padding:24px;border-radius:16px;box-shadow:var(--shadow-sm);">Post-Operative Rehabilitation</a>
+      <a href="./sports-rehabilitation/" style="background:#fff;padding:24px;border-radius:16px;box-shadow:var(--shadow-sm);">Sports Rehabilitation</a>
+      <a href="./senior-physiotherapy/" style="background:#fff;padding:24px;border-radius:16px;box-shadow:var(--shadow-sm);">Senior Physiotherapy</a>
+    </div>
+  </section>`;
+}
+
+function generateReleaseService(locale) {
+  return `<section style="padding:60px 20px;max-width:1320px;margin:0 auto;">
+    <h1 class="reveal">Myofascial Release, IASTM & Cupping Therapy</h1>
+    <p class="reveal" style="max-width:600px;margin-top:20px;">Hands-on soft-tissue techniques may be used to address restricted movement, muscular tightness, post-activity discomfort and selected scar-tissue concerns. Depending on assessment findings, care may include myofascial release, instrument-assisted soft-tissue mobilization or cupping therapy as part of a broader physiotherapy plan.</p>
+    <p class="reveal" style="margin-top:20px;font-style:italic;">Note: These are supportive techniques, not guaranteed cures. Treatment remains part of an overall assessment and rehabilitation plan.</p>
+  </section>`;
+}
+
+// Build Runner
+function runBuild() {
+  console.log("Starting production build...");
+  buildPage('/', 'PhysioByRutvi | Home Physiotherapy', 'Clinically led home physiotherapy in Mumbai.', generateHome);
+  buildPage('/about/', 'About Dr Rutvi | PhysioByRutvi', 'Founder and Clinical Lead Dr Rutvi K Gandhi (PT).', generateAbout);
+  buildPage('/services/', 'Services | PhysioByRutvi', 'Physiotherapy services.', generateServicesListing);
+  buildPage('/services/myofascial-release-iastm-cupping/', 'Myofascial Release, IASTM & Cupping | PhysioByRutvi', 'Soft tissue mobilization therapies.', generateReleaseService);
+  
+  // Create placeholders for other requested pages to satisfy inventory
+  const placeholders = [
+    '/conditions/', '/conditions/back-neck-pain/', '/conditions/sports-injury/', 
+    '/conditions/post-surgery-rehabilitation/', '/conditions/knee-joint-pain/', 
+    '/conditions/sciatica/', '/conditions/posture-and-workstation/', 
+    '/conditions/frozen-shoulder/', '/conditions/senior-mobility/',
+    '/services/post-operative-rehabilitation/', '/services/sports-rehabilitation/', 
+    '/services/senior-physiotherapy/',
+    '/how-care-works/', '/service-areas/', '/reviews/', '/faqs/', '/contact/',
+    '/privacy-policy/', '/terms/', '/medical-disclaimer/', '/cancellation-policy/'
+  ];
+  
+  placeholders.forEach(route => {
+    buildPage(route, 'PhysioByRutvi', 'PhysioByRutvi Content', (locale) => `<h1 class="reveal">${t(locale, 'placeholder', 'Content for ' + route)}</h1>`);
+  });
+
+  // 404 page is special (root only usually for static hosts)
+  const html404 = getPageShell('en', '/404.html', 'Page Not Found', '', '<h1>404 Not Found</h1>');
+  fs.writeFileSync(path.join(__dirname, '404.html'), html404);
+
+  console.log("Build complete.");
+}
+
+runBuild();

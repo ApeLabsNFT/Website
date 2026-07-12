@@ -1,0 +1,25 @@
+/* 
+  Progressive Enhancement Motion System
+  Content remains visible without JS.
+  Only hide when .motion-ready class is applied to the HTML element.
+*/
+
+html.motion-ready .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+html.motion-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--duration-reveal) var(--ease-reveal),
+              transform var(--duration-reveal) var(--ease-reveal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion-ready .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

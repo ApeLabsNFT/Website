@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="mr-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhysioByRutvi</title>
+  <meta name="description" content="PhysioByRutvi Content">
+  
+  <link rel="canonical" href="https://physiobyrutvi.in/mr/terms/">
+  <link rel="alternate" hreflang="en-IN" href="https://physiobyrutvi.in/terms/">
+  <link rel="alternate" hreflang="mr-IN" href="https://physiobyrutvi.in/mr/terms/">
+  <link rel="alternate" hreflang="gu-IN" href="https://physiobyrutvi.in/gu/terms/">
+  <link rel="alternate" hreflang="x-default" href="https://physiobyrutvi.in/terms/">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/motion.css">
+  
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- Progress Line -->
+  <div id="pbrProgress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:var(--coral);z-index:95;transform-origin:left;transition:transform .1s linear;"></div>
+
+  <!-- Header -->
+  <header id="pbrHeader" style="position:sticky;top:0;z-index:70;background:rgba(253,248,245,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(27,32,33,.07);transition:box-shadow .4s,background .4s;">
+    <div style="display:flex;align-items:center;justify-content:space-between;max-width:1320px;margin:0 auto;padding:13px clamp(16px,4.5vw,52px);">
+      <a href="/mr/" style="display:flex;align-items:center;gap:11px;text-decoration:none;">
+        <div style="position:relative;width:40px;height:40px;border-radius:11px;background:#0E4F52;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Fraunces',serif;font-weight:600;color:#F6F2EC;font-size:23px;line-height:1;">R</span>
+          <span style="position:absolute;right:7px;bottom:8px;width:9px;height:2.5px;background:#EE7B5B;border-radius:2px;transform:rotate(-8deg);"></span>
+        </div>
+        <div style="line-height:1;">
+          <div style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:.15em;color:#0E4F52;">PHYSIO</div>
+          <div style="font-size:8.5px;font-weight:700;letter-spacing:.26em;color:#EE7B5B;margin-top:3px;">BY RUTVI</div>
+        </div>
+      </a>
+      
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="tel:+918879475065" aria-label="Call Dr Rutvi" style="width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(14,79,82,.2);display:flex;align-items:center;justify-content:center;color:#0E4F52;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#EE7B5B;color:#1B2021;font-weight:600;font-size:14px;padding:11px 17px;border-radius:100px;">
+          [MR DRAFT: Book a Free 15-Minute Call]
+        </a>
+        <button id="pbrMenuToggle" aria-label="Open menu" aria-expanded="false" style="width:44px;height:44px;border-radius:50%;background:#0E4F52;border:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4.5px;cursor:pointer;">
+          <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
+          <span style="width:17px;height:2px;background:#F6F2EC;border-radius:2px;"></span>
+          <span style="width:11px;height:2px;background:#EE7B5B;border-radius:2px;align-self:flex-start;margin-left:9px;"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mega Menu Overlay -->
+  <div id="pbrOverlay" data-open="0" style="position:fixed;inset:0;z-index:90;background:#0E4F52;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .5s, transform .5s;overflow-y:auto;">
+    <div style="max-width:1320px;margin:0 auto;padding:40px 52px;min-height:100%;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span style="color:#FDF8F5;font-family:'Fraunces',serif;font-weight:600;font-size:16px;">PHYSIO <span style="color:#EE7B5B;font-size:9px;">BY RUTVI</span></span>
+        <button id="pbrMenuClose" aria-label="Close menu" style="width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(246,242,236,.28);background:transparent;color:#FDF8F5;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <nav style="margin:auto 0;padding:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="/mr/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">01 — Physiotherapy</a>
+          <a href="/mr/conditions/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">02 — Conditions</a>
+          <a href="/mr/services/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">03 — Services</a>
+          <a href="/mr/how-care-works/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">04 — How Care Works</a>
+          <a href="/mr/about/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">05 — About</a>
+          <a href="/mr/reviews/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">06 — Reviews</a>
+          <a href="/mr/service-areas/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">07 — Service Areas</a>
+          <a href="/mr/faqs/" style="color:#FDF8F5;font-size:40px;font-family:'Fraunces',serif;border-bottom:1px solid rgba(246,242,236,.1);padding-bottom:10px;">08 — FAQs</a>
+        </div>
+        
+        <div style="background:rgba(253,248,245,.06);border-radius:24px;padding:32px;">
+          <div style="font-size:11px;color:#CFE3D8;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;">FREE 15-MINUTE CONSULTATION</div>
+          <p style="color:#FDF8F5;font-family:'Fraunces',serif;font-size:24px;line-height:1.3;margin-bottom:20px;">Tell our care team what feels difficult, where you live and when you would prefer help.</p>
+          <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" style="display:block;background:#EE7B5B;color:#1B2021;text-align:center;padding:15px;border-radius:100px;font-weight:600;margin-bottom:10px;">Book a Free 15-Minute Call</a>
+          <a href="https://wa.me/918879475065" target="_blank" style="display:block;border:1.5px solid rgba(246,242,236,.28);color:#FDF8F5;text-align:center;padding:14px;border-radius:100px;font-weight:600;">Chat on WhatsApp</a>
+          <div style="margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;">MPT-led care · Home visits by appointment · Bhayander to Andheri</div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <h1 class="reveal">[MR DRAFT: Content for /terms/]</h1>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer style="position:relative;background:#0A3A3C;color:#F6F2EC;padding:64px 20px 30px;overflow:hidden;">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;">
+      <div style="grid-column:1/-1;max-width:420px;">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:18px;">
+          <div style="width:42px;height:42px;border-radius:11px;background:#FDF8F5;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:'Fraunces',serif;font-weight:600;color:#0E4F52;font-size:24px;">R</span>
+          </div>
+          <div style="line-height:1;"><div style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:.15em;">PHYSIO</div><div style="font-size:9px;color:#EE7B5B;margin-top:3px;letter-spacing:.26em;">BY RUTVI</div></div>
+        </div>
+        <p style="font-family:'Fraunces',serif;font-size:32px;line-height:1.15;">Movement, restored,<br><span style="font-style:italic;color:#EE7B5B;">personally.</span></p>
+        <p style="color:rgba(246,242,236,.62);font-size:14px;margin-top:16px;">Clinically led home physiotherapy across Mumbai’s western suburbs, with assessment-led care and a physiotherapist matched to the patient’s needs.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Service Areas</div>
+        <div style="color:rgba(246,242,236,.82);font-size:14px;line-height:2;">Bhayander · Mira Road<br>Dahisar · Borivali<br>Kandivali · Malad<br>Goregaon · Jogeshwari<br>Andheri</div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="/mr/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Home</a>
+          <a href="/mr/conditions/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Conditions</a>
+          <a href="/mr/services/" style="color:rgba(246,242,236,.82);font-size:14.5px;">Services</a>
+          <a href="/mr/how-care-works/" style="color:rgba(246,242,236,.82);font-size:14.5px;">How Care Works</a>
+          <a href="/mr/about/" style="color:rgba(246,242,236,.82);font-size:14.5px;">About</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:#EE7B5B;text-transform:uppercase;letter-spacing:.2em;margin-bottom:16px;">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/918879475065" target="_blank" style="background:#25D366;color:#fff;font-weight:600;padding:12px 18px;border-radius:100px;text-align:center;">WhatsApp</a>
+          <a href="https://calendly.com/gandhirutvi13/30min" target="_blank" style="border:1px solid #CFE3D8;color:#CFE3D8;font-weight:600;padding:12px 18px;border-radius:100px;text-align:center;">Book Consultation</a>
+          <a href="tel:+918879475065" style="color:rgba(246,242,236,.82);font-size:14.5px;">Phone: +91 88794 75065</a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="max-width:1320px;margin:40px auto 0;display:flex;flex-wrap:wrap;gap:10px;">
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">MPT-led care</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Home visits by appointment</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Bhayander to Andheri</span>
+      <span style="background:rgba(207,227,216,.12);border:1px solid rgba(207,227,216,.2);color:#CFE3D8;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:600;">Conversation support in English, Hindi, Marathi and Gujarati</span>
+    </div>
+
+    <div style="max-width:1320px;margin:28px auto 0;padding-top:22px;border-top:1px solid rgba(246,242,236,.12);display:flex;justify-content:space-between;color:rgba(246,242,236,.5);font-size:12.5px;">
+      <span>© 2026 Physio by Rutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/mr/privacy-policy/">Privacy Policy</a>
+        <a href="/mr/terms/">Terms</a>
+        <a href="/mr/medical-disclaimer/">Medical Disclaimer</a>
+        <a href="/mr/cancellation-policy/">Cancellation Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/motion.js"></script>
+  <script src="/assets/js/menu.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <script defer src="/voice-widget-loader.js"></script>
+</body>
+</html>

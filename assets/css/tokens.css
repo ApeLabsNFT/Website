@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --cream: #F6F2EC;
+  --soft-cream: #FDF8F5;
+  --teal: #0E4F52;
+  --deep-teal: #0A3A3C;
+  --coral: #EE7B5B;
+  --mint: #CFE3D8;
+  --ink: #1B2021;
+  --body-grey: #4A4F4C;
+  --muted-grey: #717470;
+  --whatsapp: #25D366;
+
+  /* Typography */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: clamp(8px, 1.5vw, 12px);
+  --space-sm: clamp(16px, 2.5vw, 24px);
+  --space-md: clamp(24px, 4vw, 40px);
+  --space-lg: clamp(40px, 6vw, 64px);
+  --space-xl: clamp(64px, 9vw, 100px);
+  --space-xxl: clamp(80px, 12vw, 140px);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+  --radius-pill: 100px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(14, 79, 82, 0.05);
+  --shadow-md: 0 8px 24px rgba(14, 79, 82, 0.08);
+  --shadow-coral: 0 8px 24px rgba(238, 123, 91, 0.15);
+  
+  /* Transitions */
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-reveal: 600ms;
+}
