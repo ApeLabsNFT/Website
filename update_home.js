@@ -18,7 +18,7 @@ home = home.replace('<span style="color:#EE7B5B;letter-spacing:1px;font-size:10p
 // 4. Update Hero Slide 1 (New Content)
 home = home.replace('DOCTOR-LED HOME PHYSIOTHERAPY', 'CLINICALLY LED HOME PHYSIOTHERAPY');
 home = home.replace('PHYSIOTHERAPY<br>THAT COMES<br>TO YOU.', 'THE RIGHT<br>PHYSIOTHERAPIST.<br>AT YOUR HOME.');
-home = home.replace('Expert, one-on-one care from Dr Rutvi Gandhi, in your own home, across Mumbai\'s western suburbs.', 'PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time—with care standards led by Dr Rutvi Gandhi, PT, MPT.');
+home = home.replace('Expert, one-on-one care from Dr Rutvi Gandhi, in your own home, across Mumbai\'s western suburbs.', 'PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time-with care standards led by Dr Rutvi Gandhi, PT, MPT.');
 home = home.replace('Chat on WhatsApp', 'Check Availability');
 
 // Update Slide 1 trust line
@@ -81,7 +81,7 @@ home = home.replace('href="/condition/#geriatric"', 'href="/conditions/senior-mo
 
 // 8. Update "How it works" -> "Who will visit?"
 home = home.replace('HOW IT WORKS', 'YOUR PHYSIOTHERAPIST');
-home = home.replace('The process of starting care.', 'Matched for your need—not assigned at random.');
+home = home.replace('The process of starting care.', 'Matched for your need-not assigned at random.');
 home = home.replace('Dr Rutvi handles every step personally to ensure nothing is lost in translation between assessment and ongoing treatment.', 'The physiotherapist visiting you may be Dr Rutvi or another qualified member of the PhysioByRutvi care team. Matching considers the nature of the concern, therapist experience, location, language and availability.');
 
 // Remove the old steps from Home.dc.html and just link to the new page.
@@ -97,7 +97,7 @@ home = home.replace(stepsGridRegex, newWhoWillVisit);
 home = home.replace('THE CLINICIAN', 'FOUNDED AND CLINICALLY LED BY');
 home = home.replace('Dr Rutvi Gandhi<br><span style="font-size:clamp(20px,3vw,28px);color:#EE7B5B;font-weight:600;letter-spacing:0;text-transform:none;">PT, MPT (Sports &amp; Musculoskeletal)</span>', 'Dr Rutvi Gandhi<br><span style="font-size:clamp(20px,3vw,28px);color:#D15B3A;font-weight:600;letter-spacing:0;text-transform:none;">PT, MPT</span>');
 home = home.replace('With a Master of Physiotherapy (MPT) specializing in Musculoskeletal and Sports rehabilitation, Dr Rutvi brings advanced diagnostic and manual therapy skills directly to the patient\'s home.', 'Dr Rutvi Gandhi specialises in musculoskeletal and sports physiotherapy. She founded PhysioByRutvi to build a home-care experience that remains personal as the team grows: thoughtful matching, clear assessment, practical plans and honest escalation when physiotherapy is not enough.');
-home = home.replace('She focuses on evidence-based treatment—combining hands-on manual therapy for immediate pain relief with targeted exercise prescription for long-term strength and injury prevention.', 'Credentials: MPT, Musculoskeletal and Sports Physiotherapy &middot; BPT &middot; Training across manual therapy, sports rehabilitation and therapeutic exercise.');
+home = home.replace('She focuses on evidence-based treatment-combining hands-on manual therapy for immediate pain relief with targeted exercise prescription for long-term strength and injury prevention.', 'Credentials: MPT, Musculoskeletal and Sports Physiotherapy &middot; BPT &middot; Training across manual therapy, sports rehabilitation and therapeutic exercise.');
 
 // Update image width and height attributes in Home.dc.html
 home = home.replace('<img src="/assets/dr-rutvi-profile.webp" alt="Dr Rutvi Gandhi" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">', '<img src="/assets/dr-rutvi-profile.webp" alt="Dr Rutvi Gandhi" width="800" height="1000" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">');
