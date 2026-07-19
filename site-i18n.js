@@ -84,19 +84,19 @@
       {
         eyebrow: 'डॉक्टरांकडून घरपोच फिजिओथेरपी',
         title: ['फिजिओथेरपी', 'आता येईल', 'तुमच्या घरी.'],
-        sub: 'वेदना थांबत नाहीत, मग तुम्ही का थांबावं? डॉ. रुत्वी तज्ज्ञ फिजिओथेरपी थेट तुमच्या घरी आणतात — भायंदर ते अंधेरी.',
+        sub: 'वेदना थांबत नाहीत, मग तुम्ही का थांबावं? डॉ. रुत्वी तज्ज्ञ फिजिओथेरपी थेट तुमच्या घरी आणतात - भायंदर ते अंधेरी.',
         trust: '★★★★★ Google वर 5.0 · MPT, स्पोर्ट्स आणि मस्क्युलोस्केलेटल'
       },
       {
         eyebrow: 'रुग्ण त्यांच्याकडेच का येतात',
-        title: ['दर वेळी', 'नवीन नाही —', 'तीच तज्ज्ञ.'],
-        sub: 'इतर सेवा जो मोकळा असेल त्याला पाठवतात. इथे प्रत्येक भेटीला डॉ. रुत्वीच येतात — तुमचं दुखणं कुठवर आलंय हे त्यांना नेमकं आठवतं.',
+        title: ['दर वेळी', 'नवीन नाही -', 'तीच तज्ज्ञ.'],
+        sub: 'इतर सेवा जो मोकळा असेल त्याला पाठवतात. इथे प्रत्येक भेटीला डॉ. रुत्वीच येतात - तुमचं दुखणं कुठवर आलंय हे त्यांना नेमकं आठवतं.',
         trust: 'एकच तज्ज्ञ · संपूर्ण उपचारभर'
       },
       {
         eyebrow: 'इथे बरं होणं असं वाटतं',
         title: ['पुन्हा त्या', 'गोष्टींकडे', 'ज्या हव्यात.'],
-        sub: 'मुलाला उचलणं. रात्री शांत झोप. सकाळचा फेरफटका. हेच खरं ध्येय — आणि त्यासाठी तुमच्या शरीरानुसार खास योजना.',
+        sub: 'मुलाला उचलणं. रात्री शांत झोप. सकाळचा फेरफटका. हेच खरं ध्येय - आणि त्यासाठी तुमच्या शरीरानुसार खास योजना.',
         trust: 'प्रत्यक्ष उपचार · फक्त तुमच्यासाठीची योजना'
       }
     ],
@@ -109,14 +109,14 @@
       },
       {
         eyebrow: 'દર્દીઓ ફરીથી એમને કેમ પસંદ કરે છે',
-        title: ['દર વખત', 'નવો નહીં —', 'એ જ નિષ્ણાત.'],
-        sub: 'બીજી સેવાઓ જે ખાલી હોય તેને મોકલે છે. અહીં દરેક મુલાકાતે ડૉ. રુત્વી જ આવે છે — તમારી પ્રગતિ ક્યાં સુધી પહોંચી તે એમને યાદ રહે છે.',
+        title: ['દર વખત', 'નવો નહીં -', 'એ જ નિષ્ણાત.'],
+        sub: 'બીજી સેવાઓ જે ખાલી હોય તેને મોકલે છે. અહીં દરેક મુલાકાતે ડૉ. રુત્વી જ આવે છે - તમારી પ્રગતિ ક્યાં સુધી પહોંચી તે એમને યાદ રહે છે.',
         trust: 'એક જ નિષ્ણાત · સંપૂર્ણ રિકવરી માટે'
       },
       {
         eyebrow: 'અહીં રિકવરી કેવી લાગે છે',
         title: ['ફરીથી', 'તમને ગમતી', 'વસ્તુઓ તરફ.'],
-        sub: 'બાળકને ઊંચકવું. રાત્રે શાંતિથી ઊંઘવું. સવારની વૉક. આ જ સાચું લક્ષ્ય છે — અને યોજના તમારા શરીર મુજબ બને છે.',
+        sub: 'બાળકને ઊંચકવું. રાત્રે શાંતિથી ઊંઘવું. સવારની વૉક. આ જ સાચું લક્ષ્ય છે - અને યોજના તમારા શરીર મુજબ બને છે.',
         trust: 'હાથથી સારવાર · તમારા માટેની યોજના'
       }
     ]
@@ -125,11 +125,11 @@
   var PAGE_HEADINGS = {
     mr: {
       about: ['एकच तज्ज्ञ.', 'पूर्णपणे तुमच्यासोबत.'],
-      condition: ['पाठ आणि मानदुखी', 'फिजिओथेरपी — घरीच']
+      condition: ['पाठ आणि मानदुखी', 'फिजिओथेरपी - घरीच']
     },
     gu: {
       about: ['એક જ નિષ્ણાત.', 'સંપૂર્ણ તમારી સાથે.'],
-      condition: ['પીઠ અને ગરદનના દુખાવાની', 'ફિઝિયોથેરાપી — ઘરે જ']
+      condition: ['પીઠ અને ગરદનના દુખાવાની', 'ફિઝિયોથેરાપી - ઘરે જ']
     }
   };
 
@@ -146,7 +146,7 @@
         'WhatsApp me': 'WhatsApp वर बोला',
         'Book a home visit': 'घरभेट बुक करा',
         'Call +91 88794 75065': 'कॉल +91 88794 75065',
-        'Movement, restored personally.': 'हालचाल, पुन्हा — आपुलकीने.',
+        'Movement, restored personally.': 'हालचाल, पुन्हा - आपुलकीने.',
         'Same expert, every visit': 'दर वेळी तीच तज्ज्ञ',
         'Home visits only · by appointment': 'घरभेट सेवा · अपॉइंटमेंटने',
         'Serving': 'सेवा क्षेत्र',
@@ -171,17 +171,17 @@
       conditions: {
         'What we treat': 'काय उपचार करतो',
         'Expert care for the things that slow you down.': 'जे तुम्हाला अडवतंय, त्यासाठी तज्ज्ञ उपचार.',
-        'From a pulled hamstring to post-surgery rehab, Dr Rutvi treats a full range of musculoskeletal and sports conditions - at home, across Bhayander to Andheri.': 'अचानक झालेली दुखापत असो वा शस्त्रक्रियेनंतरची रिकव्हरी — डॉ. रुत्वी भायंदर ते अंधेरी घरपोच मस्क्युलोस्केलेटल आणि स्पोर्ट्स फिजिओथेरपी देतात.',
+        'From a pulled hamstring to post-surgery rehab, Dr Rutvi treats a full range of musculoskeletal and sports conditions - at home, across Bhayander to Andheri.': 'अचानक झालेली दुखापत असो वा शस्त्रक्रियेनंतरची रिकव्हरी - डॉ. रुत्वी भायंदर ते अंधेरी घरपोच मस्क्युलोस्केलेटल आणि स्पोर्ट्स फिजिओथेरपी देतात.',
         'Not sure which applies?': 'कुठे बसतंय ते कळत नाही?',
         'Describe it to Dr Rutvi.': 'ते डॉ. रुत्वींना सांगा.',
-        'Message Dr Rutvi - she\'ll help you understand what\'s going on and whether home physiotherapy is right for you.': 'डॉ. रुत्वींना मेसेज करा — फिजिओथेरपी मदत करेल का ते त्या प्रामाणिकपणे सांगतील.',
+        'Message Dr Rutvi - she\'ll help you understand what\'s going on and whether home physiotherapy is right for you.': 'डॉ. रुत्वींना मेसेज करा - फिजिओथेरपी मदत करेल का ते त्या प्रामाणिकपणे सांगतील.',
         'View details': 'तपशील पहा'
       },
       about: {
         'ONE SPECIALIST. IN YOUR CORNER.': 'एकच तज्ज्ञ. पूर्णपणे तुमच्यासोबत.',
         'One specialist. In your corner.': 'एकच तज्ज्ञ. पूर्णपणे तुमच्यासोबत.',
         'About Dr Rutvi': 'डॉ. रुत्वींबद्दल',
-        'MPT — Sports & Musculoskeletal Physiotherapy': 'MPT — स्पोर्ट्स आणि मस्क्युलोस्केलेटल फिजिओथेरपी',
+        'MPT - Sports & Musculoskeletal Physiotherapy': 'MPT - स्पोर्ट्स आणि मस्क्युलोस्केलेटल फिजिओथेरपी',
         'Talk to Dr Rutvi': 'डॉ. रुत्वींशी बोला',
         'Her philosophy': 'त्यांची उपचारपद्धती',
         'How she works': 'त्या कशा काम करतात',
@@ -190,9 +190,9 @@
         'Let\'s talk about your recovery.': 'तुमच्या रिकव्हरीबद्दल बोलूया.'
       },
       condition: {
-        'BACK & NECK PAIN PHYSIOTHERAPY - AT HOME': 'पाठ आणि मानदुखी फिजिओथेरपी — घरीच',
-        'Back & Neck Pain — treated at home': 'पाठ आणि मानदुखी — घरीच उपचार',
-        'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'डेस्कवर तासनतास बसल्याने होणारी मंद वेदना असो वा तीव्र, पसरणारी वेदना — पाठ आणि मानेचा त्रास थकवून टाकतो. डॉ. रुत्वी मूळ कारण शोधून घरीच हातांनी उपचार करतात.',
+        'BACK & NECK PAIN PHYSIOTHERAPY - AT HOME': 'पाठ आणि मानदुखी फिजिओथेरपी - घरीच',
+        'Back & Neck Pain - treated at home': 'पाठ आणि मानदुखी - घरीच उपचार',
+        'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'डेस्कवर तासनतास बसल्याने होणारी मंद वेदना असो वा तीव्र, पसरणारी वेदना - पाठ आणि मानेचा त्रास थकवून टाकतो. डॉ. रुत्वी मूळ कारण शोधून घरीच हातांनी उपचार करतात.',
         'Chat about this': 'याबद्दल बोला',
         'WhatsApp me about this': 'याबद्दल WhatsApp वर बोला'
       },
@@ -210,7 +210,7 @@
         'WhatsApp me': 'WhatsApp પર વાત કરો',
         'Book a home visit': 'ઘરની મુલાકાત બુક કરો',
         'Call +91 88794 75065': 'કૉલ +91 88794 75065',
-        'Movement, restored personally.': 'હલનચલન, ફરી — પોતાપણાથી.',
+        'Movement, restored personally.': 'હલનચલન, ફરી - પોતાપણાથી.',
         'Same expert, every visit': 'દર વખત એ જ નિષ્ણાત',
         'Home visits only · by appointment': 'ઘરઆંગણે મુલાકાત · એપોઇન્ટમેન્ટથી',
         'Serving': 'સેવા વિસ્તાર',
@@ -235,17 +235,17 @@
       conditions: {
         'What we treat': 'શું સારવાર કરીએ છીએ',
         'Expert care for the things that slow you down.': 'જે તમને રોકે છે, તેના માટે નિષ્ણાત સારવાર.',
-        'From a pulled hamstring to post-surgery rehab, Dr Rutvi treats a full range of musculoskeletal and sports conditions - at home, across Bhayander to Andheri.': 'અચાનક ઇજા હોય કે સર્જરી પછીની રિકવરી — ડૉ. રુત્વી ભાઈંદરથી અંધેરી સુધી ઘરઆંગણે મસ્ક્યુલોસ્કેલેટલ અને સ્પોર્ટ્સ ફિઝિયોથેરાપી આપે છે.',
+        'From a pulled hamstring to post-surgery rehab, Dr Rutvi treats a full range of musculoskeletal and sports conditions - at home, across Bhayander to Andheri.': 'અચાનક ઇજા હોય કે સર્જરી પછીની રિકવરી - ડૉ. રુત્વી ભાઈંદરથી અંધેરી સુધી ઘરઆંગણે મસ્ક્યુલોસ્કેલેટલ અને સ્પોર્ટ્સ ફિઝિયોથેરાપી આપે છે.',
         'Not sure which applies?': 'કઈ તકલીફ છે તે સ્પષ્ટ નથી?',
         'Describe it to Dr Rutvi.': 'ડૉ. રુત્વીને જણાવો.',
-        'Message Dr Rutvi - she\'ll help you understand what\'s going on and whether home physiotherapy is right for you.': 'ડૉ. રુત્વીને મેસેજ કરો — ઘરઆંગણે ફિઝિયોથેરાપી મદદ કરશે કે નહીં તે એ પ્રામાણિકપણે કહેશે.',
+        'Message Dr Rutvi - she\'ll help you understand what\'s going on and whether home physiotherapy is right for you.': 'ડૉ. રુત્વીને મેસેજ કરો - ઘરઆંગણે ફિઝિયોથેરાપી મદદ કરશે કે નહીં તે એ પ્રામાણિકપણે કહેશે.',
         'View details': 'વિગતો જુઓ'
       },
       about: {
         'ONE SPECIALIST. IN YOUR CORNER.': 'એક જ નિષ્ણાત. સંપૂર્ણ તમારી સાથે.',
         'One specialist. In your corner.': 'એક જ નિષ્ણાત. સંપૂર્ણ તમારી સાથે.',
         'About Dr Rutvi': 'ડૉ. રુત્વી વિશે',
-        'MPT — Sports & Musculoskeletal Physiotherapy': 'MPT — સ્પોર્ટ્સ અને મસ્ક્યુલોસ્કેલેટલ ફિઝિયોથેરાપી',
+        'MPT - Sports & Musculoskeletal Physiotherapy': 'MPT - સ્પોર્ટ્સ અને મસ્ક્યુલોસ્કેલેટલ ફિઝિયોથેરાપી',
         'Talk to Dr Rutvi': 'ડૉ. રુત્વી સાથે વાત કરો',
         'Her philosophy': 'એમની સારવાર પદ્ધતિ',
         'How she works': 'એ કેવી રીતે કામ કરે છે',
@@ -254,9 +254,9 @@
         'Let\'s talk about your recovery.': 'તમારી રિકવરી વિશે વાત કરીએ.'
       },
       condition: {
-        'BACK & NECK PAIN PHYSIOTHERAPY - AT HOME': 'પીઠ અને ગરદનના દુખાવાની ફિઝિયોથેરાપી — ઘરે જ',
-        'Back & Neck Pain — treated at home': 'પીઠ અને ગરદનનો દુખાવો — ઘરે જ સારવાર',
-        'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'ડેસ્ક પર લાંબા સમય બેસવાથી થતો હળવો દુખાવો હોય કે તીવ્ર, ફેલાતો દુખાવો — પીઠ અને ગરદનની તકલીફ થકવી નાખે છે. ડૉ. રુત્વી મૂળ કારણ શોધીને ઘરે જ હાથથી સારવાર કરે છે.',
+        'BACK & NECK PAIN PHYSIOTHERAPY - AT HOME': 'પીઠ અને ગરદનના દુખાવાની ફિઝિયોથેરાપી - ઘરે જ',
+        'Back & Neck Pain - treated at home': 'પીઠ અને ગરદનનો દુખાવો - ઘરે જ સારવાર',
+        'Whether it\'s a dull ache from long desk hours or sharp, radiating pain, back and neck trouble wears you down. Dr Rutvi finds the root cause and treats it by hand, in your home.': 'ડેસ્ક પર લાંબા સમય બેસવાથી થતો હળવો દુખાવો હોય કે તીવ્ર, ફેલાતો દુખાવો - પીઠ અને ગરદનની તકલીફ થકવી નાખે છે. ડૉ. રુત્વી મૂળ કારણ શોધીને ઘરે જ હાથથી સારવાર કરે છે.',
         'Chat about this': 'આ વિશે વાત કરો',
         'WhatsApp me about this': 'આ વિશે WhatsApp પર વાત કરો'
       },

@@ -34,6 +34,7 @@ const banned = [
 
 let failed = false;
 function fail(message) { failed = true; console.error(`FAIL: ${message}`); }
+const DOMAIN = 'https://physiobyrutvi.in';
 
 for (const page of pages) {
   const full = path.join(ROOT, page.file);
@@ -63,6 +64,77 @@ if (sitemap.includes('/404.html')) fail('Sitemap must not include the 404 page')
 const robots = fs.readFileSync(path.join(ROOT, 'robots.txt'), 'utf8');
 if (!robots.includes('Sitemap: https://physiobyrutvi.in/sitemap.xml')) fail('robots.txt has the wrong sitemap location');
 
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+if (sitemapUrls.length !== new Set(sitemapUrls).size) fail('Sitemap contains duplicate URLs');
+if (!sitemapUrls.length) fail('Sitemap contains no URLs');
+
+const indexableTitles = new Map();
+const indexableDescriptions = new Map();
+for (const url of sitemapUrls) {
+  if (!url.startsWith(`${DOMAIN}/`)) fail(`Sitemap URL is outside the canonical domain: ${url}`);
+  const route = new URL(url).pathname;
+  const file = route === '/' ? 'index.html' : `${route.slice(1)}index.html`;
+  const full = path.join(ROOT, file);
+  if (!fs.existsSync(full)) { fail(`Sitemap URL has no local page: ${url}`); continue; }
+  const html = fs.readFileSync(full, 'utf8');
+  const canonical = (html.match(/<link rel="canonical" href="([^"]+)">/) || [])[1];
+  const title = (html.match(/<title>([^<]+)<\/title>/) || [])[1];
+  const description = (html.match(/<meta name="description" content="([^"]+)">/) || [])[1];
+  if (canonical !== url) fail(`${file} canonical is ${canonical || 'missing'}; expected ${url}`);
+  if (/name="robots"[^>]+noindex/i.test(html)) fail(`${file} is in the sitemap but marked noindex`);
+  if (!title) fail(`${file} has no title`);
+  if (!description) fail(`${file} has no meta description`);
+  if (title && indexableTitles.has(title)) fail(`${file} duplicates the title used by ${indexableTitles.get(title)}`);
+  if (description && indexableDescriptions.has(description)) fail(`${file} duplicates the description used by ${indexableDescriptions.get(description)}`);
+  if (title) indexableTitles.set(title, file);
+  if (description) indexableDescriptions.set(description, file);
+  if (html.includes('—')) fail(`${file} contains an em dash`);
+  const schemaText = (html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/) || [])[1];
+  if (!schemaText) fail(`${file} has no JSON-LD`);
+  else {
+    try {
+      const schema = JSON.parse(schemaText);
+      const graph = Array.isArray(schema['@graph']) ? schema['@graph'] : [];
+      if (!graph.some(item => item['@type'] === 'WebSite' && item['@id'] === `${DOMAIN}/#website`)) {
+        fail(`${file} schema does not define the referenced WebSite entity`);
+      }
+    } catch (error) { fail(`${file} contains invalid JSON-LD: ${error.message}`); }
+  }
+}
+
+function listHtmlFiles(directory) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    if (entry.name === '.git' || entry.name === 'node_modules') return [];
+    const full = path.join(directory, entry.name);
+    return entry.isDirectory() ? listHtmlFiles(full) : (entry.name.endsWith('.html') ? [full] : []);
+  });
+}
+
+const sitemapFiles = new Set(sitemapUrls.map(url => {
+  const route = new URL(url).pathname;
+  return path.normalize(path.join(ROOT, route === '/' ? 'index.html' : `${route.slice(1)}index.html`));
+}));
+for (const full of listHtmlFiles(ROOT)) {
+  const html = fs.readFileSync(full, 'utf8');
+  const relative = path.relative(ROOT, full);
+  if (!sitemapFiles.has(path.normalize(full)) && !/name="robots" content="noindex,(?:follow|nofollow)"/i.test(html)) {
+    fail(`${relative} is a public non-canonical HTML file without noindex`);
+  }
+}
+
+for (const file of ['build_static.js', 'site-i18n.js', 'site-i18n.min.js', 'About Dr Rutvi.dc.html', 'Condition.dc.html']) {
+  const content = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  if (content.includes('—')) fail(`${file} can reintroduce em dashes into website content`);
+}
+
+for (const file of ['home/index.html', 'condition/index.html', 'privacy-policy.html', 'terms-of-service.html']) {
+  const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  const target = (html.match(/http-equiv="refresh" content="0;url=([^"]+)"/) || [])[1];
+  const canonical = (html.match(/<link rel="canonical" href="([^"]+)">/) || [])[1];
+  if (!target || canonical !== `${DOMAIN}${target}`) fail(`${file} does not canonicalize its moved URL to the destination`);
+  if (!/name="robots" content="noindex,follow"/.test(html)) fail(`${file} redirect fallback must be noindex,follow`);
+}
+
 const assetFiles = [
   'assets/css/site.css',
   'assets/js/site.js',
@@ -81,6 +153,10 @@ if (!generated.includes('Free 15-Minute Consultation')) fail('The confirmed 15-m
 if (!generated.includes('calendly.com/gandhirutvi13/30min')) fail('The existing Calendly event link is missing');
 const analytics = fs.readFileSync(path.join(ROOT, 'site-analytics.js'), 'utf8');
 if (!analytics.includes("'click_calendly'") || !analytics.includes("'free_15_minute_consultation'")) fail('Calendly lead-click tracking is missing');
+for (const field of ['lead_type', 'cta_text', 'cta_location', 'page_path']) {
+  if (!analytics.includes(field)) fail(`Lead tracking is missing ${field} context`);
+}
+if (!/function trackLead[\s\S]*loadGtag\(\)/.test(analytics)) fail('Lead clicks must load analytics immediately before navigation');
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
 for (const file of allGeneratedFiles) {

@@ -27,43 +27,51 @@
   if (window.__pbrLeadTracking) return;
   window.__pbrLeadTracking = true;
 
+  function cleanText(value) {
+    return String(value || '').replace(/\s+/g, ' ').trim().slice(0, 100);
+  }
+
+  function ctaLocation(element) {
+    if (!element) return 'unknown';
+    var explicit = element.getAttribute('data-analytics-location');
+    if (explicit) return cleanText(explicit);
+    var section = element.closest('header, footer, section, nav, [id]');
+    if (!section) return 'page';
+    return cleanText(section.id || section.getAttribute('aria-label') || section.className || section.tagName).slice(0, 60);
+  }
+
+  function trackLead(eventName, leadType, element) {
+    if (typeof window.gtag !== 'function') return;
+    loadGtag();
+    window.gtag('event', eventName, {
+      event_category: 'lead',
+      lead_type: leadType,
+      cta_text: cleanText(element && (element.getAttribute('aria-label') || element.textContent)),
+      cta_location: ctaLocation(element),
+      page_path: window.location.pathname
+    });
+  }
+
   document.addEventListener('click', function(event){
     var target = event.target;
     var voice = target && target.closest ? target.closest('elevenlabs-convai') : null;
-    if (voice && typeof window.gtag === 'function') {
-      window.gtag('event', 'click_voice_agent', {
-        event_category: 'lead',
-        event_label: 'elevenlabs_conversation'
-      });
-    }
+    if (voice) trackLead('click_voice_agent', 'voice_agent', voice);
 
     var link = target && target.closest ? target.closest('a') : null;
     if (!link || typeof window.gtag !== 'function') return;
 
     var href = link.getAttribute('href') || '';
     if (href.indexOf('wa.me') !== -1) {
-      window.gtag('event', 'click_whatsapp', {
-        event_category: 'lead',
-        event_label: href
-      });
+      trackLead('click_whatsapp', 'whatsapp', link);
     }
     if (href.indexOf('calendly.com/') !== -1) {
-      window.gtag('event', 'click_calendly', {
-        event_category: 'lead',
-        event_label: 'free_15_minute_consultation'
-      });
+      trackLead('click_calendly', 'free_15_minute_consultation', link);
     }
     if (href.indexOf('tel:') === 0) {
-      window.gtag('event', 'click_call', {
-        event_category: 'lead',
-        event_label: href
-      });
+      trackLead('click_call', 'phone_call', link);
     }
     if (href.indexOf('mailto:') === 0) {
-      window.gtag('event', 'click_email', {
-        event_category: 'lead',
-        event_label: href
-      });
+      trackLead('click_email', 'email', link);
     }
   });
 })();
