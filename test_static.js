@@ -159,8 +159,10 @@ for (const field of ['lead_type', 'cta_text', 'cta_location', 'page_path']) {
 if (!/function trackLead[\s\S]*loadGtag\(\)/.test(analytics)) fail('Lead clicks must load analytics immediately before navigation');
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
+const developerCredit = 'Developed by <a href="https://github.com/ApeLabsNFT" target="_blank" rel="noopener noreferrer">ApeLabs</a>';
 for (const file of allGeneratedFiles) {
   const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  if (!html.includes(developerCredit)) fail(`${file} is missing the linked ApeLabs developer credit`);
   const links = [...html.matchAll(/href="(\/[^"]*)"/g)].map(match => match[1]);
   for (const link of links) {
     const pathname = link.split('#')[0].split('?')[0];
