@@ -342,21 +342,28 @@ a:focus-visible, button:focus-visible {
   .pbr-footer__legal { flex-direction: column; }
   .pbr-brand__image { width: 168px; }
   .home-hero__viewport {
-    height: calc(100svh - 68px) !important;
-    min-height: 640px;
-    max-height: 760px;
+    height: 640px !important;
+    min-height: 0;
+    max-height: none;
+    cursor: default !important;
   }
+  #heroTrack { transform: none !important; transition: none !important; }
+  .home-hero__slide:not(:first-child) { display: none !important; }
+  .home-hero__viewport > div:last-child { display: none !important; }
+  .home-hero [data-parallax] { display: none !important; }
   .home-hero__image {
-    object-position: 68% 20% !important;
-    transform: scale(1.015);
+    inset: 0 0 auto !important;
+    height: 56% !important;
+    object-position: 72% 48% !important;
+    transform: none;
   }
   .home-hero__wash {
-    background: linear-gradient(180deg, rgba(253,248,245,.08) 0%, rgba(253,248,245,.22) 24%, rgba(253,248,245,.84) 48%, rgba(253,248,245,.98) 70%, #fdf8f5 100%) !important;
+    background: linear-gradient(180deg, rgba(253,248,245,0) 0%, rgba(253,248,245,0) 34%, rgba(253,248,245,.38) 46%, rgba(253,248,245,.94) 56%, #fdf8f5 66%, #fdf8f5 100%) !important;
   }
   .home-hero__fade { display: none; }
   .home-hero__inner {
     justify-content: flex-end !important;
-    padding: 0 22px 62px !important;
+    padding: 0 22px 64px !important;
   }
   .home-hero__copy { max-width: 100% !important; }
   .home-hero__eyebrow {
@@ -377,19 +384,12 @@ a:focus-visible, button:focus-visible {
     line-height: 1.42 !important;
   }
   .home-hero__actions {
-    gap: 11px !important;
-    margin-top: 20px !important;
-  }
-  .home-hero__primary {
-    padding: 14px 19px !important;
-    font-size: 14.5px !important;
-  }
-  .home-hero__secondary { font-size: 13.5px !important; }
-  .home-hero__proof {
-    gap: 6px !important;
+    gap: 0 !important;
     margin-top: 17px !important;
-    font-size: 11.5px !important;
   }
+  .home-hero__primary { display: none !important; }
+  .home-hero__secondary { font-size: 14px !important; }
+  .home-hero__proof { display: none !important; }
   .about-shell { width: min(100% - 30px, 1180px); }
   .about-hero { padding-top: 28px; }
   .about-breadcrumb { margin-bottom: 34px; }
