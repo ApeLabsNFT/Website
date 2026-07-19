@@ -47,74 +47,74 @@
 </div>
   <main id="main-content">
 <!-- ===================== HERO CAROUSEL ===================== -->
-<section aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
-  <div id="heroVp" style="position:relative;width:100%;height:clamp(620px,90vh,880px);overflow:hidden;cursor:grab;touch-action:pan-y;">
+<section class="home-hero" aria-label="Intro" style="position:relative;background:#FDF8F5;overflow:hidden;">
+  <div class="home-hero__viewport" id="heroVp" style="position:relative;width:100%;height:clamp(620px,90vh,880px);overflow:hidden;cursor:grab;touch-action:pan-y;">
     <div id="heroTrack" style="display:flex;height:100%;width:100%;will-change:transform;">
 
       <!-- SLIDE 1 -->
-      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
-        <img src="/assets/img/hero-1.webp" alt="Physiotherapist treating a patient's shoulders during a home visit in a bright Mumbai apartment" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+      <div class="home-hero__slide" style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img class="home-hero__image" src="/assets/img/hero-1.webp" alt="Physiotherapist treating a patient's shoulders during a home visit in a bright Mumbai apartment" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 50%;pointer-events:none;">
+        <div class="home-hero__wash" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div class="home-hero__fade" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(600px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Clinically led home physiotherapy</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">Physiotherapy<br><span style="color:#0E4F52;">That Comes</span><br>To You.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">Assessment-led home physiotherapy across Mumbai’s western suburbs, delivered by a matched physiotherapist and guided by shared clinical standards.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="https://wa.me/918879475065?text=Hello%20PhysioByRutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+        <div class="home-hero__inner" style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div class="home-hero__copy" style="max-width:min(600px,94%);">
+            <div class="home-hero__eyebrow" style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Home physiotherapy · Mumbai</div>
+            <h1 class="home-hero__title" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">Expert physio.<br><span style="color:#0E4F52;">At your door.</span></h1>
+            <p class="home-hero__body" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">Assessment-led home visits across Mumbai’s western suburbs.</p>
+            <div class="home-hero__actions" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a class="home-hero__primary" href="https://wa.me/918879475065?text=Hello%20PhysioByRutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-                Message the Care Team
+                Book a home visit
               </a>
-              <a href="#how" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">How it works
+              <a class="home-hero__secondary" href="#how" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">How care works
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · MPT Sports &amp; Musculoskeletal · Team-based, clinically led care</div>
+            <div class="home-hero__proof" style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 Google rating · MPT-led care</div>
           </div>
         </div>
       </div>
 
       <!-- SLIDE 2 -->
-      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
-        <img src="/assets/img/hero-2.webp" alt="Physiotherapist reviewing a personalised recovery plan on a tablet with a patient at home" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+      <div class="home-hero__slide" style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img class="home-hero__image" src="/assets/img/hero-2.webp" alt="Physiotherapist reviewing a personalised recovery plan on a tablet with a patient at home" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 50%;pointer-events:none;">
+        <div class="home-hero__wash" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div class="home-hero__fade" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#0E4F52" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#EE7B5B" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(600px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Continuity of care</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">The Right<br><span style="color:#0E4F52;">Expert.</span><br>For Your Needs.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">A clinically suitable physiotherapist, matched to the patient’s needs and supported by shared care standards.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="#how" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">See how it works
+        <div class="home-hero__inner" style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div class="home-hero__copy" style="max-width:min(600px,94%);">
+            <div class="home-hero__eyebrow" style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Matched to your needs</div>
+            <h1 class="home-hero__title" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(40px,8.4vw,94px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">The right physio.<br><span style="color:#0E4F52;">For your recovery.</span></h1>
+            <p class="home-hero__body" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:440px;">Care matched to your needs, goals and location.</p>
+            <div class="home-hero__actions" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a class="home-hero__primary" href="#how" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">How care works
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a href="/about/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Meet Dr Rutvi</a>
+              <a class="home-hero__secondary" href="/about/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Meet Dr Rutvi</a>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · MPT patients treated at home</div>
+            <div class="home-hero__proof" style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 Google rating · Home visits</div>
           </div>
         </div>
       </div>
 
       <!-- SLIDE 3 -->
-      <div style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
-        <img src="/assets/img/hero-3.webp" alt="Guided resistance-band recovery exercise during an at-home physiotherapy session" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;pointer-events:none;">
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
+      <div class="home-hero__slide" style="position:relative;flex:0 0 100%;height:100%;overflow:hidden;">
+        <img class="home-hero__image" src="/assets/img/hero-3.webp" alt="Guided resistance-band recovery exercise during an at-home physiotherapy session" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;pointer-events:none;">
+        <div class="home-hero__wash" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,248,245,.97) 0%,rgba(253,248,245,.9) 30%,rgba(253,248,245,.55) 55%,rgba(253,248,245,0) 80%);pointer-events:none;"></div>
+        <div class="home-hero__fade" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,245,0) 58%,rgba(253,248,245,.34) 100%);pointer-events:none;"></div>
         <div data-parallax="0.05" style="position:absolute;top:7%;right:5%;width:min(340px,32%);opacity:.28;pointer-events:none;"><svg viewBox="0 0 600 320" fill="none" width="100%"><path d="M20 300 C 180 40, 420 40, 580 300" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/><path d="M80 300 C 210 110, 390 110, 520 300" stroke="#0E4F52" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
-          <div style="max-width:min(620px,94%);">
-            <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Movement, restored, personally</div>
-            <h1 style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,96px);line-height:.9;letter-spacing:-.02em;color:#1B2021;"><span style="color:#0E4F52;">Guided Recovery</span><br>At Home.</h1>
-            <p style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">Hands-on treatment, movement coaching, and home exercises designed around your body.</p>
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
-              <a href="https://wa.me/918879475065?text=Hello%20PhysioByRutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
+        <div class="home-hero__inner" style="position:relative;height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,52px);">
+          <div class="home-hero__copy" style="max-width:min(620px,94%);">
+            <div class="home-hero__eyebrow" style="display:inline-flex;align-items:center;gap:9px;background:rgba(207,227,216,.6);color:#0E4F52;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:100px;margin-bottom:22px;"><span style="width:6px;height:6px;border-radius:50%;background:#EE7B5B;"></span>Recovery at home</div>
+            <h1 class="home-hero__title" style="font-family:'Fraunces',serif;font-weight:600;text-transform:uppercase;font-size:clamp(42px,8.6vw,96px);line-height:.9;letter-spacing:-.02em;color:#1B2021;">Move better.<br><span style="color:#0E4F52;">Feel stronger.</span></h1>
+            <p class="home-hero__body" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#3B403D;margin-top:22px;max-width:460px;">Hands-on care, guided exercise and a plan you can follow.</p>
+            <div class="home-hero__actions" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;">
+              <a class="home-hero__primary" href="https://wa.me/918879475065?text=Hello%20PhysioByRutvi%2C%20I%20would%20like%20to%20ask%20about%20a%20home%20physiotherapy%20visit.%20My%20name%20is%20___%2C%20suburb%20is%20___%2C%20and%20preferred%20day%2Ftime%20is%20___." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#EE7B5B;color:#1B2021;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:100px;box-shadow:0 12px 28px rgba(238,123,91,.32);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;" data-hover-style="transform:translateY(-2px);box-shadow:0 18px 36px rgba(238,123,91,.4);">
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                 Start on WhatsApp
               </a>
-              <a href="/conditions/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Explore conditions</a>
+              <a class="home-hero__secondary" href="/conditions/" style="display:inline-flex;align-items:center;gap:7px;color:#0E4F52;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1.5px solid rgba(14,79,82,.25);padding-bottom:3px;">Explore conditions</a>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 · Trusted across the western suburbs</div>
+            <div class="home-hero__proof" style="display:flex;align-items:center;gap:8px;margin-top:26px;color:#5A5F5B;font-size:13px;font-weight:500;"><span style="color:#EE7B5B;letter-spacing:1px;">★★★★★</span> 5.0 Google rating · Western suburbs</div>
           </div>
         </div>
       </div>
