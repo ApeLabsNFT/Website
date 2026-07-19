@@ -3,6 +3,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const DOMAIN = 'https://physiobyrutvi.in';
+const SITEMAP_LASTMOD = '2026-07-19';
 const PHONE = '+91 88794 75065';
 const PHONE_LINK = 'tel:+918879475065';
 const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, and preferred day/time is ___.');
@@ -283,7 +284,7 @@ function aboutEditorialBody() {
 <section class="about-philosophy about-section">
   <div class="about-shell about-philosophy__inner">
     <p class="about-eyebrow about-eyebrow--light" data-reveal>Care philosophy</p>
-    <blockquote data-reveal data-delay="60">“Good physiotherapy should leave you <em>clearer and more capable</em>—not dependent.”</blockquote>
+    <blockquote data-reveal data-delay="60">“Good physiotherapy should leave you <em>clearer and more capable</em>, not dependent.”</blockquote>
     <p data-reveal data-delay="110">The treating physiotherapist explains the plan, guides appropriate treatment and helps the patient understand what to practise between visits. Dr Rutvi leads the shared clinical standards used across the care team.</p>
   </div>
 </section>
@@ -311,7 +312,7 @@ function aboutEditorialBody() {
     <div class="about-founder__copy">
       <p class="about-eyebrow" data-reveal>Founder’s perspective</p>
       <h2 data-reveal data-delay="60">Musculoskeletal care for real life.</h2>
-      <p data-reveal data-delay="100">Pain and movement concerns show up in ordinary moments—climbing stairs, sitting at a desk, lifting a child, returning to training or regaining confidence after surgery. Home visits make those real demands visible.</p>
+      <p data-reveal data-delay="100">Pain and movement concerns show up in ordinary moments: climbing stairs, sitting at a desk, lifting a child, returning to training or regaining confidence after surgery. Home visits make those real demands visible.</p>
       <p data-reveal data-delay="140">PhysioByRutvi was founded to make careful physiotherapy easier to access at home. Dr Rutvi sets the clinical approach; visits may be delivered by a physiotherapist suitably matched to the patient’s needs, location and availability.</p>
       <div class="about-founder__signature" data-reveal data-delay="180"><strong>Dr Rutvi K Gandhi (PT)</strong><span>MPT, BPT, MIAP · Founder &amp; Clinical Lead</span></div>
     </div>
@@ -344,7 +345,7 @@ function aboutEditorialBody() {
     <div>
       <p class="about-eyebrow about-eyebrow--light" data-reveal>Areas of support</p>
       <h2 id="scope-title" data-reveal data-delay="60">From pain and stiffness to confident movement.</h2>
-      <p data-reveal data-delay="100">Care is matched to assessment findings—not a one-size-fits-all protocol.</p>
+      <p data-reveal data-delay="100">Care is matched to assessment findings, not a one-size-fits-all protocol.</p>
       <a class="about-button about-button--coral" href="/services/" data-reveal data-delay="140">Explore all services</a>
     </div>
     <div class="about-scope__list">
@@ -441,11 +442,13 @@ function legalBody(label, title, paragraphs) {
 
 function addGeneratedPages() {
   for (const [slug, name, description, detail] of conditionPages) {
-    pages.push({ output: `conditions/${slug}/index.html`, route: `/conditions/${slug}/`, title: `${name} | PhysioByRutvi`, description, body: detailBody('Condition guide', name, description, detail) });
+    const title = slug === 'post-surgery-rehabilitation' ? 'Post-Surgery Physiotherapy at Home | PhysioByRutvi' : `${name} | PhysioByRutvi`;
+    pages.push({ output: `conditions/${slug}/index.html`, route: `/conditions/${slug}/`, title, description, body: detailBody('Condition guide', name, description, detail) });
   }
   pages.push({ output: 'services/index.html', route: '/services/', title: 'Home Physiotherapy Services | PhysioByRutvi', description: 'Explore home physiotherapy services delivered under clinically led care standards across Mumbai’s western suburbs.', body: servicesIndexBody() });
   for (const [slug, name, description, detail] of servicePages) {
-    pages.push({ output: `services/${slug}/index.html`, route: `/services/${slug}/`, title: `${name} | PhysioByRutvi`, description, body: detailBody('Service', name, description, detail) });
+    const title = slug === 'post-operative-rehabilitation' ? 'Post-Operative Rehabilitation Service | PhysioByRutvi' : `${name} | PhysioByRutvi`;
+    pages.push({ output: `services/${slug}/index.html`, route: `/services/${slug}/`, title, description, body: detailBody('Service', name, description, detail) });
   }
   pages.push(
     { output: 'how-care-works/index.html', route: '/how-care-works/', title: 'How Home Physiotherapy Works | PhysioByRutvi', description: 'Understand the booking, suitability, assessment and review process for PhysioByRutvi home visits.', body: howCareWorksBody() },
@@ -477,7 +480,8 @@ function addGeneratedPages() {
   }
 }
 
-function schema(route) {
+function schema(page) {
+  const route = page.redirect || page.route;
   const url = `${DOMAIN}${route}`;
   return JSON.stringify({
     '@context': 'https://schema.org',
@@ -499,13 +503,30 @@ function schema(route) {
         alumniOf: ['NMIMS Mumbai', 'Sumandeep Vidyapeeth'],
         url: `${DOMAIN}/about/`
       },
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, isPartOf: { '@id': `${DOMAIN}/#website` } }
+      {
+        '@type': 'WebSite',
+        '@id': `${DOMAIN}/#website`,
+        url: `${DOMAIN}/`,
+        name: 'PhysioByRutvi',
+        inLanguage: 'en-IN',
+        publisher: { '@id': `${DOMAIN}/#business` }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: page.title,
+        description: page.description,
+        inLanguage: 'en-IN',
+        isPartOf: { '@id': `${DOMAIN}/#website` },
+        about: { '@id': `${DOMAIN}/#business` }
+      }
     ]
   });
 }
 
 function renderPage(page, body) {
-  const canonical = `${DOMAIN}${page.route}`;
+  const canonical = `${DOMAIN}${page.redirect || page.route}`;
   return `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -529,7 +550,7 @@ function renderPage(page, body) {
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <script type="application/ld+json">${schema(page.route)}</script>
+  <script type="application/ld+json">${schema(page)}</script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -557,7 +578,7 @@ for (const page of pages) {
 const sitemapRoutes = pages.filter(page => !page.noindex).map(page => page.route);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>2026-07-13</lastmod></url>`).join('\n')}
+${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>${SITEMAP_LASTMOD}</lastmod></url>`).join('\n')}
 </urlset>\n`;
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`);
