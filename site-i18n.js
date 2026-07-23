@@ -196,7 +196,7 @@
         'Chat about this': 'याबद्दल बोला',
         'WhatsApp me about this': 'याबद्दल WhatsApp वर बोला'
       },
-      whatsapp: 'नमस्कार डॉ. रुत्वी, मला घरपोच फिजिओथेरपीबद्दल विचारायचे आहे. माझा परिसर ___ आणि माझी तक्रार ___ आहे.'
+      whatsapp: 'नमस्कार PhysioByRutvi, मला घरपोच फिजिओथेरपीबद्दल विचारायचे आहे. कृपया पुढील उपलब्ध सल्लामसलतीची वेळ कळवा.'
     },
     gu: {
       common: {
@@ -260,7 +260,7 @@
         'Chat about this': 'આ વિશે વાત કરો',
         'WhatsApp me about this': 'આ વિશે WhatsApp પર વાત કરો'
       },
-      whatsapp: 'નમસ્તે ડૉ. રુત્વી, મને ઘરઆંગણે ફિઝિયોથેરાપી વિશે પૂછવું છે. મારો વિસ્તાર ___ અને મારી તકલીફ ___ છે.'
+      whatsapp: 'નમસ્તે PhysioByRutvi, મને ઘરઆંગણે ફિઝિયોથેરાપી વિશે પૂછવું છે. કૃપા કરીને આગામી ઉપલબ્ધ પરામર્શનો સમય જણાવો.'
     }
   };
 
@@ -463,16 +463,16 @@
   function updateWhatsApp(lang, page) {
     var copy = COPY[lang];
     var msg = lang === 'en'
-      ? 'Hi Dr Rutvi, I would like to start with my symptoms and check if a home physiotherapy visit is right for me. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
+      ? 'Hello PhysioByRutvi, I would like to enquire about a home physiotherapy visit. Please share the next available consultation time.'
       : copy.whatsapp;
     if (page === 'conditions') {
       msg = lang === 'en'
-        ? 'Hi Dr Rutvi, I am exploring the conditions page. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___. Can home physiotherapy help?'
+        ? 'Hello PhysioByRutvi, I am exploring your physiotherapy services and would like to know whether home care may be suitable for my concern. Please share the next available consultation time.'
         : msg;
     }
     if (page === 'about') {
       msg = lang === 'en'
-        ? 'Hi Dr Rutvi, I read about your qualifications and services. I would like to discuss my recovery and book a home visit. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'
+        ? 'Hello PhysioByRutvi, I would like to speak with your care team about home physiotherapy. Please share the next available consultation time.'
         : msg;
     }
     document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) {
