@@ -286,7 +286,7 @@ class Component extends DCLogic {
     window.removeEventListener('resize', this.onResize);
   }
   slug(){ return (location.hash || '').replace('#','').trim() || 'back-neck'; }
-  waLink(slug){ const n = this.NAMES[slug] || 'my condition'; return 'https://wa.me/918879475065?text=' + encodeURIComponent('Hi Dr Rutvi, I need help with ' + n.toLowerCase() + ' and would like to check home physiotherapy availability. My name is ___, suburb is ___, concern is ___, and preferred day/time is ___.'); }
+  waLink(slug){ const n = this.NAMES[slug] || 'my condition'; return 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to enquire about home physiotherapy for ' + n.toLowerCase() + '. Please share the next available consultation time.'); }
   esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   schemaData(slug){
     const knownSlug = this.NAMES[slug] ? slug : 'back-neck';
