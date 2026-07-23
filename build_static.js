@@ -5,7 +5,8 @@ const ROOT = __dirname;
 const DOMAIN = 'https://physiobyrutvi.in';
 const PHONE = '+91 88794 75065';
 const PHONE_LINK = 'tel:+918879475065';
-const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, and preferred day/time is ___.');
+const WHATSAPP_MESSAGE = 'Hello PhysioByRutvi, I would like to enquire about a home physiotherapy visit. Please share the next available consultation time.';
+const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent(WHATSAPP_MESSAGE);
 // The account owner confirmed this event is configured as a 15-minute consultation;
 // the legacy Calendly slug is retained so existing links continue to work.
 const CALENDLY = 'https://calendly.com/gandhirutvi13/30min';

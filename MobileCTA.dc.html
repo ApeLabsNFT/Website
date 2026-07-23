@@ -37,8 +37,8 @@ class Component extends DCLogic {
     return "I found PhysioByRutvi online";
   }
   link(msg){ return "https://wa.me/" + this.PHONE + "?text=" + encodeURIComponent(msg); }
-  wa = this.link("Hi Dr Rutvi, " + this.context() + ". My name is ___, suburb is ___, concern is ___, and preferred day/time is ___. I would like to ask about a home physiotherapy visit.");
-  book = this.link("Hi Dr Rutvi, I'd like to book a home visit. My name is ___, suburb is ___, preferred day/time is ___, and I need help with ___. " + this.context() + ".");
+  wa = this.link("Hello PhysioByRutvi, " + this.context() + ". I would like to enquire about a home physiotherapy visit. Please share the next available consultation time.");
+  book = this.link("Hello PhysioByRutvi, I would like to book a home physiotherapy visit. Please share the next available consultation time. " + this.context() + ".");
 
   onResize = () => {
     const el = document.getElementById('pbrMobileCta');
@@ -55,5 +55,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
-
 

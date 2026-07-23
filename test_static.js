@@ -29,7 +29,9 @@ const banned = [
   'No rotating aggregator therapists', 'Guaranteed cure', 'guaranteed cure',
   'eradicate pain', 'instant recovery', 'Rutvi visits your home',
   'she replies personally', 'The Person Who', 'The person who assesses you',
-  'Message Dr Rutvi today, the same specialist'
+  'Message Dr Rutvi today, the same specialist',
+  'My name is ___', 'suburb is ___', 'preferred day/time is ___',
+  'माझा परिसर ___', 'મારો વિસ્તાર ___'
 ];
 
 let failed = false;
@@ -81,6 +83,15 @@ if (!generated.includes('Free 15-Minute Consultation')) fail('The confirmed 15-m
 if (!generated.includes('calendly.com/gandhirutvi13/30min')) fail('The existing Calendly event link is missing');
 const analytics = fs.readFileSync(path.join(ROOT, 'site-analytics.js'), 'utf8');
 if (!analytics.includes("'click_calendly'") || !analytics.includes("'free_15_minute_consultation'")) fail('Calendly lead-click tracking is missing');
+
+const whatsappSourceBanned = [
+  'wa.me/919876543210', 'My name is ___', 'suburb is ___',
+  'preferred day/time is ___', 'माझा परिसर ___', 'મારો વિસ્તાર ___'
+];
+for (const file of ['build_static.js', 'site-i18n.js', 'site-i18n.min.js', 'Home.dc.html', 'Home.dc (1).html', 'MobileCTA.dc.html', 'Condition.dc.html']) {
+  const source = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  for (const text of whatsappSourceBanned) if (source.includes(text)) fail(`${file} contains invalid WhatsApp template text: ${text}`);
+}
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
 for (const file of allGeneratedFiles) {
