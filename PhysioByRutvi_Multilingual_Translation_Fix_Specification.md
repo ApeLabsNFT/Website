@@ -1,4 +1,4 @@
-# PhysioByRutvi — Multilingual Translation and Language-Switch Fix Specification
+# PhysioByRutvi, Multilingual Translation and Language-Switch Fix Specification
 
 ## Version 1.0 | 12 July 2026
 
@@ -190,11 +190,11 @@ Do not send every language choice back to the homepage.
 
 Do not automatically redirect users based only on browser language or IP. Show a dismissible suggestion:
 
-> ही वेबसाइट मराठीत पाहायची आहे का? — मराठीमध्ये पहा
+> ही वेबसाइट मराठीत पाहायची आहे का?, मराठीमध्ये पहा
 
 or:
 
-> શું તમે આ વેબસાઇટ ગુજરાતીમાં જોવા માંગો છો? — ગુજરાતી જુઓ
+> શું તમે આ વેબસાઇટ ગુજરાતીમાં જોવા માંગો છો?, ગુજરાતી જુઓ
 
 The user must remain able to choose English.
 
@@ -221,7 +221,7 @@ The current system breaks whenever copy changes. Use stable semantic identifiers
     "gu": "યોગ્ય ફિઝિયોથેરાપિસ્ટ. તમારા ઘરે."
   },
   "home.hero.body": {
-    "en": "PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time—with care standards led by Dr Rutvi Gandhi, PT, MPT.",
+    "en": "PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time, with care standards led by Dr Rutvi Gandhi, PT, MPT.",
     "mr": "तुमची समस्या, परिसर आणि पसंतीची वेळ लक्षात घेऊन PhysioByRutvi योग्य पात्र फिजिओथेरपिस्टची निवड करते. सेवेची काळजीची मानके डॉ. रुत्वी गांधी, PT, MPT यांच्या मार्गदर्शनाखाली ठरवली जातात.",
     "gu": "તમારી તકલીફ, વિસ્તાર અને પસંદગીના સમયને આધારે PhysioByRutvi યોગ્ય લાયકાત ધરાવતા ફિઝિયોથેરાપિસ્ટ સાથે તમારી મુલાકાત ગોઠવે છે. સેવાના કેર સ્ટાન્ડર્ડ્સ ડૉ. રુત્વી ગાંધી, PT, MPTના માર્ગદર્શન હેઠળ નક્કી થાય છે."
   }
@@ -415,7 +415,7 @@ These translations are suitable as the first reviewed UI layer. They should stil
 
 **Gujarati:** યોગ્ય ફિઝિયોથેરાપિસ્ટ. તમારા ઘરે.
 
-**English body:** PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time—with care standards led by Dr Rutvi Gandhi, PT, MPT.
+**English body:** PhysioByRutvi matches you with a qualified physiotherapist for your condition, locality and preferred time, with care standards led by Dr Rutvi Gandhi, PT, MPT.
 
 **Marathi:** तुमची समस्या, परिसर आणि पसंतीची वेळ लक्षात घेऊन PhysioByRutvi योग्य पात्र फिजिओथेरपिस्टची निवड करते. सेवेची काळजीची मानके डॉ. रुत्वी गांधी, PT, MPT यांच्या मार्गदर्शनाखाली ठरवली जातात.
 
@@ -500,7 +500,7 @@ Do not inject a duplicate business schema through JavaScript. Generate one valid
 
 # 10. Immediate Repair Plan
 
-## Phase 0 — Emergency cleanup
+## Phase 0, Emergency cleanup
 
 1. Fix duplicated `<html>`, `<head>` and `<body>` markup.
 2. Remove the old `site-i18n.min.js` DOM translation system.
@@ -508,7 +508,7 @@ Do not inject a duplicate business schema through JavaScript. Generate one valid
 4. Stop mutating titles, canonical links and schema after page load.
 5. Verify that the English site renders correctly without the translation script.
 
-## Phase 1 — Safe temporary state
+## Phase 1, Safe temporary state
 
 Until localized content is generated:
 
@@ -517,7 +517,7 @@ Until localized content is generated:
 - Do not present English-body pages as completed Marathi/Gujarati pages.
 - Optionally show instructions that Chrome users can use browser translation, but do not treat it as the official experience.
 
-## Phase 2 — Locale data and build system
+## Phase 2, Locale data and build system
 
 1. Move all English content into stable-key JSON or CMS fields.
 2. Add Google Cloud Translation to the build workflow.
@@ -525,7 +525,7 @@ Until localized content is generated:
 4. Generate Marathi and Gujarati draft files.
 5. Review safety, consent, pricing and medical language.
 
-## Phase 3 — Publish complete routes
+## Phase 3, Publish complete routes
 
 1. Build actual localized HTML.
 2. Connect equivalent language routes.
@@ -601,10 +601,10 @@ This is the most reliable approach for a healthcare website hosted as a static s
 
 # 13. Official References
 
-- Google Search Central — Managing multilingual sites: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites
-- Google Search Central — Localized page versions and `hreflang`: https://developers.google.com/search/docs/specialty/international/localized-versions
-- Google Search Central — Locale-adaptive page crawling limitations: https://developers.google.com/search/docs/specialty/international/locale-adaptive-pages
-- Google Cloud — Translation API overview: https://docs.cloud.google.com/translate/docs/api-overview
-- Google Cloud — Translation setup and authentication: https://docs.cloud.google.com/translate/docs/setup
-- Google Chrome Help — Browser page translation: https://support.google.com/chrome/answer/173424
+- Google Search Central, Managing multilingual sites: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites
+- Google Search Central, Localized page versions and `hreflang`: https://developers.google.com/search/docs/specialty/international/localized-versions
+- Google Search Central, Locale-adaptive page crawling limitations: https://developers.google.com/search/docs/specialty/international/locale-adaptive-pages
+- Google Cloud, Translation API overview: https://docs.cloud.google.com/translate/docs/api-overview
+- Google Cloud, Translation setup and authentication: https://docs.cloud.google.com/translate/docs/setup
+- Google Chrome Help, Browser page translation: https://support.google.com/chrome/answer/173424
 

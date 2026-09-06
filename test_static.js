@@ -77,10 +77,11 @@ const assetFiles = [
 for (const file of assetFiles) if (!fs.existsSync(path.join(ROOT, file))) fail(`Missing asset: ${file}`);
 
 const generated = pages.map(page => fs.readFileSync(path.join(ROOT, page.file), 'utf8')).join('\n');
-if (!generated.includes('Free 15-Minute Consultation')) fail('The confirmed 15-minute consultation label is missing');
+if (!generated.includes('Free 15-Minute Call')) fail('The confirmed 15-minute introductory call label is missing');
 if (!generated.includes('calendly.com/gandhirutvi13/30min')) fail('The existing Calendly event link is missing');
 const analytics = fs.readFileSync(path.join(ROOT, 'site-analytics.js'), 'utf8');
-if (!analytics.includes("'click_calendly'") || !analytics.includes("'free_15_minute_consultation'")) fail('Calendly lead-click tracking is missing');
+if (!analytics.includes("'free_15_minute_consultation'")) fail('The consultation tracking label is missing');
+// Actual event behaviour, deduplication and privacy are checked in test_leads.js.
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
 for (const file of allGeneratedFiles) {

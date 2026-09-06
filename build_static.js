@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const { enquirySection, heroSection, bookingFaqs } = require('./lead-sections');
 
 const ROOT = __dirname;
 const DOMAIN = 'https://physiobyrutvi.in';
 const PHONE = '+91 88794 75065';
 const PHONE_LINK = 'tel:+918879475065';
-const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to ask about a home physiotherapy visit. My name is ___, suburb is ___, and preferred day/time is ___.');
+const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to enquire about home physiotherapy. Please share the visit fee and availability in my area.');
 // The account owner confirmed this event is configured as a 15-minute consultation;
 // the legacy Calendly slug is retained so existing links continue to work.
 const CALENDLY = 'https://calendly.com/gandhirutvi13/30min';
@@ -16,7 +17,7 @@ const pages = [
     output: 'index.html',
     route: '/',
     title: 'Home Physiotherapy in Mumbai | PhysioByRutvi',
-    description: 'Clinically led physiotherapy home visits across Bhayander to Andheri, with assessment-led care and a physiotherapist matched to the patient’s needs.',
+    description: 'Home physiotherapy from Bhayander to Andheri for back and knee pain, post-surgery recovery and senior mobility. Ask about visit fees and availability on WhatsApp.',
     type: 'home'
   },
   {
@@ -143,6 +144,8 @@ function normalizeBody(source, type) {
     .replace(/Care in your own home/g, 'Matched to patient needs');
 
   if (type === 'home') {
+    body = replaceSection(body, '<!-- ===================== HERO CAROUSEL', '<!-- ===================== WELCOME + TRUST', heroSection(WHATSAPP, PHONE_LINK) + enquirySection(WHATSAPP, PHONE_LINK, CALENDLY));
+    body = body.replace('<!-- ===================== CLOSING CTA', bookingFaqs() + '\n<!-- ===================== CLOSING CTA');
     body = replaceSection(body, '<!-- ===================== REVIEWS', '<!-- ===================== ABOUT TEASER', verifiedReviewSection());
     body = body
       .replace(/src="\/assets\/rutvi-3\.png"/g, 'src="/assets/img/dr-rutvi-founder-about-portrait.webp"')
@@ -154,7 +157,8 @@ function normalizeBody(source, type) {
       .replace(/Tell Rutvi what's hurting\. One quick message, she replies personally, usually the same day\./g, 'Tell the care team what feels difficult, where care is needed and your preferred time. We will respond as availability allows.')
       .replace(/Rutvi visits your home/g, 'A physiotherapist visits your home')
       .replace(/The same specialist arrives with everything needed, assessment, hands-on treatment, and a plan you can follow\./g, 'A matched physiotherapist arrives for assessment, appropriate treatment and a plan you can follow between visits.')
-      .replace(/Chat on WhatsApp/g, 'Message the Care Team');
+      .replace(/Chat on WhatsApp/g, 'Message the Care Team')
+      .replace(/Book a home visit/g, 'Free 15-Minute Call');
   }
 
   if (type === 'about') {
@@ -200,7 +204,8 @@ function header() {
     ['05', 'About', '/about/'],
     ['06', 'Reviews', '/#reviews'],
     ['07', 'Service Areas', '/service-areas/'],
-    ['08', 'FAQs', '/faqs/']
+    ['08', 'FAQs', '/faqs/'],
+    ['09', 'Contact & Booking', '/contact/']
   ].map(([number, label, href]) => `<a class="pbr-menu__link" href="${href}"><span>${number}</span>${label}</a>`).join('');
   return `<div class="pbr-progress" aria-hidden="true"></div>
 <header class="pbr-header">
@@ -208,7 +213,7 @@ function header() {
     <a class="pbr-brand" href="/" aria-label="PhysioByRutvi home">${brand()}</a>
     <div class="pbr-header__actions">
       <a class="pbr-icon-btn pbr-icon-btn--call" href="${PHONE_LINK}" aria-label="Call PhysioByRutvi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <a class="pbr-book-btn" href="${CALENDLY}" target="_blank" rel="noopener">Free 15-Minute Consultation</a>
+      <a class="pbr-book-btn" href="/contact/#enquire">Check home visit availability</a>
       <button class="pbr-icon-btn pbr-menu-btn" id="pbrMenuOpen" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="pbrMenu"><svg width="19" height="16" viewBox="0 0 19 16" fill="none"><path d="M1 2h17M1 8h17M1 14h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 14h4" stroke="#EE7B5B" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
@@ -238,7 +243,7 @@ function footer() {
     <div class="pbr-footer__legal"><span>© 2026 PhysioByRutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span><span><a href="/privacy-policy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/medical-disclaimer/">Medical Disclaimer</a> · <a href="/cancellation-policy/">Cancellation</a></span></div>
   </div>
 </footer>
-<div class="pbr-mobile-cta" role="group" aria-label="Booking actions"><a class="pbr-mobile-cta__wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a class="pbr-mobile-cta__book" href="${CALENDLY}" target="_blank" rel="noopener">Free 15-Min Call</a></div>`;
+<div class="pbr-mobile-cta" role="group" aria-label="Booking actions" data-lead-location="mobile_bar"><a class="pbr-mobile-cta__wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp enquiry</a><a class="pbr-mobile-cta__book" href="${PHONE_LINK}">Call now</a></div>`;
 }
 
 function aboutEditorialBody() {
@@ -283,7 +288,7 @@ function aboutEditorialBody() {
 <section class="about-philosophy about-section">
   <div class="about-shell about-philosophy__inner">
     <p class="about-eyebrow about-eyebrow--light" data-reveal>Care philosophy</p>
-    <blockquote data-reveal data-delay="60">“Good physiotherapy should leave you <em>clearer and more capable</em>—not dependent.”</blockquote>
+    <blockquote data-reveal data-delay="60">“Good physiotherapy should leave you <em>clearer and more capable</em>, not dependent.”</blockquote>
     <p data-reveal data-delay="110">The treating physiotherapist explains the plan, guides appropriate treatment and helps the patient understand what to practise between visits. Dr Rutvi leads the shared clinical standards used across the care team.</p>
   </div>
 </section>
@@ -311,7 +316,7 @@ function aboutEditorialBody() {
     <div class="about-founder__copy">
       <p class="about-eyebrow" data-reveal>Founder’s perspective</p>
       <h2 data-reveal data-delay="60">Musculoskeletal care for real life.</h2>
-      <p data-reveal data-delay="100">Pain and movement concerns show up in ordinary moments—climbing stairs, sitting at a desk, lifting a child, returning to training or regaining confidence after surgery. Home visits make those real demands visible.</p>
+      <p data-reveal data-delay="100">Pain and movement concerns show up in ordinary moments, including climbing stairs, sitting at a desk, lifting a child, returning to training or regaining confidence after surgery. Home visits make those real demands visible.</p>
       <p data-reveal data-delay="140">PhysioByRutvi was founded to make careful physiotherapy easier to access at home. Dr Rutvi sets the clinical approach; visits may be delivered by a physiotherapist suitably matched to the patient’s needs, location and availability.</p>
       <div class="about-founder__signature" data-reveal data-delay="180"><strong>Dr Rutvi K Gandhi (PT)</strong><span>MPT, BPT, MIAP · Founder &amp; Clinical Lead</span></div>
     </div>
@@ -344,7 +349,7 @@ function aboutEditorialBody() {
     <div>
       <p class="about-eyebrow about-eyebrow--light" data-reveal>Areas of support</p>
       <h2 id="scope-title" data-reveal data-delay="60">From pain and stiffness to confident movement.</h2>
-      <p data-reveal data-delay="100">Care is matched to assessment findings—not a one-size-fits-all protocol.</p>
+      <p data-reveal data-delay="100">Care is matched to assessment findings, with a plan tailored to each patient.</p>
       <a class="about-button about-button--coral" href="/services/" data-reveal data-delay="140">Explore all services</a>
     </div>
     <div class="about-scope__list">
@@ -374,7 +379,7 @@ function aboutEditorialBody() {
 function leadSection(eyebrow, title, intro) {
   return `<section style="position:relative;overflow:hidden;background:#FDF8F5;padding:clamp(54px,8vw,108px) clamp(20px,5vw,52px);">
   <div data-parallax=".035" style="position:absolute;right:-5%;top:-8%;width:min(620px,70%);opacity:.65;pointer-events:none;"><svg viewBox="0 0 620 360" fill="none"><path d="M20 330C180 55 440 55 600 330" stroke="#EE7B5B" stroke-width="2.4"/><path d="M90 340C220 140 400 140 530 340" stroke="#CFE3D8" stroke-width="2"/></svg></div>
-  <div style="position:relative;max-width:1120px;margin:auto;"><div data-reveal style="color:#0E4F52;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">${eyebrow}</div><h1 data-reveal data-delay="60" style="max-width:14ch;margin:18px 0 24px;font-family:'Fraunces',serif;font-size:clamp(42px,7vw,88px);font-weight:600;line-height:.94;letter-spacing:-.02em;text-transform:uppercase;color:#1B2021;">${title}</h1><p data-reveal data-delay="110" style="max-width:62ch;margin:0;color:#4A4F4C;font-size:clamp(16px,1.8vw,20px);line-height:1.65;">${intro}</p><div data-reveal data-delay="160" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;"><a href="${WHATSAPP}" target="_blank" rel="noopener" style="border-radius:999px;background:#EE7B5B;color:#1B2021;padding:15px 24px;text-decoration:none;font-weight:700;">Message the Care Team</a><a href="${CALENDLY}" target="_blank" rel="noopener" style="border:1.5px solid #0E4F52;border-radius:999px;color:#0E4F52;padding:14px 24px;text-decoration:none;font-weight:700;">Book Consultation</a></div></div>
+  <div style="position:relative;max-width:1120px;margin:auto;"><div data-reveal style="color:#0E4F52;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">${eyebrow}</div><h1 data-reveal data-delay="60" style="max-width:14ch;margin:18px 0 24px;font-family:'Fraunces',serif;font-size:clamp(42px,7vw,88px);font-weight:600;line-height:.94;letter-spacing:-.02em;text-transform:uppercase;color:#1B2021;">${title}</h1><p data-reveal data-delay="110" style="max-width:62ch;margin:0;color:#4A4F4C;font-size:clamp(16px,1.8vw,20px);line-height:1.65;">${intro}</p><div data-reveal data-delay="160" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;"><a href="${WHATSAPP}" target="_blank" rel="noopener" style="border-radius:999px;background:#EE7B5B;color:#1B2021;padding:15px 24px;text-decoration:none;font-weight:700;">Ask about fees &amp; availability</a><a href="${CALENDLY}" target="_blank" rel="noopener" style="border:1.5px solid #0E4F52;border-radius:999px;color:#0E4F52;padding:14px 24px;text-decoration:none;font-weight:700;">Free 15-Minute Consultation</a></div></div>
 </section>`;
 }
 
@@ -417,6 +422,8 @@ function serviceAreasBody() {
 
 function faqBody() {
   const questions = [
+    ['What does a home visit cost?', 'Ask the care team for the visit fee for your location and care needs. Confirm the total fee and what is included before agreeing to a booking.'],
+    ['Is the free call a home treatment session?', 'No. The free 15-minute introductory call is separate from a home assessment or treatment appointment.'],
     ['Will Dr Rutvi attend every visit?', 'Not necessarily. Dr Rutvi is Founder and Clinical Lead. Visits may be delivered by another suitably qualified physiotherapist matched to the patient’s needs and location.'],
     ['What happens during the first visit?', 'The physiotherapist discusses the concern, relevant history, movement, function and goals before explaining suitable next steps.'],
     ['How many sessions will be required?', 'This cannot be responsibly estimated without assessment. Recommendations depend on the concern, goals, response and any medical guidance.'],
@@ -432,7 +439,7 @@ function reviewsBody() {
 }
 
 function contactBody() {
-  return `<main id="main-content">${leadSection('Contact and booking', 'Tell us where care is needed.', 'For the first contact, share only what is necessary: the suburb, preferred timing and a short reason for the enquiry. Detailed medical information can be discussed through an appropriate clinical channel.')}<section style="background:#F6F2EC;padding:clamp(56px,8vw,96px) clamp(20px,5vw,52px);"><div style="max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;"><a href="${WHATSAPP}" target="_blank" rel="noopener" style="border-radius:24px;background:#25D366;color:#fff;padding:30px;text-decoration:none;"><strong style="display:block;font:600 30px/1.1 'Fraunces',serif;">WhatsApp</strong><span style="display:block;margin-top:12px;">Start a simple availability conversation.</span></a><a href="${PHONE_LINK}" style="border-radius:24px;background:#fff;color:#0E4F52;padding:30px;text-decoration:none;"><strong style="display:block;font:600 30px/1.1 'Fraunces',serif;">Call</strong><span style="display:block;margin-top:12px;">${PHONE}</span></a><a href="${CALENDLY}" target="_blank" rel="noopener" style="border-radius:24px;background:#EE7B5B;color:#1B2021;padding:30px;text-decoration:none;"><strong style="display:block;font:600 30px/1.1 'Fraunces',serif;">Consultation</strong><span style="display:block;margin-top:12px;">Choose a time through Calendly.</span></a></div></section></main>`;
+  return `<main id="main-content">${enquirySection(WHATSAPP, PHONE_LINK, CALENDLY, true)}${bookingFaqs()}</main>`;
 }
 
 function legalBody(label, title, paragraphs) {
@@ -536,7 +543,8 @@ function renderPage(page, body) {
   ${header()}
   ${body}
   ${footer()}
-  <div id="pbrVoiceAgent"><elevenlabs-convai agent-id="agent_4701kwskch1ker1v5s2mpjdabvwq"></elevenlabs-convai></div>
+  <div class="pbr-voice-option pbr-shell"><button id="pbrVoiceLauncher" type="button" aria-controls="pbrVoiceAgent" aria-expanded="false">Open the voice assistant</button><p class="pbr-small">You can also ask general service questions by voice.</p></div>
+  <section id="pbrVoiceAgent" class="pbr-voice-panel" aria-label="Voice assistant" hidden><button id="pbrVoiceClose" type="button">Hide voice assistant</button><p data-voice-status>For booking help, you can also <a href="${PHONE_LINK}">call the care team</a>.</p><elevenlabs-convai agent-id="agent_4701kwskch1ker1v5s2mpjdabvwq"></elevenlabs-convai></section>
   <script defer src="/assets/js/site.js"></script>
   <script defer src="/site-analytics.min.js"></script>
   <script defer src="/voice-widget-loader.js"></script>
@@ -557,8 +565,10 @@ for (const page of pages) {
 const sitemapRoutes = pages.filter(page => !page.noindex).map(page => page.route);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>2026-07-13</lastmod></url>`).join('\n')}
+${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>2026-09-06</lastmod></url>`).join('\n')}
 </urlset>\n`;
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`);
+// Keep the deployed analytics entry in sync without a separate dependency/toolchain.
+fs.copyFileSync(path.join(ROOT, 'site-analytics.js'), path.join(ROOT, 'site-analytics.min.js'));
 console.log('Built sitemap.xml and robots.txt');

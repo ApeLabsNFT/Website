@@ -1,6 +1,23 @@
 document.documentElement.classList.add('motion-ready');
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-enquiry-builder]').forEach(builder => {
+    const area = builder.querySelector('[data-enquiry-area]');
+    const time = builder.querySelector('[data-enquiry-time]');
+    const link = builder.querySelector('[data-enquiry-link]');
+    if (!area || !time || !link) return;
+    const updateDraft = () => {
+      const message = ['Hello PhysioByRutvi, I would like to enquire about home physiotherapy.'];
+      if (area.value) message.push(`My area: ${area.value}.`);
+      if (time.value) message.push(`Preferred time: ${time.value}.`);
+      message.push('Please share the visit fee and availability.');
+      link.href = 'https://wa.me/918879475065?text=' + encodeURIComponent(message.join(' '));
+    };
+    area.addEventListener('change', updateDraft);
+    time.addEventListener('change', updateDraft);
+    updateDraft();
+    builder.querySelector('[data-enquiry-fields]').hidden = false;
+  });
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const progress = document.querySelector('.pbr-progress');

@@ -1,79 +1,80 @@
-# Google Business Profile Copy
+# PhysioByRutvi: business profile and enquiry copy
 
-Use these values consistently across Google Business Profile, Practo, Justdial, Bing Places, Apple Business, Lybrate, Sulekha, and any other citation.
+Updated 6 September 2026. These are local drafts; they have not been posted to Google, directories, Instagram, or the voice platform.
 
-## Core NAP
+## Consistent business details
 
-- Business name: PhysioByRutvi
-- Practitioner: Dr Rutvi Gandhi
-- Credentials: PT, MPT - Musculoskeletal & Sports Physiotherapy
-- Website: https://physiobyrutvi.in/
+- Business: PhysioByRutvi
+- Founder and Clinical Lead: Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP
+- Service: home physiotherapy by a suitably matched physiotherapist
 - Phone / WhatsApp: +91 88794 75065
-- Public email: support@physiobyrutvi.in
-- Instagram: https://www.instagram.com/physiobyrutvi/
-- Languages: English, Hindi, Gujarati, Marathi
-- Service model: home visits only; hide street address in Google Business Profile
-- Service corridor: Bhayander to Andheri, including Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri
+- Website: https://physiobyrutvi.in/
+- Areas: Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri
+- Languages: English, Hindi, Marathi and Gujarati
+- Confirm actual operating hours and available therapists before publishing them.
 
-## GBP Description
+For a business that visits customers and does not receive them at its address, Google instructs owners to hide the address and use a service area. [Google's business guidelines](https://support.google.com/business/answer/3038177?hl=en-en).
 
-PhysioByRutvi is a doctor-led home-visit physiotherapy service by Dr Rutvi Gandhi (PT, MPT - Musculoskeletal & Sports Physiotherapy), serving Mumbai's western suburbs from Bhayander to Andheri, including Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon and Jogeshwari. Dr Rutvi supports back and neck pain, sports injuries, post-surgical rehabilitation, knee and joint pain, arthritis, sciatica, posture problems, frozen shoulder and geriatric mobility with personalised assessment, hands-on care and home exercise plans. You are treated at home by the same qualified specialist every visit. To enquire or book, message on WhatsApp at +91 88794 75065.
+## Business description
 
-## Short Directory Description
+PhysioByRutvi provides home physiotherapy across Mumbai's western suburbs, from Bhayander to Andheri. Founded and clinically led by Dr Rutvi K Gandhi (PT), MPT, the service supports back and neck concerns, knee and joint problems, recovery after surgery, sports rehabilitation and senior mobility. Home visits are delivered by a physiotherapist matched to the patient's needs and location. Enquiring for yourself or a family member? Call or WhatsApp +91 88794 75065 to ask about visit fees, availability and the next step.
 
-PhysioByRutvi is a doctor-led home-visit physiotherapy service by Dr Rutvi Gandhi, PT, MPT - Musculoskeletal & Sports Physiotherapy - serving Mumbai's western suburbs from Bhayander to Andheri.
+## Short directory description
 
-## Medium Directory Description
+Home physiotherapy from Bhayander to Andheri. Clinical standards led by Dr Rutvi K Gandhi (PT), MPT. Ask about home-visit fees and availability on +91 88794 75065.
 
-PhysioByRutvi offers doctor-led home-visit physiotherapy by Dr Rutvi Gandhi, PT, MPT - Musculoskeletal & Sports Physiotherapy. She supports patients with back and neck pain, sports injuries, post-surgical rehabilitation, knee and joint pain, arthritis, sciatica, posture problems, frozen shoulder and geriatric mobility at home across Bhayander, Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri. To enquire or book, call or WhatsApp +91 88794 75065.
+## Service descriptions
 
-## Services To Add
+- Home physiotherapy: One-on-one home assessment and a plan matched to the patient's needs.
+- Back and neck physiotherapy: Assessment and rehabilitation for movement difficulties and discomfort.
+- Post-operative rehabilitation: Home rehabilitation aligned with available surgeon guidance.
+- Senior physiotherapy: Support for mobility, balance and everyday tasks, with caregiver involvement where appropriate.
+- Sports rehabilitation: Assessment and progressive rehabilitation matched to activity goals.
 
-- Home Visit Physiotherapy: Doctor-led physiotherapy at your home across Bhayander to Andheri, Mumbai. Same MPT specialist every visit.
-- Back & Neck Pain Treatment: Assessment, hands-on care and home exercise guidance for lower back pain, neck pain and stiffness.
-- Sports Injury Rehabilitation: Specialist rehabilitation for muscle strains, ligament injuries, ankle/knee injuries and safe return to activity.
-- Post-Surgical Rehabilitation: At-home recovery support after knee, hip, ligament, fracture, spine or other orthopaedic surgeries.
-- Knee & Joint Pain / Arthritis: Mobility, strengthening and pain-management support for knee, shoulder, joint pain and arthritis.
-- Sciatica & Disc Pain: Guided physiotherapy support for sciatica, disc-related pain and referred leg pain at home.
-- Posture Correction: Desk and screen posture correction for neck, shoulder and upper-back discomfort.
-- Frozen Shoulder Treatment: Guided mobility and strengthening support for painful, stiff shoulders at home.
-- Geriatric Mobility: Balance, strength and fall-prevention support for older adults at home.
+## Answers for prospective patients
 
-## Google Q&A Seeds
+**Do you visit Borivali, Kandivali or Andheri?**
+Yes, these are within our Bhayander-to-Andheri service corridor. Please share your suburb and preferred time so the team can check availability.
 
-Q: Do you do home physiotherapy visits in Borivali, Kandivali or Andheri?
-A: Yes. PhysioByRutvi provides doctor-led home physiotherapy across the Bhayander to Andheri corridor, including Mira Road, Dahisar, Borivali, Kandivali, Malad, Goregaon, Jogeshwari and Andheri. WhatsApp +91 88794 75065 to enquire.
+**How much does a home visit cost?**
+Ask the care team for the fee for your location and care needs. Confirm the total visit fee and what it includes before agreeing to a booking. A published price can be added once the owner confirms it.
 
-Q: What conditions does Dr Rutvi treat?
-A: Dr Rutvi supports back and neck pain, sports injuries, post-surgical rehabilitation, knee and joint pain, arthritis, sciatica, posture problems, frozen shoulder and geriatric mobility.
+**Will Dr Rutvi attend every visit?**
+Dr Rutvi is the Founder and Clinical Lead. Your visit may be with another suitably qualified physiotherapist matched to your needs and location. Ask who will attend before booking.
 
-Q: How much does a home physiotherapy session cost?
-A: Commercials are shared after understanding your concern, location, session requirement and care plan. Please WhatsApp +91 88794 75065 with your area and the issue you need help with.
+**Can I enquire for my parent?**
+Yes. Share the suburb and preferred time to start. Clinical details can be discussed with the treating physiotherapist as appropriate.
 
-Q: Will I see the same physiotherapist every time?
-A: Yes. Patients are treated by Dr Rutvi Gandhi herself, an MPT specialist in Musculoskeletal & Sports Physiotherapy, not a rotating therapist.
+**Is the free call a home visit?**
+No. The free 15-minute introductory phone call is separate from a home assessment or treatment appointment.
 
-Q: How do I book a home visit?
-A: WhatsApp +91 88794 75065 with your area, concern and preferred timing. You will be guided on the next suitable slot and care plan.
+## WhatsApp replies for the care team
 
-## Review Templates
+Initial reply:
+“Thank you for contacting PhysioByRutvi. Which suburb is the home visit for, and is there a preferred day or time? We can then discuss availability, the visit fee and who would attend.”
 
-Ask:
-Hi [Name], I'm glad today's session helped. A quick Google review about what we worked on and how the home visit went would really help others in [suburb] find trusted physio care. Thank you. [review link]
+After availability and fees are actually checked:
+“For [suburb], the available option is [date and time] with [physiotherapist name and qualification]. The visit fee is ₹[confirmed total], including [confirmed inclusions]. Would you like us to arrange that visit?”
 
-Reply:
-Thank you, [Name]. I'm glad the session helped and appreciate you trusting PhysioByRutvi for your recovery. Keep following your home exercise plan and feel free to reach out whenever needed. - Dr Rutvi
+One follow-up to an existing enquiry, when appropriate:
+“Hello, following up on your home physiotherapy enquiry. Would you still like help checking a visit time, or do you have a question about the service?”
 
-## Submission Order
+These are drafts for staff use, not messages sent by this task. Never fill placeholders with guesses.
 
-1. Google Business Profile
-2. Website schema
-3. Instagram bio/link cleanup
-4. Practo
-5. Justdial
-6. Bing Places
-7. Apple Business
-8. Lybrate
-9. Sulekha
+## Review request and response
 
-Avoid public price-first messaging unless a platform requires it.
+Invite honest feedback consistently, without incentives or selecting only satisfied patients:
+“Thank you for choosing PhysioByRutvi. If you would like, please share an honest review of your experience here: [verified Google review link]. Please avoid posting private medical information.”
+
+Public response:
+“Thank you for taking the time to share your feedback. We appreciate it. PhysioByRutvi”
+
+## Measurable profile links
+
+Google Business website:
+https://physiobyrutvi.in/?utm_source=google&utm_medium=organic&utm_campaign=business_profile
+
+Instagram bio:
+https://physiobyrutvi.in/?utm_source=instagram&utm_medium=social&utm_campaign=bio
+
+Tag only external entry links. Keep patient names, phone numbers and health details out of URLs. Google documents source, medium and campaign tagging in its [campaign URL guidance](https://support.google.com/analytics/answer/10917952?hl=en).
