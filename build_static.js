@@ -4,6 +4,7 @@ const { enquirySection, heroSection, bookingFaqs } = require('./lead-sections');
 
 const ROOT = __dirname;
 const DOMAIN = 'https://physiobyrutvi.in';
+const SITEMAP_LASTMOD = '2026-09-07';
 const PHONE = '+91 88794 75065';
 const PHONE_LINK = 'tel:+918879475065';
 const WHATSAPP = 'https://wa.me/918879475065?text=' + encodeURIComponent('Hello PhysioByRutvi, I would like to enquire about home physiotherapy. Please share the visit fee and availability in my area.');
@@ -240,7 +241,7 @@ function footer() {
     </div>
     <div class="pbr-footer__trust"><span class="pbr-footer__chip">MPT-led clinical standards</span><span class="pbr-footer__chip">Home visits by appointment</span><span class="pbr-footer__chip">Bhayander to Andheri</span><span class="pbr-footer__chip">English · Hindi · Marathi · Gujarati support</span></div>
     <p style="margin-top:26px;color:rgba(246,242,236,.55);font-size:12.5px;">For severe, rapidly worsening or potentially urgent symptoms, contact an appropriate emergency or medical service rather than waiting for a website response.</p>
-    <div class="pbr-footer__legal"><span>© 2026 PhysioByRutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span><span><a href="/privacy-policy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/medical-disclaimer/">Medical Disclaimer</a> · <a href="/cancellation-policy/">Cancellation</a></span></div>
+    <div class="pbr-footer__legal"><span>© 2026 PhysioByRutvi · Dr Rutvi K Gandhi (PT), MPT, BPT, MIAP</span><span><a href="/privacy-policy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/medical-disclaimer/">Medical Disclaimer</a> · <a href="/cancellation-policy/">Cancellation</a> · Developed by <a href="https://github.com/ApeLabsNFT" target="_blank" rel="noopener noreferrer">ApeLabs</a></span></div>
   </div>
 </footer>
 <div class="pbr-mobile-cta" role="group" aria-label="Booking actions" data-lead-location="mobile_bar"><a class="pbr-mobile-cta__wa" href="${WHATSAPP}" target="_blank" rel="noopener">WhatsApp enquiry</a><a class="pbr-mobile-cta__book" href="${PHONE_LINK}">Call now</a></div>`;
@@ -448,11 +449,13 @@ function legalBody(label, title, paragraphs) {
 
 function addGeneratedPages() {
   for (const [slug, name, description, detail] of conditionPages) {
-    pages.push({ output: `conditions/${slug}/index.html`, route: `/conditions/${slug}/`, title: `${name} | PhysioByRutvi`, description, body: detailBody('Condition guide', name, description, detail) });
+    const title = slug === 'post-surgery-rehabilitation' ? 'Post-Surgery Physiotherapy at Home | PhysioByRutvi' : `${name} | PhysioByRutvi`;
+    pages.push({ output: `conditions/${slug}/index.html`, route: `/conditions/${slug}/`, title, description, body: detailBody('Condition guide', name, description, detail) });
   }
   pages.push({ output: 'services/index.html', route: '/services/', title: 'Home Physiotherapy Services | PhysioByRutvi', description: 'Explore home physiotherapy services delivered under clinically led care standards across Mumbai’s western suburbs.', body: servicesIndexBody() });
   for (const [slug, name, description, detail] of servicePages) {
-    pages.push({ output: `services/${slug}/index.html`, route: `/services/${slug}/`, title: `${name} | PhysioByRutvi`, description, body: detailBody('Service', name, description, detail) });
+    const title = slug === 'post-operative-rehabilitation' ? 'Post-Operative Rehabilitation Service | PhysioByRutvi' : `${name} | PhysioByRutvi`;
+    pages.push({ output: `services/${slug}/index.html`, route: `/services/${slug}/`, title, description, body: detailBody('Service', name, description, detail) });
   }
   pages.push(
     { output: 'how-care-works/index.html', route: '/how-care-works/', title: 'How Home Physiotherapy Works | PhysioByRutvi', description: 'Understand the booking, suitability, assessment and review process for PhysioByRutvi home visits.', body: howCareWorksBody() },
@@ -484,7 +487,8 @@ function addGeneratedPages() {
   }
 }
 
-function schema(route) {
+function schema(page) {
+  const route = page.redirect || page.route;
   const url = `${DOMAIN}${route}`;
   return JSON.stringify({
     '@context': 'https://schema.org',
@@ -506,13 +510,30 @@ function schema(route) {
         alumniOf: ['NMIMS Mumbai', 'Sumandeep Vidyapeeth'],
         url: `${DOMAIN}/about/`
       },
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, isPartOf: { '@id': `${DOMAIN}/#website` } }
+      {
+        '@type': 'WebSite',
+        '@id': `${DOMAIN}/#website`,
+        url: `${DOMAIN}/`,
+        name: 'PhysioByRutvi',
+        inLanguage: 'en-IN',
+        publisher: { '@id': `${DOMAIN}/#business` }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: page.title,
+        description: page.description,
+        inLanguage: 'en-IN',
+        isPartOf: { '@id': `${DOMAIN}/#website` },
+        about: { '@id': `${DOMAIN}/#business` }
+      }
     ]
   });
 }
 
 function renderPage(page, body) {
-  const canonical = `${DOMAIN}${page.route}`;
+  const canonical = `${DOMAIN}${page.redirect || page.route}`;
   return `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -536,7 +557,7 @@ function renderPage(page, body) {
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <script type="application/ld+json">${schema(page.route)}</script>
+  <script type="application/ld+json">${schema(page)}</script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -565,7 +586,7 @@ for (const page of pages) {
 const sitemapRoutes = pages.filter(page => !page.noindex).map(page => page.route);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>2026-09-06</lastmod></url>`).join('\n')}
+${sitemapRoutes.map(route => `  <url><loc>${DOMAIN}${route}</loc><lastmod>${SITEMAP_LASTMOD}</lastmod></url>`).join('\n')}
 </urlset>\n`;
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`);
